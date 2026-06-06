@@ -19,6 +19,8 @@ html, body{
     overflow-y:auto;
     overflow-x:hidden;
     touch-action:pan-y;
+
+    padding-bottom:70px; /* for bottom nav */
 }
 
 /* TITLE */
@@ -42,6 +44,7 @@ html, body{
 
     background:#111;
     color:white;
+    outline:none;
 }
 
 /* LIST WRAPPER */
@@ -49,7 +52,7 @@ html, body{
     padding:10px;
 }
 
-/* ROW (2 ITEMS) */
+/* ROW */
 .row{
     display:flex;
     gap:10px;
@@ -96,6 +99,50 @@ html, body{
     margin-top:5px;
 }
 
+/* 🔥 HIGHLIGHT (SEARCH) */
+.highlight{
+    background:gold;
+    color:black;
+    padding:2px;
+    border-radius:4px;
+}
+
+/* =========================
+   BOTTOM NAV (PHONE STYLE)
+========================= */
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+
+    width:100%;
+    display:flex;
+
+    background:rgba(0,0,0,0.95);
+    border-top:2px solid gold;
+
+    padding:8px 0;
+}
+
+.nav-btn{
+    flex:1;
+    padding:10px;
+
+    border:none;
+    font-size:14px;
+    font-weight:bold;
+
+    background:transparent;
+}
+
+.nav-btn.back{
+    color:#e74c3c;
+}
+
+.nav-btn.home{
+    color:gold;
+}
+
 </style>
 </head>
 
@@ -107,17 +154,34 @@ html, body{
 
 <div class="container" id="list"></div>
 
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+    <button class="nav-btn back" onclick="history.back()">
+        ⬅ Back
+    </button>
+
+    <button class="nav-btn home" onclick="location.href='index.html'">
+        🏠 Home
+    </button>
+
+</div>
+
 <script src="n5-data.js"></script>
 
 <script>
 
 let box = document.getElementById("list");
 
-/* 2 COLUMN RENDER */
-for(let i=0; i<kanjiN5.length; i+=2){
+/* RENDER */
+function render(data){
 
-let k1 = kanjiN5[i];
-let k2 = kanjiN5[i+1];
+box.innerHTML = "";
+
+for(let i=0; i<data.length; i+=2){
+
+let k1 = data[i];
+let k2 = data[i+1];
 
 box.innerHTML += `
 <div class="row">
@@ -139,21 +203,28 @@ box.innerHTML += `
 </div>`;
 }
 
-/* SEARCH */
+}
+
+render(kanjiN5);
+
+/* SEARCH + HIGHLIGHT */
 document.getElementById("searchBox").addEventListener("keyup", function(){
 
 let value = this.value.toLowerCase();
-let cards = document.querySelectorAll(".card");
 
-cards.forEach(card=>{
-    let text = card.innerText.toLowerCase();
+if(value === ""){
+    render(kanjiN5);
+    return;
+}
 
-    if(text.includes(value)){
-        card.style.display="block";
-    } else {
-        card.style.display="none";
-    }
-});
+let filtered = kanjiN5.filter(k =>
+    k.kanji.includes(value) ||
+    k.kana.includes(value) ||
+    k.romaji.toLowerCase().includes(value) ||
+    k.meaning.includes(value)
+);
+
+render(filtered);
 
 });
 
