@@ -108,6 +108,11 @@ body{
     opacity:0.8;
 }
 
+/* HIDE */
+.hidden{
+    display:none;
+}
+
 /* ANIMATION */
 @keyframes fadeUp{
     from{
@@ -131,28 +136,51 @@ body{
         EWONZ LINGUA
     </div>
 
-    <div class="about">
-        Discover the world through language, connect globally, and grow beyond limits.
-    </div>
+    <!-- HOME MENU -->
+    <div id="homeMenu" class="buttons">
 
-    <div class="buttons">
-
-        <!-- NEW STRUCTURE (UPDATED) -->
-        <button class="btn" onclick="location.href='japanese.html'">
+        <button class="btn" onclick="openJapanese()">
             Japanese Language 🇯🇵
         </button>
 
-        <button class="btn" onclick="location.href='chinese.html'">
+        <button class="btn">
             Chinese Language 🇨🇳
         </button>
 
-        <button class="btn" onclick="location.href='korean.html'">
+        <button class="btn">
             Korean Language 🇰🇷
         </button>
 
     </div>
 
+    <!-- JAPANESE MENU -->
+    <div id="jpMenu" class="buttons hidden">
+
+        <button class="btn">Hiragana</button>
+        <button class="btn">Katakana</button>
+        <button class="btn">Kanji</button>
+
+        <button class="btn" onclick="goBack()">
+            ⬅ Back
+        </button>
+
+    </div>
+
 </div>
+
+<script>
+
+function openJapanese(){
+    document.getElementById("homeMenu").classList.add("hidden");
+    document.getElementById("jpMenu").classList.remove("hidden");
+}
+
+function goBack(){
+    document.getElementById("jpMenu").classList.add("hidden");
+    document.getElementById("homeMenu").classList.remove("hidden");
+}
+
+</script>
 
 </body>
 </html>
