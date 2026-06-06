@@ -1,171 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Katakana Chart</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Katakana</title>
 
 <style>
-
-/* =========================
-   BODY
-========================= */
-body{
-    margin:0;
-    background:#0b0b0b;
-    font-family:'Poppins', sans-serif;
-    color:white;
-    padding:20px;
-}
-
-/* =========================
-   TITLE
-========================= */
-.title{
-    text-align:center;
-    font-size:24px;
-    font-weight:700;
-    color:gold;
-    margin-bottom:20px;
-}
-
-/* =========================
-   GRID
-========================= */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(5, 1fr);
-    gap:10px;
-}
-
-/* =========================
-   BOX
-========================= */
-.box{
-    background:rgba(255,255,255,0.05);
-    border:1px solid #d4af37;
-    border-radius:12px;
-
-    text-align:center;
-    padding:12px 5px;
-
-    transition:0.2s;
-}
-
-.box:hover{
-    transform:scale(1.05);
-}
-
-/* JAPANESE CHAR */
-.jp{
-    font-size:22px;
-    font-weight:700;
-}
-
-/* ROMAJI */
-.en{
-    font-size:12px;
-    color:gold;
-    margin-top:5px;
-}
-
-/* BACK BUTTON */
-.back{
-    display:block;
-    margin:20px auto;
-    padding:12px 18px;
-
-    border:none;
-    border-radius:12px;
-
-    background:linear-gradient(135deg,#4d79ff,#001f66);
-    color:white;
-
-    font-weight:bold;
-    cursor:pointer;
-}
-
+body{background:#0b0b0b;color:white;font-family:sans-serif;padding:20px;}
+h1{color:gold;text-align:center;}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+.box{border:1px solid gold;padding:10px;text-align:center;border-radius:10px;}
 </style>
 </head>
 
 <body>
 
-<div class="title">Katakana Chart 🇯🇵</div>
+<h1>Katakana 46</h1>
 
 <div class="grid">
 
-<!-- A row -->
-<div class="box"><div class="jp">ア</div><div class="en">a</div></div>
-<div class="box"><div class="jp">イ</div><div class="en">i</div></div>
-<div class="box"><div class="jp">ウ</div><div class="en">u</div></div>
-<div class="box"><div class="jp">エ</div><div class="en">e</div></div>
-<div class="box"><div class="jp">オ</div><div class="en">o</div></div>
+<div class="box">ア a</div>
+<div class="box">イ i</div>
+<div class="box">ウ u</div>
+<div class="box">エ e</div>
+<div class="box">オ o</div>
 
-<!-- K row -->
-<div class="box"><div class="jp">カ</div><div class="en">ka</div></div>
-<div class="box"><div class="jp">キ</div><div class="en">ki</div></div>
-<div class="box"><div class="jp">ク</div><div class="en">ku</div></div>
-<div class="box"><div class="jp">ケ</div><div class="en">ke</div></div>
-<div class="box"><div class="jp">コ</div><div class="en">ko</div></div>
+<div class="box">カ ka</div>
+<div class="box">キ ki</div>
+<div class="box">ク ku</div>
+<div class="box">ケ ke</div>
+<div class="box">コ ko</div>
 
-<!-- S row -->
-<div class="box"><div class="jp">サ</div><div class="en">sa</div></div>
-<div class="box"><div class="jp">シ</div><div class="en">shi</div></div>
-<div class="box"><div class="jp">ス</div><div class="en">su</div></div>
-<div class="box"><div class="jp">セ</div><div class="en">se</div></div>
-<div class="box"><div class="jp">ソ</div><div class="en">so</div></div>
+<div class="box">サ sa</div>
+<div class="box">シ shi</div>
+<div class="box">ス su</div>
+<div class="box">セ se</div>
+<div class="box">ソ so</div>
 
-<!-- T row -->
-<div class="box"><div class="jp">タ</div><div class="en">ta</div></div>
-<div class="box"><div class="jp">チ</div><div class="en">chi</div></div>
-<div class="box"><div class="jp">ツ</div><div class="en">tsu</div></div>
-<div class="box"><div class="jp">テ</div><div class="en">te</div></div>
-<div class="box"><div class="jp">ト</div><div class="en">to</div></div>
+<div class="box">タ ta</div>
+<div class="box">チ chi</div>
+<div class="box">ツ tsu</div>
+<div class="box">テ te</div>
+<div class="box">ト to</div>
 
-<!-- N row -->
-<div class="box"><div class="jp">ナ</div><div class="en">na</div></div>
-<div class="box"><div class="jp">ニ</div><div class="en">ni</div></div>
-<div class="box"><div class="jp">ヌ</div><div class="en">nu</div></div>
-<div class="box"><div class="jp">ネ</div><div class="en">ne</div></div>
-<div class="box"><div class="jp">ノ</div><div class="en">no</div></div>
+<div class="box">ナ na</div>
+<div class="box">ニ ni</div>
+<div class="box">ヌ nu</div>
+<div class="box">ネ ne</div>
+<div class="box">ノ no</div>
 
-<!-- H row -->
-<div class="box"><div class="jp">ハ</div><div class="en">ha</div></div>
-<div class="box"><div class="jp">ヒ</div><div class="en">hi</div></div>
-<div class="box"><div class="jp">フ</div><div class="en">fu</div></div>
-<div class="box"><div class="jp">ヘ</div><div class="en">he</div></div>
-<div class="box"><div class="jp">ホ</div><div class="en">ho</div></div>
+<div class="box">ハ ha</div>
+<div class="box">ヒ hi</div>
+<div class="box">フ fu</div>
+<div class="box">ヘ he</div>
+<div class="box">ホ ho</div>
 
-<!-- M row -->
-<div class="box"><div class="jp">マ</div><div class="en">ma</div></div>
-<div class="box"><div class="jp">ミ</div><div class="en">mi</div></div>
-<div class="box"><div class="jp">ム</div><div class="en">mu</div></div>
-<div class="box"><div class="jp">メ</div><div class="en">me</div></div>
-<div class="box"><div class="jp">モ</div><div class="en">mo</div></div>
+<div class="box">マ ma</div>
+<div class="box">ミ mi</div>
+<div class="box">ム mu</div>
+<div class="box">メ me</div>
+<div class="box">モ mo</div>
 
-<!-- Y row -->
-<div class="box"><div class="jp">ヤ</div><div class="en">ya</div></div>
-<div class="box"><div class="jp">ユ</div><div class="en">yu</div></div>
-<div class="box"><div class="jp">ヨ</div><div class="en">yo</div></div>
+<div class="box">ヤ ya</div>
+<div class="box">ユ yu</div>
+<div class="box">ヨ yo</div>
 
-<!-- R row -->
-<div class="box"><div class="jp">ラ</div><div class="en">ra</div></div>
-<div class="box"><div class="jp">リ</div><div class="en">ri</div></div>
-<div class="box"><div class="jp">ル</div><div class="en">ru</div></div>
-<div class="box"><div class="jp">レ</div><div class="en">re</div></div>
-<div class="box"><div class="jp">ロ</div><div class="en">ro</div></div>
+<div class="box">ラ ra</div>
+<div class="box">リ ri</div>
+<div class="box">ル ru</div>
+<div class="box">レ re</div>
+<div class="box">ロ ro</div>
 
-<!-- W + N -->
-<div class="box"><div class="jp">ワ</div><div class="en">wa</div></div>
-<div class="box"><div class="jp">ヲ</div><div class="en">wo</div></div>
-<div class="box"><div class="jp">ン</div><div class="en">n</div></div>
+<div class="box">ワ wa</div>
+<div class="box">ヲ wo</div>
+<div class="box">ン n</div>
 
 </div>
-
-<button class="back" onclick="history.back()">← Back</button>
 
 </body>
 </html>
