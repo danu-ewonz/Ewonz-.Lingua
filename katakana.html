@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Katakana Chart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BODY
+========================= */
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:'Poppins', sans-serif;
+    color:white;
+
+    padding:20px;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title{
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    color:gold;
+    margin-bottom:20px;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:10px;
+}
+
+/* =========================
+   BOX
+========================= */
+.box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid #d4af37;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    padding:12px 5px;
+
+    transition:0.2s;
+}
+
+.box:hover{
+    transform:scale(1.05);
+}
+
+/* JAPANESE CHAR */
+.jp{
+    font-size:22px;
+    font-weight:700;
+}
+
+/* ROMAJI */
+.en{
+    font-size:12px;
+    color:gold;
+    margin-top:5px;
+}
+
+/* BACK BUTTON */
+.back{
+    display:block;
+    margin:20px auto;
+    padding:12px 18px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#4d79ff,#001f66);
+    color:white;
+
+    font-weight:bold;
+    cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">Katakana Chart 🇯🇵</div>
+
+<div class="grid">
+
+    <div class="box"><div class="jp">ア</div><div class="en">a</div></div>
+    <div class="box"><div class="jp">イ</div><div class="en">i</div></div>
+    <div class="box"><div class="jp">ウ</div><div class="en">u</div></div>
+    <div class="box"><div class="jp">エ</div><div class="en">e</div></div>
+    <div class="box"><div class="jp">オ</div><div class="en">o</div></div>
+
+    <div class="box"><div class="jp">カ</div><div class="en">ka</div></div>
+    <div class="box"><div class="jp">キ</div><div class="en">ki</div></div>
+    <div class="box"><div class="jp">ク</div><div class="en">ku</div></div>
+    <div class="box"><div class="jp">ケ</div><div class="en">ke</div></div>
+    <div class="box"><div class="jp">コ</div><div class="en">ko</div></div>
+
+    <div class="box"><div class="jp">サ</div><div class="en">sa</div></div>
+    <div class="box"><div class="jp">シ</div><div class="en">shi</div></div>
+    <div class="box"><div class="jp">ス</div><div class="en">su</div></div>
+    <div class="box"><div class="jp">セ</div><div class="en">se</div></div>
+    <div class="box"><div class="jp">ソ</div><div class="en">so</div></div>
+
+    <div class="box"><div class="jp">タ</div><div class="en">ta</div></div>
+    <div class="box"><div class="jp">チ</div><div class="en">chi</div></div>
+    <div class="box"><div class="jp">ツ</div><div class="en">tsu</div></div>
+    <div class="box"><div class="jp">テ</div><div class="en">te</div></div>
+    <div class="box"><div class="jp">ト</div><div class="en">to</div></div>
+
+    <div class="box"><div class="jp">ナ</div><div class="en">na</div></div>
+    <div class="box"><div class="jp">ニ</div><div class="en">ni</div></div>
+    <div class="box"><div class="jp">ヌ</div><div class="en">nu</div></div>
+    <div class="box"><div class="jp">ネ</div><div class="en">ne</div></div>
+    <div class="box"><div class="jp">ノ</div><div class="en">no</div></div>
+
+</div>
+
+<!-- BACK -->
+<button class="back" onclick="history.back()">← Back</button>
+
+</body>
+</html>
