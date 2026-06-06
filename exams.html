@@ -10,68 +10,73 @@
 
 body{
     margin:0;
+    font-family:Arial, sans-serif;
     background:#0b0b0b;
-    font-family:Arial;
     color:white;
     padding:20px;
 }
 
+/* TITLE */
 .title{
     text-align:center;
+    font-size:24px;
     color:gold;
-    font-size:22px;
     font-weight:bold;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
-/* MAIN BOX */
-.box{
-    border:1px solid gold;
-    border-radius:12px;
+/* TREE STYLE BOX */
+.tree{
+    font-size:14px;
+    line-height:1.8;
+
+    white-space:pre-line;
+
+    border:2px solid gold;
     padding:15px;
-    margin-bottom:15px;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.05);
 }
 
-/* SUB ITEMS */
-.sub{
-    margin-left:20px;
-    font-size:13px;
-    color:#ccc;
+/* SMALL NOTE */
+.note{
+    font-size:12px;
+    color:#aaa;
+    margin-top:10px;
+    text-align:center;
 }
 
-/* HIDE SHOW (future expand ready) */
 </style>
-
 </head>
 
 <body>
 
-<div class="title">🇯🇵 JAPANESE EXAMS</div>
-
-<div class="box">
-    ├── JLPT (Main System)
-
-    <div class="sub">├── N5</div>
-    <div class="sub">├── N4</div>
-    <div class="sub">├── N3</div>
-    <div class="sub">├── N2</div>
-    <div class="sub">└── N1</div>
+<div class="title">
+🇯🇵 JAPANESE EXAMS
 </div>
 
-<div class="box">
-    ├── NAT-TEST (Practice System)
-
-    <div class="sub">├── 5Q</div>
-    <div class="sub">├── 4Q</div>
-    <div class="sub">├── 3Q</div>
-    <div class="sub">├── 2Q</div>
-    <div class="sub">└── 1Q</div>
+<div class="tree">
+├── JLPT (Main System)
+│   ├── N5
+│   ├── N4
+│   ├── N3
+│   ├── N2
+│   └── N1
+│
+├── NAT-TEST (Practice System)
+│   ├── 5Q
+│   ├── 4Q
+│   ├── 3Q
+│   ├── 2Q
+│   └── 1Q
+│
+└── JFT-Basic (SSW Visa)
+    └── Basic Level (N5–N4 Kanji)
 </div>
 
-<div class="box">
-    └── JFT-Basic (SSW Visa)
-
-    <div class="sub">└── Basic Level (N5–N4 Kanji)</div>
+<div class="note">
+Kanji (Japanese Exams)
 </div>
 
 </body>
