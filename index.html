@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>EWONZ LiNGUA</title>
+<title>Ewonz Lingua</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -42,9 +42,9 @@ body{
 
 /* TITLE */
 .title{
-    font-family:'Cinzel', serif;
+    font-family:'Playfair Display', serif;
 
-    font-size:32px;
+    font-size:26px;
     font-weight:bold;
 
     color:gold;
@@ -55,27 +55,26 @@ body{
     margin-bottom:10px;
 
     text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-     0px  0px 6px rgba(0,0,0,0.5);
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 /* ABOUT */
 .about{
     font-size:12px;
-
     color:black;
-
     font-weight:600;
 
     text-align:center;
 
     padding:5px 15px;
 
-    margin-top:15px;
-    margin-bottom:60px;
+    margin-top:40px;
+    margin-bottom:70px;
+
+    animation:fadeUp 2s ease;
 }
 
 /* BUTTON AREA */
@@ -94,18 +93,31 @@ body{
 .btn{
     padding:12px;
 
-    border:2px solid black;
+    border:2px solid gold;
 
     border-radius:12px;
 
     font-size:14px;
     font-weight:bold;
 
-    background:rgba(255,255,255,0.25);
+    background:rgba(255,255,255,0.20);
 
     color:black;
 
     backdrop-filter:blur(3px);
+}
+
+/* ABOUT ANIMATION */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 </style>
