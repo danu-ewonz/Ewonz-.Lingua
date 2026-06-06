@@ -8,75 +8,69 @@
 
 <style>
 
+/* FULL SCREEN */
 body{
     margin:0;
     height:100vh;
     overflow:hidden;
     font-family:Arial;
-}
-
-/* BACKGROUND */
-.bg{
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-
-    background:url("1780704324974.png") center/cover no-repeat;
-    z-index:-1;
-}
-
-/* MAIN LAYOUT */
-.container{
-    height:100vh;
+    background:#000;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
 }
 
-/* 🔥 TITLE UPDATED */
+/* 3:4 CARD */
+.card{
+    width:320px;
+    height:430px;
+
+    border:2px solid gold;
+    border-radius:20px;
+
+    background:url("1780704324974.png") center/cover no-repeat;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:10px;
+    box-sizing:border-box;
+}
+
+/* TITLE (SMALL + TOP) */
 .title{
-    font-size:44px;              /* BIGGER */
-    font-weight:900;
-
+    font-size:22px;   /* smaller */
+    font-weight:bold;
     color:gold;
-
-    /* BLACK BORDER EFFECT */
-    text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
-
-    margin-top:-60px;           /* MOVE UP */
-    letter-spacing:2px;
+    margin-top:5px;   /* move up */
+    margin-bottom:5px;
+    text-shadow:2px 2px 5px black;
 }
 
 /* ABOUT */
 .about{
-    font-size:12px;
+    font-size:11px;
     color:white;
     text-align:center;
-    padding:10px 20px;
-    margin-bottom:25px;
+    padding:5px 10px;
+    margin-bottom:15px;
 }
 
-/* BUTTONS */
+/* BUTTON AREA */
 .buttons{
+    width:100%;
     display:flex;
     flex-direction:column;
-    gap:12px;
-    width:80%;
+    gap:10px;
 }
 
 /* BUTTON STYLE */
 .btn{
-    padding:15px;
+    padding:12px;
     border:none;
     border-radius:12px;
-    font-size:16px;
+    font-size:14px;
     font-weight:bold;
     color:white;
 }
@@ -91,10 +85,9 @@ body{
 
 <body>
 
-<div class="bg"></div>
+<div class="card">
 
-<div class="container">
-
+    <!-- TITLE SMALL + TOP -->
     <div class="title">EWONZ LINGUA</div>
 
     <div class="about">
