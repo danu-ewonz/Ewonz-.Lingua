@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Word List - Ewonz Lingua</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* WORD BOX */
+.word-list{
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* CARD */
+.card{
+    background:linear-gradient(135deg,#1e1e1e,#2a2a2a);
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+}
+
+/* WORD */
+.word{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* MEANING (hidden default) */
+.meaning{
+    margin-top:8px;
+    font-size:14px;
+    color:#00ffcc;
+    display:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">Japanese Basic Words</div>
+
+<div class="word-list">
+
+    <div class="card" onclick="toggle(this)">
+        <div class="word">こんにちは</div>
+        <div class="meaning">Hello (Konnichiwa)</div>
+    </div>
+
+    <div class="card" onclick="toggle(this)">
+        <div class="word">ありがとう</div>
+        <div class="meaning">Thank you (Arigatou)</div>
+    </div>
+
+    <div class="card" onclick="toggle(this)">
+        <div class="word">さようなら</div>
+        <div class="meaning">Goodbye (Sayounara)</div>
+    </div>
+
+</div>
+
+<script>
+function toggle(card){
+    let meaning = card.querySelector(".meaning");
+    
+    if(meaning.style.display === "block"){
+        meaning.style.display = "none";
+    } else {
+        meaning.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
