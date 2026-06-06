@@ -83,11 +83,7 @@ body{
 function toggle(card){
     let meaning = card.querySelector(".meaning");
 
-    if(meaning.style.display === "block"){
-        meaning.style.display = "none";
-    } else {
-        meaning.style.display = "block";
-    }
+    meaning.style.display = (meaning.style.display === "block") ? "none" : "block";
 }
 </script>
 
