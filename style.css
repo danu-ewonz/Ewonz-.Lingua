@@ -12,7 +12,7 @@ body{
     font-family:Arial, sans-serif;
 }
 
-/* MAIN BOX (3:4 ratio) */
+/* MAIN CONTAINER (3:4) */
 .container{
     width:90vw;
     max-width:420px;
@@ -24,11 +24,10 @@ body{
 
     border-radius:20px;
     overflow:hidden;
-
     box-shadow:0 10px 40px rgba(0,0,0,0.6);
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .overlay{
     position:absolute;
     width:100%;
@@ -36,16 +35,41 @@ body{
     background:rgba(0,0,0,0.45);
 }
 
-/* TITLE */
+/* TITLE (GOLD) */
 .title{
     position:absolute;
-    top:40px;
+    top:30px;
     width:100%;
     text-align:center;
-    color:white;
-    font-size:28px;
-    font-weight:bold;
-    letter-spacing:1px;
+
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    background: linear-gradient(90deg,#d4af37,#ffd700,#b8860b);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* TAGLINE */
+.tagline{
+    position:absolute;
+    top:75px;
+    width:80%;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+
+    font-size:12px;
+    color:rgba(255,255,255,0.85);
+    line-height:1.5;
+
+    background:rgba(255,255,255,0.05);
+    padding:8px 12px;
+    border-radius:12px;
+
+    backdrop-filter: blur(6px);
 }
 
 /* BUTTON AREA */
