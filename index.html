@@ -7,11 +7,78 @@
 <title>Ewonz Lingua</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+
+    background:url("1780704324974.png") no-repeat center center fixed;
+    background-size:cover;
+
+    overflow:hidden;
+    font-family:Arial;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+    background:transparent;
+}
+
+.title{
+    font-size:30px;
+    color:gold;
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+    text-shadow:2px 2px 5px black;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:80%;
+}
+
+/* BUTTON STYLE */
+.btn{
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    font-size:16px;
+    font-weight:bold;
+    color:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* COLORS */
+.jp{background:#c0392b;}
+.cn{background:#2980b9;}
+.kr{background:#27ae60;}
+
+.exam{
+    background:linear-gradient(135deg,#d4af37,#8c6b00);
+    color:black;
+}
+
+.border{
+    border:2px solid gold;
+}
+</style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="container border">
 
     <div class="title">EWONZ LINGUA</div>
 
@@ -29,6 +96,7 @@
             Korean Language 🇰🇷
         </button>
 
+        <!-- 🔥 JAPANESE EXAMS BUTTON (ADDED HERE) -->
         <button class="btn exam" onclick="location.href='exams.html'">
             Japanese Exams 📘
         </button>
