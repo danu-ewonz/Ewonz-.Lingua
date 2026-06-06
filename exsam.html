@@ -50,67 +50,49 @@ body{
     transform:scale(0.98);
 }
 
-.note{
-    text-align:center;
-    margin-top:15px;
-    color:#aaa;
-    font-size:12px;
+/* FLOAT NAV */
+.bottom-nav{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    display:flex;
+    gap:6px;
 }
+
+.nav-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.back{background:#e74c3c;color:white;}
+.home{background:gold;color:black;}
 
 </style>
 </head>
+
 <body>
 
-<div class="title">
-🇯🇵 JAPANESE EXAMS
-</div>
+<div class="title">🇯🇵 JAPANESE EXAMS</div>
 
 <div class="section">
 
-<h3>JLPT (Main System)</h3>
+<h3>JLPT</h3>
 
-<button class="exam-btn" onclick="location.href='n5.html'">
-JLPT N5
-</button>
-
-<button class="exam-btn" onclick="location.href='n4.html'">
-JLPT N4
-</button>
-
-<button class="exam-btn" onclick="location.href='n3.html'">
-JLPT N3
-</button>
-
-<button class="exam-btn" onclick="location.href='n2.html'">
-JLPT N2
-</button>
-
-<button class="exam-btn" onclick="location.href='n1.html'">
-JLPT N1
-</button>
-
-<br><br>
-
-<h3>NAT-TEST (Practice System)</h3>
-
-<button class="exam-btn">5Q</button>
-<button class="exam-btn">4Q</button>
-<button class="exam-btn">3Q</button>
-<button class="exam-btn">2Q</button>
-<button class="exam-btn">1Q</button>
-
-<br><br>
-
-<h3>JFT-Basic (SSW Visa)</h3>
-
-<button class="exam-btn" onclick="location.href='jft.html'">
-Basic Level (N5–N4 Kanji)
-</button>
+<button class="exam-btn" onclick="window.location.href='n5.html'">N5</button>
+<button class="exam-btn" onclick="window.location.href='n4.html'">N4</button>
+<button class="exam-btn" onclick="window.location.href='n3.html'">N3</button>
+<button class="exam-btn" onclick="window.location.href='n2.html'">N2</button>
+<button class="exam-btn" onclick="window.location.href='n1.html'">N1</button>
 
 </div>
 
-<div class="note">
-Kanji • JLPT • NAT • JFT
+<!-- NAV -->
+<div class="bottom-nav">
+    <button class="nav-btn back" onclick="history.back()">←</button>
+    <button class="nav-btn home" onclick="window.location.href='index.html'">🏠</button>
 </div>
 
 </body>
