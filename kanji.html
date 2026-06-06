@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kanji System</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:Arial;
+    color:white;
+    padding:20px;
+}
+
+/* TITLE */
+h1{
+    text-align:center;
+    color:gold;
+    margin-bottom:20px;
+}
+
+/* LEVEL BUTTONS */
+.level{
+    border:1px solid gold;
+    padding:15px;
+    margin:10px 0;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+/* INNER BOX */
+.box{
+    display:none;
+    margin-top:10px;
+    padding-left:10px;
+}
+
+/* KANJI ITEM */
+.item{
+    font-size:14px;
+    margin:5px 0;
+    color:#ddd;
+}
+
+/* SMALL NOTE */
+.note{
+    font-size:12px;
+    color:gray;
+    margin-top:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>📘 Kanji System</h1>
+
+<!-- N5 -->
+<div class="level" onclick="toggle('n5')">
+    JLPT N5 (Basic Kanji)
+    <div id="n5" class="box">
+        <div class="item">日 - Sun / Day (にち, ひ)</div>
+        <div class="item">月 - Moon / Month (げつ, つき)</div>
+        <div class="item">山 - Mountain (やま)</div>
+        <div class="item">川 - River (かわ)</div>
+        <div class="note">~100 basic Kanji</div>
+    </div>
+</div>
+
+<!-- N4 -->
+<div class="level" onclick="toggle('n4')">
+    JLPT N4 (Elementary Kanji)
+    <div id="n4" class="box">
+        <div class="item">会 - Meet (かい)</div>
+        <div class="item">食 - Eat (しょく)</div>
+        <div class="item">行 - Go (こう / いく)</div>
+        <div class="item">見 - See (けん / みる)</div>
+        <div class="note">~300 Kanji</div>
+    </div>
+</div>
+
+<!-- N3 -->
+<div class="level" onclick="toggle('n3')">
+    JLPT N3 (Intermediate Kanji)
+    <div id="n3" class="box">
+        <div class="item">経 - Economy</div>
+        <div class="item">発 - Depart</div>
+        <div class="item">業 - Business</div>
+        <div class="note">~1000 Kanji</div>
+    </div>
+</div>
+
+<!-- JS -->
+<script>
+function toggle(id){
+    let el = document.getElementById(id);
+    if(el.style.display === "block"){
+        el.style.display = "none";
+    } else {
+        el.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
