@@ -38,6 +38,8 @@ body{
 
     padding:10px;
     box-sizing:border-box;
+
+    position:relative;
 }
 
 /* TITLE */
@@ -80,13 +82,9 @@ body{
 /* BUTTON AREA */
 .buttons{
     width:100%;
-
     display:flex;
     flex-direction:column;
-
     gap:12px;
-
-    margin-top:20px;
 }
 
 /* BUTTON STYLE */
@@ -105,19 +103,55 @@ body{
     color:black;
 
     backdrop-filter:blur(3px);
+
+    transition:0.2s ease;
 }
 
-/* ABOUT ANIMATION */
+/* CLICK EFFECT */
+.btn:active{
+    transform:scale(0.97);
+    opacity:0.8;
+}
+
+/* ANIMATION */
 @keyframes fadeUp{
     from{
         opacity:0;
         transform:translateY(20px);
     }
-
     to{
         opacity:1;
         transform:translateY(0);
     }
+}
+
+/* =========================
+   BOTTOM NAV (HOME ONLY)
+========================= */
+.bottom-nav{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:10px;
+}
+
+/* HOME ONLY (NO BACK ON INDEX) */
+.nav-btn{
+    padding:6px 12px;
+    font-size:12px;
+
+    border:none;
+    border-radius:8px;
+
+    font-weight:bold;
+}
+
+.nav-btn.home{
+    background:gold;
+    color:black;
 }
 
 </style>
@@ -149,6 +183,13 @@ body{
             Korean Language 🇰🇷
         </button>
 
+    </div>
+
+    <!-- HOME BUTTON ONLY (NO BACK HERE) -->
+    <div class="bottom-nav">
+        <button class="nav-btn home" onclick="location.href='index.html'">
+            🏠 Home
+        </button>
     </div>
 
 </div>
