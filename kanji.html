@@ -10,47 +10,79 @@
 
 body{
     margin:0;
+    font-family:Arial, sans-serif;
     background:#0b0b0b;
-    font-family:Arial;
     color:white;
     padding:20px;
 }
 
 /* TITLE */
-h1{
+.main-title{
     text-align:center;
     color:gold;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+/* SUB TITLE */
+.sub-title{
+    text-align:center;
+    font-size:12px;
+    color:#aaa;
     margin-bottom:20px;
 }
 
-/* LEVEL BUTTONS */
-.level{
-    border:1px solid gold;
-    padding:15px;
-    margin:10px 0;
+/* SECTION BOX */
+.section{
+    border:2px solid gold;
     border-radius:12px;
-    cursor:pointer;
+    padding:15px;
+    margin-bottom:15px;
+    background:rgba(255,255,255,0.05);
 }
 
-/* INNER BOX */
-.box{
-    display:none;
-    margin-top:10px;
-    padding-left:10px;
+/* SECTION TITLE */
+.section-title{
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
-/* KANJI ITEM */
-.item{
-    font-size:14px;
-    margin:5px 0;
-    color:#ddd;
+/* KANJI BIG TITLE STYLE */
+.kanji-main{
+    font-size:28px;
+    color:gold;
+    font-weight:bold;
 }
 
 /* SMALL NOTE */
 .note{
-    font-size:12px;
-    color:gray;
-    margin-top:5px;
+    font-size:11px;
+    color:#aaa;
+    margin-top:3px;
+    margin-bottom:10px;
+}
+
+/* BUTTONS */
+.btn{
+    display:block;
+    width:100%;
+    margin:6px 0;
+
+    padding:10px;
+
+    border:2px solid gold;
+    border-radius:10px;
+
+    background:transparent;
+    color:white;
+
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:rgba(255,215,0,0.1);
 }
 
 </style>
@@ -58,54 +90,54 @@ h1{
 
 <body>
 
-<h1>📘 Kanji System</h1>
-
-<!-- N5 -->
-<div class="level" onclick="toggle('n5')">
-    JLPT N5 (Basic Kanji)
-    <div id="n5" class="box">
-        <div class="item">日 - Sun / Day (にち, ひ)</div>
-        <div class="item">月 - Moon / Month (げつ, つき)</div>
-        <div class="item">山 - Mountain (やま)</div>
-        <div class="item">川 - River (かわ)</div>
-        <div class="note">~100 basic Kanji</div>
-    </div>
+<div class="main-title">
+KANJI
 </div>
 
-<!-- N4 -->
-<div class="level" onclick="toggle('n4')">
-    JLPT N4 (Elementary Kanji)
-    <div id="n4" class="box">
-        <div class="item">会 - Meet (かい)</div>
-        <div class="item">食 - Eat (しょく)</div>
-        <div class="item">行 - Go (こう / いく)</div>
-        <div class="item">見 - See (けん / みる)</div>
-        <div class="note">~300 Kanji</div>
-    </div>
+<div class="sub-title">
+Japanese Exam Required Kanji
 </div>
 
-<!-- N3 -->
-<div class="level" onclick="toggle('n3')">
-    JLPT N3 (Intermediate Kanji)
-    <div id="n3" class="box">
-        <div class="item">経 - Economy</div>
-        <div class="item">発 - Depart</div>
-        <div class="item">業 - Business</div>
-        <div class="note">~1000 Kanji</div>
+<!-- 1 JLPT -->
+<div class="section">
+
+    <div class="section-title">
+        (1) JLPT EXAM
     </div>
+
+    <button class="btn">JLPT - N5</button>
+    <button class="btn">JLPT - N4</button>
+    <button class="btn">JLPT - N3</button>
+    <button class="btn">JLPT - N2</button>
+    <button class="btn">JLPT - N1</button>
+
 </div>
 
-<!-- JS -->
-<script>
-function toggle(id){
-    let el = document.getElementById(id);
-    if(el.style.display === "block"){
-        el.style.display = "none";
-    } else {
-        el.style.display = "block";
-    }
-}
-</script>
+<!-- 2 NAT -->
+<div class="section">
+
+    <div class="section-title">
+        (2) NAT - TEST
+    </div>
+
+    <button class="btn">5Q</button>
+    <button class="btn">4Q</button>
+    <button class="btn">3Q</button>
+    <button class="btn">2Q</button>
+    <button class="btn">1Q</button>
+
+</div>
+
+<!-- 3 JFT -->
+<div class="section">
+
+    <div class="section-title">
+        (3) JFT BASIC (SSW)
+    </div>
+
+    <button class="btn">JFT (N2)</button>
+
+</div>
 
 </body>
 </html>
