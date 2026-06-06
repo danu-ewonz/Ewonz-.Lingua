@@ -1,82 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>JLPT N5 Kanji Chart</title>
+<title>JLPT N5 Kanji</title>
 
 <style>
 
-/* ZOOM LOCK */
-html,body{
-margin:0;
-padding:0;
-font-family:Arial;
-background:#0b0b0b;
-color:white;
-touch-action:none;
-overflow-x:hidden;
+/* =========================
+   GLOBAL FIX (NO FREEZE)
+========================= */
+html, body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#0b0b0b;
+    color:white;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+    touch-action:pan-y;
 }
 
 /* TITLE */
 .title{
-text-align:center;
-color:gold;
-font-size:22px;
-font-weight:bold;
-padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:gold;
+    padding:15px;
 }
 
-/* TABLE WRAP */
+/* SEARCH BOX */
+#searchBox{
+    width:90%;
+    display:block;
+    margin:10px auto;
+    padding:10px;
+
+    border:2px solid gold;
+    border-radius:10px;
+
+    background:#111;
+    color:white;
+    outline:none;
+}
+
+/* CONTAINER */
 .container{
-padding:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+
+    min-height:100vh;
+    padding-bottom:40px;
 }
 
-/* ROW (2 kanji per row) */
+/* ROW (KANJI CARD) */
 .row{
-display:flex;
-justify-content:space-between;
-gap:10px;
-margin-bottom:10px;
-}
+    width:90%;
+    border:2px solid gold;
+    border-radius:12px;
 
-/* CARD */
-.card{
-flex:1;
-border:2px solid gold;
-border-radius:10px;
-padding:10px;
-background:rgba(255,255,255,0.05);
-text-align:center;
+    padding:12px;
+    margin:8px 0;
+
+    background:rgba(255,255,255,0.05);
+    text-align:center;
 }
 
 /* KANJI */
 .kanji{
-font-size:28px;
-color:gold;
-font-weight:bold;
+    font-size:32px;
+    color:gold;
+    font-weight:bold;
 }
 
-/* KANA */
+/* HIRAGANA */
 .kana{
-font-size:11px;
-color:#aaa;
-margin-top:3px;
+    font-size:12px;
+    color:#aaa;
+    margin-top:3px;
 }
 
 /* ROMAJI */
 .romaji{
-font-size:12px;
-color:#00ffcc;
-margin-top:5px;
+    font-size:13px;
+    color:#00ffcc;
+    margin-top:5px;
 }
 
-/* MEANING */
+/* SINHALA */
 .meaning{
-font-size:12px;
-color:white;
-margin-top:5px;
+    font-size:13px;
+    color:white;
+    margin-top:5px;
 }
 
 </style>
@@ -84,7 +104,10 @@ margin-top:5px;
 
 <body>
 
-<div class="title">JLPT N5 KANJI (2 COLUMN CHART)</div>
+<div class="title">JLPT N5 KANJI (120 SYSTEM)</div>
+
+<!-- SEARCH -->
+<input id="searchBox" placeholder="Search Kanji..." />
 
 <div class="container" id="list"></div>
 
@@ -92,34 +115,38 @@ margin-top:5px;
 
 <script>
 
-let box=document.getElementById("list");
+let box = document.getElementById("list");
 
-for(let i=0;i<kanjiN5.length;i+=2){
+/* RENDER KANJI */
+kanjiN5.forEach(k=>{
+    box.innerHTML += `
+    <div class="row">
 
-let k1 = kanjiN5[i];
-let k2 = kanjiN5[i+1];
+        <div class="kanji">${k.kanji}</div>
+        <div class="kana">${k.kana}</div>
+        <div class="romaji">${k.romaji}</div>
+        <div class="meaning">${k.meaning}</div>
 
-box.innerHTML += `
-<div class="row">
+    </div>`;
+});
 
-<!-- LEFT -->
-<div class="card">
-<div class="kanji">${k1?.kanji || ""}</div>
-<div class="kana">${k1?.kana || ""}</div>
-<div class="romaji">${k1?.romaji || ""}</div>
-<div class="meaning">${k1?.meaning || ""}</div>
-</div>
+/* SEARCH FUNCTION */
+document.getElementById("searchBox").addEventListener("keyup", function(){
 
-<!-- RIGHT -->
-<div class="card">
-<div class="kanji">${k2?.kanji || ""}</div>
-<div class="kana">${k2?.kana || ""}</div>
-<div class="romaji">${k2?.romaji || ""}</div>
-<div class="meaning">${k2?.meaning || ""}</div>
-</div>
+let value = this.value.toLowerCase();
+let cards = document.querySelectorAll(".row");
 
-</div>`;
-}
+cards.forEach(card=>{
+    let text = card.innerText.toLowerCase();
+
+    if(text.includes(value)){
+        card.style.display="block";
+    } else {
+        card.style.display="none";
+    }
+});
+
+});
 
 </script>
 
