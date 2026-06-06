@@ -3,24 +3,22 @@ body{
     background:#0b0b0b;
     font-family:Arial, sans-serif;
 
-    /* ✅ SCROLL FIX */
+    /* SCROLL FIX */
     overflow-y:auto;
     overflow-x:hidden;
 
     user-select:none;
     -webkit-user-select:none;
 
-    /* mobile scroll enable */
     touch-action:pan-y;
 
-    /* space for bottom nav */
-    padding-bottom:70px;
+    padding-bottom:80px;
 }
 
-/* SMOOTH UI */
+/* GLOBAL RESET */
 *{
-    -webkit-tap-highlight-color: transparent;
     box-sizing:border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html{
@@ -32,7 +30,6 @@ html{
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
-
     align-items:center;
 
     min-height:100vh;
@@ -55,7 +52,7 @@ html{
     animation:fadeInUp 0.6s ease;
 }
 
-/* BUTTON WRAPPER */
+/* BUTTONS */
 .buttons{
     display:flex;
     flex-direction:column;
@@ -63,12 +60,11 @@ html{
     width:80%;
 }
 
-/* BUTTON BASE */
+/* BUTTON */
 .btn{
     padding:15px;
 
     border:3px solid gold;
-
     border-radius:15px;
 
     font-size:16px;
@@ -85,59 +81,48 @@ html{
     transition:0.2s ease;
 }
 
-/* CLICK EFFECT */
 .btn:active{
-    transform:scale(0.97);
-    opacity:0.8;
+    transform:scale(0.96);
+    opacity:0.85;
 }
 
-/* OPTIONAL COLORS */
-.jp{ background:rgba(255,255,255,0.15); }
-.cn{ background:rgba(255,255,255,0.15); }
-.kr{ background:rgba(255,255,255,0.15); }
-
-/* EXAM BUTTON */
+/* EXAM */
 .exam{
     background:linear-gradient(135deg,#d4af37,#8c6b00);
     color:black;
 }
 
 /* =========================
-   🔥 GLOBAL BUTTON FIX
-========================= */
-button{
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* =========================
-   📱 BOTTOM NAV (ALL PAGES)
+   📱 FLOAT NAV (FINAL FIX)
 ========================= */
 .bottom-nav{
     position:fixed;
-    bottom:10px;
-    left:50%;
-    transform:translateX(-50%);
+    bottom:12px;
+    right:12px;
 
     display:flex;
-    gap:10px;
+    gap:6px;
 
-    background:rgba(0,0,0,0.85);
-    border:1px solid gold;
-    border-radius:12px;
-
-    padding:6px;
+    z-index:999;
 }
 
 .nav-btn{
-    padding:6px 12px;
-    font-size:12px;
+    width:42px;
+    height:42px;
 
     border:none;
-    border-radius:8px;
+    border-radius:50%;
 
+    font-size:14px;
     font-weight:bold;
 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     cursor:pointer;
+
+    box-shadow:0 0 10px rgba(255,215,0,0.25);
 }
 
 .nav-btn.back{
@@ -151,10 +136,9 @@ button{
 }
 
 /* =========================
-   🟢 KANJI SYSTEM (NEW ADD)
+   🟢 KANJI SYSTEM
 ========================= */
 
-/* ROW = 2 kanji layout */
 .row{
     display:flex;
     gap:10px;
@@ -162,7 +146,6 @@ button{
     width:90%;
 }
 
-/* KANJI CARD */
 .card{
     flex:1;
 
@@ -178,34 +161,29 @@ button{
     transition:0.2s ease;
 }
 
-/* CARD TAP EFFECT */
 .card:active{
     transform:scale(0.97);
     opacity:0.9;
 }
 
-/* KANJI BIG TEXT */
 .kanji{
     font-size:30px;
     color:gold;
     font-weight:bold;
 }
 
-/* HIRAGANA */
 .kana{
     font-size:11px;
     color:#aaa;
     margin-top:3px;
 }
 
-/* ROMAJI */
 .romaji{
     font-size:12px;
     color:#00ffcc;
     margin-top:5px;
 }
 
-/* SINHALA MEANING */
 .meaning{
     font-size:12px;
     color:white;
