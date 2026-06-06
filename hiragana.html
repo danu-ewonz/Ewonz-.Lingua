@@ -10,21 +10,14 @@
 
 <style>
 
-/* =========================
-   BODY
-========================= */
 body{
     margin:0;
     background:#0b0b0b;
     font-family:'Poppins', sans-serif;
     color:white;
-
     padding:20px;
 }
 
-/* =========================
-   TITLE
-========================= */
 .title{
     text-align:center;
     font-size:24px;
@@ -33,28 +26,18 @@ body{
     margin-bottom:20px;
 }
 
-/* =========================
-   GRID
-========================= */
 .grid{
     display:grid;
     grid-template-columns:repeat(5, 1fr);
     gap:10px;
 }
 
-/* =========================
-   BOX
-========================= */
 .box{
     background:rgba(255,255,255,0.05);
     border:1px solid #d4af37;
-
     border-radius:12px;
-
     text-align:center;
-
     padding:12px 5px;
-
     transition:0.2s;
 }
 
@@ -62,34 +45,26 @@ body{
     transform:scale(1.05);
 }
 
-/* JAPANESE CHARACTER */
 .jp{
     font-size:22px;
     font-weight:700;
-    color:white;
 }
 
-/* ROMAJI */
 .en{
     font-size:12px;
     color:gold;
     margin-top:5px;
 }
 
-/* BACK BUTTON */
 .back{
     display:block;
     margin:20px auto;
     padding:12px 18px;
-
     border:none;
     border-radius:12px;
-
     background:linear-gradient(135deg,#ff4d4d,#b30000);
     color:white;
-
     font-weight:bold;
-
     cursor:pointer;
 }
 
@@ -102,39 +77,74 @@ body{
 
 <div class="grid">
 
-    <div class="box"><div class="jp">あ</div><div class="en">a</div></div>
-    <div class="box"><div class="jp">い</div><div class="en">i</div></div>
-    <div class="box"><div class="jp">う</div><div class="en">u</div></div>
-    <div class="box"><div class="jp">え</div><div class="en">e</div></div>
-    <div class="box"><div class="jp">お</div><div class="en">o</div></div>
+<!-- A row -->
+<div class="box"><div class="jp">あ</div><div class="en">a</div></div>
+<div class="box"><div class="jp">い</div><div class="en">i</div></div>
+<div class="box"><div class="jp">う</div><div class="en">u</div></div>
+<div class="box"><div class="jp">え</div><div class="en">e</div></div>
+<div class="box"><div class="jp">お</div><div class="en">o</div></div>
 
-    <div class="box"><div class="jp">か</div><div class="en">ka</div></div>
-    <div class="box"><div class="jp">き</div><div class="en">ki</div></div>
-    <div class="box"><div class="jp">く</div><div class="en">ku</div></div>
-    <div class="box"><div class="jp">け</div><div class="en">ke</div></div>
-    <div class="box"><div class="jp">こ</div><div class="en">ko</div></div>
+<!-- K row -->
+<div class="box"><div class="jp">か</div><div class="en">ka</div></div>
+<div class="box"><div class="jp">き</div><div class="en">ki</div></div>
+<div class="box"><div class="jp">く</div><div class="en">ku</div></div>
+<div class="box"><div class="jp">け</div><div class="en">ke</div></div>
+<div class="box"><div class="jp">こ</div><div class="en">ko</div></div>
 
-    <div class="box"><div class="jp">さ</div><div class="en">sa</div></div>
-    <div class="box"><div class="jp">し</div><div class="en">shi</div></div>
-    <div class="box"><div class="jp">す</div><div class="en">su</div></div>
-    <div class="box"><div class="jp">せ</div><div class="en">se</div></div>
-    <div class="box"><div class="jp">そ</div><div class="en">so</div></div>
+<!-- S row -->
+<div class="box"><div class="jp">さ</div><div class="en">sa</div></div>
+<div class="box"><div class="jp">し</div><div class="en">shi</div></div>
+<div class="box"><div class="jp">す</div><div class="en">su</div></div>
+<div class="box"><div class="jp">せ</div><div class="en">se</div></div>
+<div class="box"><div class="jp">そ</div><div class="en">so</div></div>
 
-    <div class="box"><div class="jp">た</div><div class="en">ta</div></div>
-    <div class="box"><div class="jp">ち</div><div class="en">chi</div></div>
-    <div class="box"><div class="jp">つ</div><div class="en">tsu</div></div>
-    <div class="box"><div class="jp">て</div><div class="en">te</div></div>
-    <div class="box"><div class="jp">と</div><div class="en">to</div></div>
+<!-- T row -->
+<div class="box"><div class="jp">た</div><div class="en">ta</div></div>
+<div class="box"><div class="jp">ち</div><div class="en">chi</div></div>
+<div class="box"><div class="jp">つ</div><div class="en">tsu</div></div>
+<div class="box"><div class="jp">て</div><div class="en">te</div></div>
+<div class="box"><div class="jp">と</div><div class="en">to</div></div>
 
-    <div class="box"><div class="jp">な</div><div class="en">na</div></div>
-    <div class="box"><div class="jp">に</div><div class="en">ni</div></div>
-    <div class="box"><div class="jp">ぬ</div><div class="en">nu</div></div>
-    <div class="box"><div class="jp">ね</div><div class="en">ne</div></div>
-    <div class="box"><div class="jp">の</div><div class="en">no</div></div>
+<!-- N row -->
+<div class="box"><div class="jp">な</div><div class="en">na</div></div>
+<div class="box"><div class="jp">に</div><div class="en">ni</div></div>
+<div class="box"><div class="jp">ぬ</div><div class="en">nu</div></div>
+<div class="box"><div class="jp">ね</div><div class="en">ne</div></div>
+<div class="box"><div class="jp">の</div><div class="en">no</div></div>
+
+<!-- H row -->
+<div class="box"><div class="jp">は</div><div class="en">ha</div></div>
+<div class="box"><div class="jp">ひ</div><div class="en">hi</div></div>
+<div class="box"><div class="jp">ふ</div><div class="en">fu</div></div>
+<div class="box"><div class="jp">へ</div><div class="en">he</div></div>
+<div class="box"><div class="jp">ほ</div><div class="en">ho</div></div>
+
+<!-- M row -->
+<div class="box"><div class="jp">ま</div><div class="en">ma</div></div>
+<div class="box"><div class="jp">み</div><div class="en">mi</div></div>
+<div class="box"><div class="jp">む</div><div class="en">mu</div></div>
+<div class="box"><div class="jp">め</div><div class="en">me</div></div>
+<div class="box"><div class="jp">も</div><div class="en">mo</div></div>
+
+<!-- Y row -->
+<div class="box"><div class="jp">や</div><div class="en">ya</div></div>
+<div class="box"><div class="jp">ゆ</div><div class="en">yu</div></div>
+<div class="box"><div class="jp">よ</div><div class="en">yo</div></div>
+
+<!-- R row -->
+<div class="box"><div class="jp">ら</div><div class="en">ra</div></div>
+<div class="box"><div class="jp">り</div><div class="en">ri</div></div>
+<div class="box"><div class="jp">る</div><div class="en">ru</div></div>
+<div class="box"><div class="jp">れ</div><div class="en">re</div></div>
+<div class="box"><div class="jp">ろ</div><div class="en">ro</div></div>
+
+<!-- W + N -->
+<div class="box"><div class="jp">わ</div><div class="en">wa</div></div>
+<div class="box"><div class="jp">を</div><div class="en">wo</div></div>
+<div class="box"><div class="jp">ん</div><div class="en">n</div></div>
 
 </div>
 
-<!-- BACK BUTTON -->
 <button class="back" onclick="history.back()">← Back</button>
 
 </body>
