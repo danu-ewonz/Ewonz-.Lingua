@@ -2,85 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Japanese Writing System</title>
 
-<style>
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-body{
-    margin:0;
-    background:#0b0b0b;
-    font-family:Arial,sans-serif;
-    color:white;
+<link rel="stylesheet" href="style.css">
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    min-height:100vh;
-}
-
-/* MAIN CONTAINER */
-.container{
-    width:90%;
-    max-width:450px;
-}
-
-/* TITLE */
-.title{
-    text-align:center;
-    font-size:26px;
-    font-weight:800;
-
-    color:gold;
-
-    margin-bottom:35px;
-
-    white-space:nowrap;
-    letter-spacing:1px;
-}
-
-/* BUTTON LIST */
-.menu{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    align-items:center;
-}
-
-/* BUTTON STYLE */
-.btn{
-    width:85%;
-    padding:18px;
-
-    border:none;
-    border-radius:15px;
-
-    font-size:18px;
-    font-weight:bold;
-
-    cursor:pointer;
-    color:white;
-
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-/* HIRAGANA */
-.hira{
-    background:linear-gradient(135deg,#ff4d4d,#b30000);
-}
-
-/* KATAKANA */
-.kata{
-    background:linear-gradient(135deg,#4d79ff,#001f66);
-}
-
-</style>
 </head>
 
 <body>
@@ -95,11 +25,11 @@ body{
     <!-- BUTTONS -->
     <div class="menu">
 
-        <button class="btn hira" onclick="alert('Hiragana page next step')">
+        <button class="btn hira">
             あ Hiragana
         </button>
 
-        <button class="btn kata" onclick="alert('Katakana page next step')">
+        <button class="btn kata">
             ア Katakana
         </button>
 
