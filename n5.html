@@ -1,153 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>JLPT N5 Kanji Final</title>
+<title>N5 Kanji 120</title>
 
 <style>
-
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0b0b0b;
-    color:white;
-    padding:15px;
-}
-
-.title{
-    text-align:center;
-    font-size:24px;
-    color:gold;
-    font-weight:bold;
-    margin-bottom:15px;
+background:#0b0b0b;
+color:white;
+font-family:Arial;
+padding:15px;
 }
 
 .row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    border:2px solid gold;
-    border-radius:10px;
-
-    padding:10px;
-    margin-bottom:8px;
-
-    background:rgba(255,255,255,0.05);
+display:flex;
+justify-content:space-between;
+border:2px solid gold;
+padding:10px;
+margin:8px;
+border-radius:10px;
 }
 
-.kanji{
-    font-size:26px;
-    color:gold;
-    font-weight:bold;
-    width:25%;
-    text-align:center;
-}
-
-.pronounce{
-    font-size:12px;
-    color:#aaa;
-    width:35%;
-    text-align:center;
-}
-
-.meaning{
-    font-size:13px;
-    color:white;
-    width:40%;
-    text-align:center;
-}
-
+.k{color:gold;font-size:24px;width:20%;}
+.r{color:#00ffcc;width:30%;text-align:center;}
+.m{width:50%;text-align:center;}
 </style>
 </head>
 
 <body>
 
-<div class="title">JLPT N5 KANJI (FINAL LOCKED SYSTEM ~100)</div>
+<h2 style="text-align:center;color:gold;">JLPT N5 Kanji (120 FULL SYSTEM)</h2>
 
-<!-- BASIC ELEMENTS -->
-<div class="row"><div class="kanji">日</div><div class="pronounce">にち / ひ</div><div class="meaning">දවස</div></div>
-<div class="row"><div class="kanji">月</div><div class="pronounce">げつ / つき</div><div class="meaning">මාසය</div></div>
-<div class="row"><div class="kanji">火</div><div class="pronounce">ひ</div><div class="meaning">ගිනි</div></div>
-<div class="row"><div class="kanji">水</div><div class="pronounce">みず</div><div class="meaning">වතුර</div></div>
-<div class="row"><div class="kanji">木</div><div class="pronounce">き</div><div class="meaning">ගස</div></div>
-<div class="row"><div class="kanji">金</div><div class="pronounce">きん / かね</div><div class="meaning">සල්ලි</div></div>
-<div class="row"><div class="kanji">土</div><div class="pronounce">ど / つち</div><div class="meaning">පොළොව</div></div>
+<div id="list"></div>
 
-<!-- PEOPLE -->
-<div class="row"><div class="kanji">人</div><div class="pronounce">ひと / じん</div><div class="meaning">මිනිසා</div></div>
-<div class="row"><div class="kanji">男</div><div class="pronounce">おとこ</div><div class="meaning">පිරිමි</div></div>
-<div class="row"><div class="kanji">女</div><div class="pronounce">おんな</div><div class="meaning">කාන්තාව</div></div>
-<div class="row"><div class="kanji">子</div><div class="pronounce">こ</div><div class="meaning">දරුවා</div></div>
+<script src="n5-data.js"></script>
 
-<!-- BODY -->
-<div class="row"><div class="kanji">目</div><div class="pronounce">め</div><div class="meaning">ඇස</div></div>
-<div class="row"><div class="kanji">耳</div><div class="pronounce">みみ</div><div class="meaning">කන</div></div>
-<div class="row"><div class="kanji">口</div><div class="pronounce">くち</div><div class="meaning">කට</div></div>
-<div class="row"><div class="kanji">手</div><div class="pronounce">て</div><div class="meaning">අත</div></div>
-<div class="row"><div class="kanji">足</div><div class="pronounce">あし</div><div class="meaning">පාදය</div></div>
+<script>
+let box = document.getElementById("list");
 
-<!-- NATURE -->
-<div class="row"><div class="kanji">山</div><div class="pronounce">やま</div><div class="meaning">කන්ද</div></div>
-<div class="row"><div class="kanji">川</div><div class="pronounce">かわ</div><div class="meaning">ගඟ</div></div>
-<div class="row"><div class="kanji">田</div><div class="pronounce">た</div><div class="meaning">කුඹුර</div></div>
-<div class="row"><div class="kanji">空</div><div class="pronounce">そら</div><div class="meaning">අහස</div></div>
-<div class="row"><div class="kanji">雨</div><div class="pronounce">あめ</div><div class="meaning">වැස්ස</div></div>
-<div class="row"><div class="kanji">風</div><div class="pronounce">かぜ</div><div class="meaning">සුළඟ</div></div>
+kanjiN5.forEach(k=>{
+box.innerHTML += `
+<div class="row">
+<div class="k">${k.kanji}</div>
+<div class="r">${k.romaji}</div>
+<div class="m">${k.meaning}</div>
+</div>`;
+});
 
-<!-- DIRECTION -->
-<div class="row"><div class="kanji">上</div><div class="pronounce">うえ</div><div class="meaning">ඉහළ</div></div>
-<div class="row"><div class="kanji">下</div><div class="pronounce">した</div><div class="meaning">පහළ</div></div>
-<div class="row"><div class="kanji">中</div><div class="pronounce">なか</div><div class="meaning">මැද</div></div>
-<div class="row"><div class="kanji">外</div><div class="pronounce">そと</div><div class="meaning">පිටත</div></div>
-<div class="row"><div class="kanji">前</div><div class="pronounce">まえ</div><div class="meaning">ඉදිරිය</div></div>
-<div class="row"><div class="kanji">後</div><div class="pronounce">あと</div><div class="meaning">පසුපස</div></div>
-
-<!-- NUMBERS -->
-<div class="row"><div class="kanji">一</div><div class="pronounce">いち</div><div class="meaning">1</div></div>
-<div class="row"><div class="kanji">二</div><div class="pronounce">に</div><div class="meaning">2</div></div>
-<div class="row"><div class="kanji">三</div><div class="pronounce">さん</div><div class="meaning">3</div></div>
-<div class="row"><div class="kanji">四</div><div class="pronounce">し</div><div class="meaning">4</div></div>
-<div class="row"><div class="kanji">五</div><div class="pronounce">ご</div><div class="meaning">5</div></div>
-<div class="row"><div class="kanji">六</div><div class="pronounce">ろく</div><div class="meaning">6</div></div>
-<div class="row"><div class="kanji">七</div><div class="pronounce">しち</div><div class="meaning">7</div></div>
-<div class="row"><div class="kanji">八</div><div class="pronounce">はち</div><div class="meaning">8</div></div>
-<div class="row"><div class="kanji">九</div><div class="pronounce">きゅう</div><div class="meaning">9</div></div>
-<div class="row"><div class="kanji">十</div><div class="pronounce">じゅう</div><div class="meaning">10</div></div>
-
-<!-- SCHOOL -->
-<div class="row"><div class="kanji">学</div><div class="pronounce">がく</div><div class="meaning">ඉගෙනීම</div></div>
-<div class="row"><div class="kanji">校</div><div class="pronounce">こう</div><div class="meaning">පාසල</div></div>
-<div class="row"><div class="kanji">本</div><div class="pronounce">ほん</div><div class="meaning">පොත</div></div>
-<div class="row"><div class="kanji">語</div><div class="pronounce">ご</div><div class="meaning">භාෂාව</div></div>
-<div class="row"><div class="kanji">文</div><div class="pronounce">ぶん</div><div class="meaning">වචන</div></div>
-
-<!-- ACTION -->
-<div class="row"><div class="kanji">見</div><div class="pronounce">み</div><div class="meaning">බැලීම</div></div>
-<div class="row"><div class="kanji">聞</div><div class="pronounce">き</div><div class="meaning">ඇසීම</div></div>
-<div class="row"><div class="kanji">行</div><div class="pronounce">い</div><div class="meaning">යෑම</div></div>
-<div class="row"><div class="kanji">来</div><div class="pronounce">く</div><div class="meaning">එනවා</div></div>
-<div class="row"><div class="kanji">出</div><div class="pronounce">で</div><div class="meaning">පිටවීම</div></div>
-<div class="row"><div class="kanji">入</div><div class="pronounce">はい</div><div class="meaning">ඇතුල්වීම</div></div>
-
-<!-- OBJECTS -->
-<div class="row"><div class="kanji">車</div><div class="pronounce">くるま</div><div class="meaning">කාර්</div></div>
-<div class="row"><div class="kanji">門</div><div class="pronounce">もん</div><div class="meaning">දොරටුව</div></div>
-<div class="row"><div class="kanji">休</div><div class="pronounce">やす</div><div class="meaning">විවේකය</div></div>
-<div class="row"><div class="kanji">買</div><div class="pronounce">か</div><div class="meaning">මිලදී ගැනීම</div></div>
-<div class="row"><div class="kanji">売</div><div class="pronounce">う</div><div class="meaning">විකිණීම</div></div>
-
-<!-- EXTRA CORE -->
-<div class="row"><div class="kanji">高</div><div class="pronounce">たか</div><div class="meaning">ඉහළ / මිල අධික</div></div>
-<div class="row"><div class="kanji">安</div><div class="pronounce">やす</div><div class="meaning">අඩු මිල</div></div>
-<div class="row"><div class="kanji">小</div><div class="pronounce">ちい</div><div class="meaning">කුඩා</div></div>
-<div class="row"><div class="kanji">大</div><div class="pronounce">おお</div><div class="meaning">විශාල</div></div>
-<div class="row"><div class="kanji">新</div><div class="pronounce">しん</div><div class="meaning">අලුත්</div></div>
-<div class="row"><div class="kanji">古</div><div class="pronounce">ふる</div><div class="meaning">පරණ</div></div>
-<div class="row"><div class="kanji">多</div><div class="pronounce">おお</div><div class="meaning">බහු / ගොඩක්</div></div>
-<div class="row"><div class="kanji">少</div><div class="pronounce">すく</div><div class="meaning">අඩු</div></div>
+console.log("Rendered:", kanjiN5.length);
+</script>
 
 </body>
 </html>
