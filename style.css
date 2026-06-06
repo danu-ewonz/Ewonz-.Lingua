@@ -1,39 +1,61 @@
 /* =========================
-   FULL BACKGROUND SCREEN
+   BODY CENTER
 ========================= */
 body{
     margin:0;
     height:100vh;
-    width:100vw;
 
-    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
+    background:#0b0b0b;
     font-family:'Montserrat', sans-serif;
+}
+
+/* =========================
+   MAIN CARD (IMAGE SMALL + GOLD BORDER)
+========================= */
+.card{
+    width:90vw;
+    max-width:420px;
+    aspect-ratio:3/4;
+
+    position:relative;
 
     background:url("1780704324974.png") no-repeat center center;
     background-size:cover;
+
+    border-radius:20px;
+
+    /* 🔥 GOLD BORDER */
+    border:2px solid #d4af37;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.7);
 }
 
 /* DARK OVERLAY */
-.overlay{
+.card::before{
+    content:"";
     position:absolute;
     inset:0;
     background:rgba(0,0,0,0.45);
 }
 
 /* =========================
-   TITLE (LARGER + CLEAN POSITION)
+   TITLE (TOP MOST)
 ========================= */
 .title{
     position:absolute;
-    top:18%;
+    top:12px;   /* 🔥 moved to top */
     width:100%;
     text-align:center;
 
-    font-size:38px;   /* 🔥 bigger */
+    font-size:34px;
     font-weight:900;
     letter-spacing:3px;
-
     text-transform:uppercase;
 
     background: linear-gradient(90deg,#d4af37,#ffd700,#b8860b);
@@ -44,12 +66,12 @@ body{
 }
 
 /* =========================
-   TAGLINE (LIFTED UP)
+   TAGLINE (NO WHITE BOX)
 ========================= */
 .tagline{
     position:absolute;
-    top:30%;   /* 🔥 moved up */
-    width:80%;
+    top:70px;
+    width:85%;
     left:50%;
     transform:translateX(-50%);
 
@@ -58,11 +80,11 @@ body{
     font-size:13px;
     color:rgba(255,255,255,0.9);
 
-    background:rgba(255,255,255,0.05);
-    padding:10px 12px;
-    border-radius:12px;
+    /* ❌ removed background box */
+    background:none;
+    padding:0;
 
-    backdrop-filter: blur(6px);
+    line-height:1.4;
 
     animation: float 2.5s ease-in-out infinite alternate;
 }
@@ -82,13 +104,13 @@ body{
 ========================= */
 .buttons{
     position:absolute;
-    bottom:12%;
+    bottom:40px;
     width:100%;
 
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:15px;
+    gap:12px;
 }
 
 /* BUTTON STYLE */
