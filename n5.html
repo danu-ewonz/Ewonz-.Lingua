@@ -1,53 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>N5 Kanji 120</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>JLPT N5 Kanji</title>
 
 <style>
+
+/* 🚫 ZOOM BLOCK */
+html, body{
+    touch-action:none;
+    user-select:none;
+    overflow-x:hidden;
+}
+
+/* BODY */
 body{
-background:#0b0b0b;
-color:white;
-font-family:Arial;
-padding:15px;
+    margin:0;
+    font-family:Arial;
+    background:#0b0b0b;
+    color:white;
+    padding:15px;
 }
 
+/* TITLE */
+.title{
+    text-align:center;
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/* CARD ROW */
 .row{
-display:flex;
-justify-content:space-between;
-border:2px solid gold;
-padding:10px;
-margin:8px;
-border-radius:10px;
+    border:2px solid gold;
+    border-radius:12px;
+
+    padding:12px;
+    margin-bottom:10px;
+
+    background:rgba(255,255,255,0.05);
 }
 
-.k{color:gold;font-size:24px;width:20%;}
-.r{color:#00ffcc;width:30%;text-align:center;}
-.m{width:50%;text-align:center;}
+/* KANJI BIG */
+.kanji{
+    font-size:32px;
+    color:gold;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* JAPANESE MEANING (small top note) */
+.jp-meaning{
+    font-size:11px;
+    color:#aaa;
+    text-align:center;
+    margin-top:3px;
+}
+
+/* ROMAJI */
+.romaji{
+    font-size:13px;
+    color:#00ffcc;
+    text-align:center;
+    margin-top:5px;
+}
+
+/* SINHALA */
+.sinhala{
+    font-size:13px;
+    color:white;
+    text-align:center;
+    margin-top:5px;
+}
+
 </style>
 </head>
 
 <body>
 
-<h2 style="text-align:center;color:gold;">JLPT N5 Kanji (120 FULL SYSTEM)</h2>
+<div class="title">JLPT N5 KANJI</div>
 
 <div id="list"></div>
 
 <script src="n5-data.js"></script>
 
 <script>
+
 let box = document.getElementById("list");
 
 kanjiN5.forEach(k=>{
-box.innerHTML += `
-<div class="row">
-<div class="k">${k.kanji}</div>
-<div class="r">${k.romaji}</div>
-<div class="m">${k.meaning}</div>
-</div>`;
+    box.innerHTML += `
+    <div class="row">
+
+        <div class="kanji">${k.kanji}</div>
+
+        <div class="jp-meaning">Japanese meaning</div>
+
+        <div class="romaji">${k.romaji}</div>
+
+        <div class="sinhala">${k.meaning}</div>
+
+    </div>`;
 });
 
-console.log("Rendered:", kanjiN5.length);
 </script>
 
 </body>
