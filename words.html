@@ -72,21 +72,27 @@ body{
     </div>
 
     <!-- HIRAGANA -->
-    <button class="btn hira" onclick="location.href='hiragana.html'">
+    <button class="btn hira" onclick="go('hiragana.html')">
         Hiragana あ
     </button>
 
     <!-- KATAKANA -->
-    <button class="btn kata" onclick="location.href='katakana.html'">
+    <button class="btn kata" onclick="go('katakana.html')">
         Katakana ア
     </button>
 
     <!-- KANJI -->
-    <button class="btn kanji" onclick="location.href='kanji.html'">
+    <button class="btn kanji" onclick="go('kanji.html')">
         Kanji (Required 漢字)
     </button>
 
 </div>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+</script>
 
 </body>
 </html>
