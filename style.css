@@ -2,21 +2,28 @@ body{
     margin:0;
     background:#0b0b0b;
     font-family:Arial, sans-serif;
-    overflow:hidden;
+
+    /* ✅ FIX: ENABLE SCROLL */
+    overflow-y:auto;
+    overflow-x:hidden;
+
     user-select:none;
-    touch-action:none;
+
+    /* allow vertical scroll on mobile */
+    touch-action:pan-y;
 }
 
 /* CENTER */
 .container{
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start; /* FIX: was center */
     align-items:center;
-    height:100vh;
+
+    min-height:100vh; /* FIX: allows scrolling content */
 }
 
-/* TITLE (updated style) */
+/* TITLE */
 .title{
     font-size:26px;
     color:gold;
@@ -58,7 +65,7 @@ body{
     box-shadow:0 0 8px rgba(255,215,0,0.4);
 }
 
-/* OPTIONAL COLOR STYLES (can keep or remove) */
+/* OPTIONAL */
 .jp{ background:rgba(255,255,255,0.15); }
 .cn{ background:rgba(255,255,255,0.15); }
 .kr{ background:rgba(255,255,255,0.15); }
@@ -69,7 +76,7 @@ body{
     color:black;
 }
 
-/* ANIMATION (for future use) */
+/* ANIMATION */
 @keyframes fadeInUp{
     from{
         opacity:0;
