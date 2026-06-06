@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Ewonz Lingua</title>
+<title>EWONZ LiNGUA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,14 +15,14 @@ body{
     margin:0;
     height:100vh;
     overflow:hidden;
-    font-family:Arial;
+    font-family:Arial, sans-serif;
     background:#000;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-/* 3:4 CARD */
+/* MAIN CARD */
 .card{
     width:320px;
     height:430px;
@@ -38,47 +40,73 @@ body{
     box-sizing:border-box;
 }
 
-/* TITLE (SMALL + TOP) */
+/* TITLE */
 .title{
-    font-size:22px;   /* smaller */
+    font-family:'Cinzel', serif;
+
+    font-size:32px;
     font-weight:bold;
+
     color:gold;
-    margin-top:5px;   /* move up */
-    margin-bottom:5px;
-    text-shadow:2px 2px 5px black;
+
+    text-align:center;
+
+    margin-top:5px;
+    margin-bottom:10px;
+
+    text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0px  0px 6px rgba(0,0,0,0.5);
 }
 
 /* ABOUT */
 .about{
-    font-size:11px;
-    color:white;
+    font-size:12px;
+
+    color:black;
+
+    font-weight:600;
+
     text-align:center;
-    padding:5px 10px;
-    margin-bottom:15px;
+
+    padding:5px 15px;
+
+    margin-top:15px;
+    margin-bottom:60px;
 }
 
 /* BUTTON AREA */
 .buttons{
     width:100%;
+
     display:flex;
     flex-direction:column;
-    gap:10px;
+
+    gap:12px;
+
+    margin-top:20px;
 }
 
 /* BUTTON STYLE */
 .btn{
     padding:12px;
-    border:none;
+
+    border:2px solid black;
+
     border-radius:12px;
+
     font-size:14px;
     font-weight:bold;
-    color:white;
-}
 
-/* COLORS */
-.jp{background:#c0392b;}
-.cn{background:#2980b9;}
-.kr{background:#27ae60;}
+    background:rgba(255,255,255,0.25);
+
+    color:black;
+
+    backdrop-filter:blur(3px);
+}
 
 </style>
 </head>
@@ -87,24 +115,25 @@ body{
 
 <div class="card">
 
-    <!-- TITLE SMALL + TOP -->
-    <div class="title">EWONZ LINGUA</div>
+    <div class="title">
+        EWONZ LINGUA
+    </div>
 
     <div class="about">
-        “Discover the world through language, connect globally, and grow beyond limits.”
+        Discover the world through language, connect globally, and grow beyond limits.
     </div>
 
     <div class="buttons">
 
-        <button class="btn jp" onclick="location.href='words.html'">
+        <button class="btn" onclick="location.href='words.html'">
             Japanese Language 🇯🇵
         </button>
 
-        <button class="btn cn">
+        <button class="btn">
             Chinese Language 🇨🇳
         </button>
 
-        <button class="btn kr">
+        <button class="btn">
             Korean Language 🇰🇷
         </button>
 
