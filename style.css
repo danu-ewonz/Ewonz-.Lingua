@@ -3,7 +3,6 @@ body{
     background:#0b0b0b;
     font-family:Arial, sans-serif;
 
-    /* SCROLL FIX */
     overflow-y:auto;
     overflow-x:hidden;
 
@@ -11,8 +10,6 @@ body{
     -webkit-user-select:none;
 
     touch-action:pan-y;
-
-    padding-bottom:80px;
 }
 
 /* GLOBAL RESET */
@@ -25,15 +22,13 @@ html{
     scroll-behavior:smooth;
 }
 
-/* CENTER */
+/* CENTER WRAPPER (optional use) */
 .container{
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
     align-items:center;
-
     min-height:100vh;
-    padding-bottom:20px;
+    padding:20px 0;
 }
 
 /* TITLE */
@@ -52,7 +47,7 @@ html{
     animation:fadeInUp 0.6s ease;
 }
 
-/* BUTTONS */
+/* BUTTON SYSTEM */
 .buttons{
     display:flex;
     flex-direction:column;
@@ -60,7 +55,6 @@ html{
     width:80%;
 }
 
-/* BUTTON */
 .btn{
     padding:15px;
 
@@ -71,11 +65,9 @@ html{
     font-weight:bold;
 
     color:black;
-
     background:rgba(255,255,255,0.15);
 
     backdrop-filter:blur(3px);
-
     box-shadow:0 0 8px rgba(255,215,0,0.4);
 
     transition:0.2s ease;
@@ -86,52 +78,9 @@ html{
     opacity:0.85;
 }
 
-/* EXAM */
+/* EXAM BUTTON */
 .exam{
     background:linear-gradient(135deg,#d4af37,#8c6b00);
-    color:black;
-}
-
-/* =========================
-   📱 FLOAT NAV (FINAL FIX)
-========================= */
-.bottom-nav{
-    position:fixed;
-    bottom:12px;
-    right:12px;
-
-    display:flex;
-    gap:6px;
-
-    z-index:999;
-}
-
-.nav-btn{
-    width:42px;
-    height:42px;
-
-    border:none;
-    border-radius:50%;
-
-    font-size:14px;
-    font-weight:bold;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    cursor:pointer;
-
-    box-shadow:0 0 10px rgba(255,215,0,0.25);
-}
-
-.nav-btn.back{
-    background:#e74c3c;
-    color:white;
-}
-
-.nav-btn.home{
-    background:gold;
     color:black;
 }
 
@@ -146,7 +95,8 @@ html{
     width:90%;
 }
 
-.card{
+/* renamed to avoid conflict */
+.kanji-card{
     flex:1;
 
     border:2px solid gold;
@@ -161,7 +111,7 @@ html{
     transition:0.2s ease;
 }
 
-.card:active{
+.kanji-card:active{
     transform:scale(0.97);
     opacity:0.9;
 }
