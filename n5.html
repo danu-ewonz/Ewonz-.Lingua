@@ -4,40 +4,89 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>N5 Kanji 120</title>
+<title>JLPT N5 Kanji Chart</title>
 
 <style>
 
-body{
+/* ZOOM LOCK */
+html,body{
+margin:0;
+padding:0;
+font-family:Arial;
 background:#0b0b0b;
 color:white;
-font-family:Arial;
-padding:15px;
 touch-action:none;
+overflow-x:hidden;
 }
 
+/* TITLE */
+.title{
+text-align:center;
+color:gold;
+font-size:22px;
+font-weight:bold;
+padding:15px;
+}
+
+/* TABLE WRAP */
+.container{
+padding:10px;
+}
+
+/* ROW (2 kanji per row) */
 .row{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-bottom:10px;
+}
+
+/* CARD */
+.card{
+flex:1;
 border:2px solid gold;
 border-radius:10px;
-padding:12px;
-margin:10px 0;
+padding:10px;
 background:rgba(255,255,255,0.05);
 text-align:center;
 }
 
-.kanji{font-size:32px;color:gold;font-weight:bold;}
-.kana{font-size:12px;color:#aaa;margin-top:3px;}
-.romaji{font-size:13px;color:#00ffcc;margin-top:5px;}
-.meaning{font-size:13px;color:white;margin-top:5px;}
+/* KANJI */
+.kanji{
+font-size:28px;
+color:gold;
+font-weight:bold;
+}
+
+/* KANA */
+.kana{
+font-size:11px;
+color:#aaa;
+margin-top:3px;
+}
+
+/* ROMAJI */
+.romaji{
+font-size:12px;
+color:#00ffcc;
+margin-top:5px;
+}
+
+/* MEANING */
+.meaning{
+font-size:12px;
+color:white;
+margin-top:5px;
+}
 
 </style>
 </head>
 
 <body>
 
-<h2 style="text-align:center;color:gold;">JLPT N5 KANJI (120 FULL SYSTEM)</h2>
+<div class="title">JLPT N5 KANJI (2 COLUMN CHART)</div>
 
-<div id="list"></div>
+<div class="container" id="list"></div>
 
 <script src="n5-data.js"></script>
 
@@ -45,19 +94,32 @@ text-align:center;
 
 let box=document.getElementById("list");
 
-kanjiN5.forEach(k=>{
+for(let i=0;i<kanjiN5.length;i+=2){
+
+let k1 = kanjiN5[i];
+let k2 = kanjiN5[i+1];
+
 box.innerHTML += `
 <div class="row">
 
-<div class="kanji">${k.kanji}</div>
-<div class="kana">${k.kana}</div>
-<div class="romaji">${k.romaji}</div>
-<div class="meaning">${k.meaning}</div>
+<!-- LEFT -->
+<div class="card">
+<div class="kanji">${k1?.kanji || ""}</div>
+<div class="kana">${k1?.kana || ""}</div>
+<div class="romaji">${k1?.romaji || ""}</div>
+<div class="meaning">${k1?.meaning || ""}</div>
+</div>
+
+<!-- RIGHT -->
+<div class="card">
+<div class="kanji">${k2?.kanji || ""}</div>
+<div class="kana">${k2?.kana || ""}</div>
+<div class="romaji">${k2?.romaji || ""}</div>
+<div class="meaning">${k2?.meaning || ""}</div>
+</div>
 
 </div>`;
-});
-
-console.log("FINAL COUNT =", kanjiN5.length);
+}
 
 </script>
 
