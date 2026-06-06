@@ -1,87 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>JLPT N5 Kanji</title>
+<title>N5 Kanji 120</title>
 
 <style>
 
-/* 🚫 ZOOM BLOCK */
-html, body{
-    touch-action:none;
-    user-select:none;
-    overflow-x:hidden;
-}
-
-/* BODY */
 body{
-    margin:0;
-    font-family:Arial;
-    background:#0b0b0b;
-    color:white;
-    padding:15px;
+background:#0b0b0b;
+color:white;
+font-family:Arial;
+padding:15px;
+touch-action:none;
 }
 
-/* TITLE */
-.title{
-    text-align:center;
-    color:gold;
-    font-size:22px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-/* CARD ROW */
 .row{
-    border:2px solid gold;
-    border-radius:12px;
-
-    padding:12px;
-    margin-bottom:10px;
-
-    background:rgba(255,255,255,0.05);
+border:2px solid gold;
+border-radius:10px;
+padding:12px;
+margin:10px 0;
+background:rgba(255,255,255,0.05);
+text-align:center;
 }
 
-/* KANJI BIG */
-.kanji{
-    font-size:32px;
-    color:gold;
-    font-weight:bold;
-    text-align:center;
-}
-
-/* JAPANESE MEANING (small top note) */
-.jp-meaning{
-    font-size:11px;
-    color:#aaa;
-    text-align:center;
-    margin-top:3px;
-}
-
-/* ROMAJI */
-.romaji{
-    font-size:13px;
-    color:#00ffcc;
-    text-align:center;
-    margin-top:5px;
-}
-
-/* SINHALA */
-.sinhala{
-    font-size:13px;
-    color:white;
-    text-align:center;
-    margin-top:5px;
-}
+.kanji{font-size:32px;color:gold;font-weight:bold;}
+.kana{font-size:12px;color:#aaa;margin-top:3px;}
+.romaji{font-size:13px;color:#00ffcc;margin-top:5px;}
+.meaning{font-size:13px;color:white;margin-top:5px;}
 
 </style>
 </head>
 
 <body>
 
-<div class="title">JLPT N5 KANJI</div>
+<h2 style="text-align:center;color:gold;">JLPT N5 KANJI (120 FULL SYSTEM)</h2>
 
 <div id="list"></div>
 
@@ -89,22 +43,21 @@ body{
 
 <script>
 
-let box = document.getElementById("list");
+let box=document.getElementById("list");
 
 kanjiN5.forEach(k=>{
-    box.innerHTML += `
-    <div class="row">
+box.innerHTML += `
+<div class="row">
 
-        <div class="kanji">${k.kanji}</div>
+<div class="kanji">${k.kanji}</div>
+<div class="kana">${k.kana}</div>
+<div class="romaji">${k.romaji}</div>
+<div class="meaning">${k.meaning}</div>
 
-        <div class="jp-meaning">Japanese meaning</div>
-
-        <div class="romaji">${k.romaji}</div>
-
-        <div class="sinhala">${k.meaning}</div>
-
-    </div>`;
+</div>`;
 });
+
+console.log("FINAL COUNT =", kanjiN5.length);
 
 </script>
 
