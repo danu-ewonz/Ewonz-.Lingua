@@ -25,54 +25,49 @@ body{
     margin-bottom:15px;
 }
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:10px;
+/* TABLE CONTAINER */
+.table{
+    width:100%;
 }
 
-/* CARD */
-.card{
+/* ROW */
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
     border:2px solid gold;
-    border-radius:12px;
-    padding:12px;
+    border-radius:10px;
+
+    padding:10px;
+    margin-bottom:8px;
+
     background:rgba(255,255,255,0.05);
-    text-align:center;
 }
 
 /* KANJI */
 .kanji{
-    font-size:30px;
+    font-size:26px;
     color:gold;
     font-weight:bold;
+    width:25%;
+    text-align:center;
+}
+
+/* PRONOUNCE */
+.pronounce{
+    font-size:12px;
+    color:#aaa;
+    width:35%;
+    text-align:center;
 }
 
 /* MEANING */
 .meaning{
-    font-size:12px;
-    margin-top:5px;
+    font-size:13px;
     color:white;
-}
-
-/* READING */
-.reading{
-    font-size:11px;
-    color:#aaa;
-    margin-top:3px;
-}
-
-/* BACK BUTTON */
-.back{
-    display:block;
+    width:40%;
     text-align:center;
-    margin-bottom:15px;
-    color:black;
-    background:gold;
-    padding:10px;
-    border-radius:10px;
-    font-weight:bold;
-    text-decoration:none;
 }
 
 </style>
@@ -80,60 +75,58 @@ body{
 
 <body>
 
-<a class="back" href="kanji.html">⬅ Back</a>
-
 <div class="title">
 JLPT N5 KANJI
 </div>
 
-<div class="grid">
+<div class="table">
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">日</div>
-        <div class="meaning">Day / Sun</div>
-        <div class="reading">にち / ひ</div>
+        <div class="pronounce">にち / ひ</div>
+        <div class="meaning">දවස / සූර්යයා</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">月</div>
-        <div class="meaning">Moon / Month</div>
-        <div class="reading">げつ / つき</div>
+        <div class="pronounce">げつ / つき</div>
+        <div class="meaning">මාසය / චන්ද්‍රයා</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">人</div>
-        <div class="meaning">Person</div>
-        <div class="reading">ひと / じん</div>
+        <div class="pronounce">ひと / じん</div>
+        <div class="meaning">මිනිසා</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">山</div>
-        <div class="meaning">Mountain</div>
-        <div class="reading">やま</div>
+        <div class="pronounce">やま</div>
+        <div class="meaning">කන්ද</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">川</div>
-        <div class="meaning">River</div>
-        <div class="reading">かわ</div>
+        <div class="pronounce">かわ</div>
+        <div class="meaning">ගඟ</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">水</div>
-        <div class="meaning">Water</div>
-        <div class="reading">みず</div>
+        <div class="pronounce">みず</div>
+        <div class="meaning">වතුර</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">火</div>
-        <div class="meaning">Fire</div>
-        <div class="reading">ひ</div>
+        <div class="pronounce">ひ</div>
+        <div class="meaning">ගිනි</div>
     </div>
 
-    <div class="card">
+    <div class="row">
         <div class="kanji">木</div>
-        <div class="meaning">Tree</div>
-        <div class="reading">き</div>
+        <div class="pronounce">き</div>
+        <div class="meaning">ගස</div>
     </div>
 
 </div>
