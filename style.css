@@ -1,24 +1,23 @@
 /* =========================
-   BODY CENTER
+   BODY
 ========================= */
 body{
     margin:0;
     height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:#0b0b0b;
+    overflow:hidden;
     font-family:'Montserrat', sans-serif;
 }
 
 /* =========================
-   MAIN CARD (IMAGE SMALL + GOLD BORDER)
+   MAIN CARD (3:4)
 ========================= */
 .card{
-    width:90vw;
-    max-width:420px;
+    width:92vw;
+    max-width:450px;
     aspect-ratio:3/4;
 
     position:relative;
@@ -26,17 +25,19 @@ body{
     background:url("1780704324974.png") no-repeat center center;
     background-size:cover;
 
-    border-radius:20px;
-
-    /* 🔥 GOLD BORDER */
     border:2px solid #d4af37;
+    border-radius:20px;
 
     overflow:hidden;
 
-    box-shadow:0 10px 40px rgba(0,0,0,0.7);
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.7),
+        0 0 20px rgba(212,175,55,0.2);
 }
 
-/* DARK OVERLAY */
+/* =========================
+   DARK OVERLAY
+========================= */
 .card::before{
     content:"";
     position:absolute;
@@ -45,57 +46,73 @@ body{
 }
 
 /* =========================
-   TITLE (TOP MOST)
+   TITLE
 ========================= */
 .title{
     position:absolute;
-    top:12px;   /* 🔥 moved to top */
+    top:12px;
+    left:0;
     width:100%;
+
     text-align:center;
 
-    font-size:34px;
+    font-size:30px;
     font-weight:900;
-    letter-spacing:3px;
-    text-transform:uppercase;
+    letter-spacing:2px;
 
-    background: linear-gradient(90deg,#d4af37,#ffd700,#b8860b);
+    text-transform:uppercase;
+    white-space:nowrap;
+
+    background:linear-gradient(
+        90deg,
+        #d4af37,
+        #ffd700,
+        #b8860b
+    );
+
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    -webkit-text-stroke:1px black;
+    -webkit-text-stroke:1px #000;
+
+    z-index:2;
 }
 
 /* =========================
-   TAGLINE (NO WHITE BOX)
+   TAGLINE
 ========================= */
 .tagline{
     position:absolute;
     top:70px;
-    width:85%;
     left:50%;
+
     transform:translateX(-50%);
+
+    width:82%;
 
     text-align:center;
 
     font-size:13px;
-    color:rgba(255,255,255,0.9);
+    line-height:1.5;
 
-    /* ❌ removed background box */
-    background:none;
-    padding:0;
+    color:white;
 
-    line-height:1.4;
+    z-index:2;
 
-    animation: float 2.5s ease-in-out infinite alternate;
+    animation:floatText 3s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
-@keyframes float{
+@keyframes floatText{
     0%{
         transform:translateX(-50%) translateY(0px);
     }
+
+    50%{
+        transform:translateX(-50%) translateY(-5px);
+    }
+
     100%{
-        transform:translateX(-50%) translateY(-6px);
+        transform:translateX(-50%) translateY(0px);
     }
 }
 
@@ -104,37 +121,73 @@ body{
 ========================= */
 .buttons{
     position:absolute;
-    bottom:40px;
+    bottom:45px;
     width:100%;
 
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:12px;
+    gap:14px;
+
+    z-index:2;
 }
 
-/* BUTTON STYLE */
+/* =========================
+   BUTTONS
+========================= */
 .btn{
-    width:75%;
+    width:78%;
+
     padding:14px;
 
     border:none;
-    border-radius:12px;
+    border-radius:14px;
 
     font-size:16px;
-    font-weight:bold;
+    font-weight:700;
 
-    color:white;
     cursor:pointer;
 
     transition:0.3s;
+
+    color:white;
 }
 
 .btn:hover{
     transform:scale(1.05);
 }
 
-/* COLORS */
-.jp{ background:linear-gradient(135deg,#ff4d4d,#b30000); }
-.cn{ background:linear-gradient(135deg,#ffcc00,#ff8800); color:#000; }
-.kr{ background:linear-gradient(135deg,#4d79ff,#001f66); }
+/* =========================
+   JAPANESE
+========================= */
+.jp{
+    background:linear-gradient(
+        135deg,
+        #ff4d4d,
+        #b30000
+    );
+}
+
+/* =========================
+   CHINESE
+========================= */
+.cn{
+    background:linear-gradient(
+        135deg,
+        #ffcc00,
+        #ff8800
+    );
+
+    color:#000;
+}
+
+/* =========================
+   KOREAN
+========================= */
+.kr{
+    background:linear-gradient(
+        135deg,
+        #4d79ff,
+        #001f66
+    );
+}
