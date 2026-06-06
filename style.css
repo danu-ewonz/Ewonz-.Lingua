@@ -1,192 +1,210 @@
 body{
-    margin:0;
-    background:#0b0b0b;
-    font-family:Arial, sans-serif;
+margin:0;
+background:#0b0b0b;
+font-family:Arial, sans-serif;
 
-    overflow-y:auto;
-    overflow-x:hidden;
+/* SCROLL FIX */  
+overflow-y:auto;  
+overflow-x:hidden;  
 
-    user-select:none;
-    -webkit-user-select:none;
+user-select:none;  
+-webkit-user-select:none;  
 
-    touch-action:pan-y;
+touch-action:pan-y;  
 
-    padding-bottom:80px;
+padding-bottom:80px;
+
 }
 
 /* GLOBAL RESET */
 *{
-    box-sizing:border-box;
-    -webkit-tap-highlight-color: transparent;
+box-sizing:border-box;
+-webkit-tap-highlight-color: transparent;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
+}
+
+/* CENTER */
+.container{
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
+
+min-height:100vh;  
+padding-bottom:20px;
+
 }
 
 /* TITLE */
 .title{
-    font-size:26px;
-    color:gold;
-    font-weight:bold;
-    margin-bottom:30px;
+font-size:26px;
+color:gold;
+font-weight:bold;
+margin-bottom:30px;
 
-    text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000;
+text-shadow:  
+-2px -2px 0 #000,  
+ 2px -2px 0 #000,  
+-2px  2px 0 #000,  
+ 2px  2px 0 #000;  
 
-    animation:fadeInUp 0.6s ease;
+animation:fadeInUp 0.6s ease;
+
 }
 
 /* BUTTONS */
 .buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    width:80%;
+display:flex;
+flex-direction:column;
+gap:15px;
+width:80%;
 }
 
 /* BUTTON */
 .btn{
-    padding:15px;
+padding:15px;
 
-    border:3px solid gold;
-    border-radius:15px;
+border:3px solid gold;  
+border-radius:15px;  
 
-    font-size:16px;
-    font-weight:bold;
+font-size:16px;  
+font-weight:bold;  
 
-    color:black;
+color:black;  
 
-    background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.15);  
 
-    backdrop-filter:blur(3px);
+backdrop-filter:blur(3px);  
 
-    box-shadow:0 0 8px rgba(255,215,0,0.4);
+box-shadow:0 0 8px rgba(255,215,0,0.4);  
 
-    transition:0.2s ease;
+transition:0.2s ease;
+
 }
 
 .btn:active{
-    transform:scale(0.96);
-    opacity:0.85;
+transform:scale(0.96);
+opacity:0.85;
 }
 
-/* EXAM BUTTON */
+/* EXAM */
 .exam{
-    background:linear-gradient(135deg,#d4af37,#8c6b00);
-    color:black;
+background:linear-gradient(135deg,#d4af37,#8c6b00);
+color:black;
 }
 
 /* =========================
-   📱 FLOAT NAV (KEEP ORIGINAL)
+📱 FLOAT NAV (FINAL FIX)
 ========================= */
 .bottom-nav{
-    position:fixed;
-    bottom:12px;
-    right:12px;
+position:fixed;
+bottom:12px;
+right:12px;
 
-    display:flex;
-    gap:6px;
+display:flex;  
+gap:6px;  
 
-    z-index:999;
+z-index:999;
+
 }
 
 .nav-btn{
-    width:42px;
-    height:42px;
+width:42px;
+height:42px;
 
-    border:none;
-    border-radius:50%;
+border:none;  
+border-radius:50%;  
 
-    font-size:14px;
-    font-weight:bold;
+font-size:14px;  
+font-weight:bold;  
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+display:flex;  
+align-items:center;  
+justify-content:center;  
 
-    cursor:pointer;
+cursor:pointer;  
 
-    box-shadow:0 0 10px rgba(255,215,0,0.25);
+box-shadow:0 0 10px rgba(255,215,0,0.25);
+
 }
 
 .nav-btn.back{
-    background:#e74c3c;
-    color:white;
+background:#e74c3c;
+color:white;
 }
 
 .nav-btn.home{
-    background:gold;
-    color:black;
+background:gold;
+color:black;
 }
 
 /* =========================
-   🟢 KANJI SYSTEM (KEEP ORIGINAL STYLE)
+🟢 KANJI SYSTEM
 ========================= */
 
 .row{
-    display:flex;
-    gap:10px;
-    margin-bottom:10px;
-    width:90%;
+display:flex;
+gap:10px;
+margin-bottom:10px;
+width:90%;
 }
 
-/* IMPORTANT: keep .card name as you used before */
 .card{
-    flex:1;
+flex:1;
 
-    border:2px solid gold;
-    border-radius:12px;
+border:2px solid gold;  
+border-radius:12px;  
 
-    padding:10px;
+padding:10px;  
 
-    background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.05);  
 
-    text-align:center;
+text-align:center;  
 
-    transition:0.2s ease;
+transition:0.2s ease;
+
 }
 
 .card:active{
-    transform:scale(0.97);
-    opacity:0.9;
+transform:scale(0.97);
+opacity:0.9;
 }
 
 .kanji{
-    font-size:30px;
-    color:gold;
-    font-weight:bold;
+font-size:30px;
+color:gold;
+font-weight:bold;
 }
 
 .kana{
-    font-size:11px;
-    color:#aaa;
-    margin-top:3px;
+font-size:11px;
+color:#aaa;
+margin-top:3px;
 }
 
 .romaji{
-    font-size:12px;
-    color:#00ffcc;
-    margin-top:5px;
+font-size:12px;
+color:#00ffcc;
+margin-top:5px;
 }
 
 .meaning{
-    font-size:12px;
-    color:white;
-    margin-top:5px;
+font-size:12px;
+color:white;
+margin-top:5px;
 }
 
 /* ANIMATION */
 @keyframes fadeInUp{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+from{
+opacity:0;
+transform:translateY(25px);
 }
+to{
+opacity:1;
+transform:translateY(0);
+}
+} 
