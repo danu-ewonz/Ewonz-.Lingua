@@ -1,16 +1,11 @@
-/* PAGE CENTER */
 body{
     margin:0;
-    padding:0;
-
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:#000;
     overflow:hidden;
-
     font-family:'Montserrat', sans-serif;
 }
 
@@ -18,8 +13,8 @@ body{
 .container{
     width:90vw;
     max-width:420px;
-
     aspect-ratio:3/4;
+
     position:relative;
 
     background:url("1780704324974.png") no-repeat center center;
@@ -29,26 +24,29 @@ body{
     overflow:hidden;
 
     box-shadow:0 10px 40px rgba(0,0,0,0.6);
+
+    /* 🔥 IMPORTANT FIX */
+    transform:scale(1);
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .overlay{
     position:absolute;
-    width:100%;
-    height:100%;
+    inset:0;
     background:rgba(0,0,0,0.45);
 }
 
-/* TITLE */
+/* TITLE (auto responsive) */
 .title{
     position:absolute;
-    top:30px;
+    top:8%;
     width:100%;
     text-align:center;
 
-    font-size:30px;
+    font-size:clamp(20px,5vw,30px);
     font-weight:900;
     letter-spacing:3px;
+
     text-transform:uppercase;
 
     background: linear-gradient(90deg,#d4af37,#ffd700,#b8860b);
@@ -61,13 +59,14 @@ body{
 /* TAGLINE */
 .tagline{
     position:absolute;
-    top:75px;
+    top:18%;
     width:85%;
     left:50%;
     transform:translateX(-50%);
+
     text-align:center;
 
-    font-size:12px;
+    font-size:clamp(10px,2.5vw,12px);
     color:rgba(255,255,255,0.9);
 
     background:rgba(255,255,255,0.05);
@@ -87,24 +86,29 @@ body{
 /* BUTTON AREA */
 .buttons{
     position:absolute;
-    bottom:60px;
+    bottom:8%;
     width:100%;
+
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:15px;
+    gap:12px;
 }
 
-/* BUTTON STYLE */
+/* BUTTON */
 .btn{
     width:75%;
     padding:14px;
+
     border:none;
     border-radius:12px;
-    font-size:16px;
+
+    font-size:clamp(12px,3vw,16px);
     font-weight:bold;
+
     color:white;
     cursor:pointer;
+
     transition:0.3s;
 }
 
