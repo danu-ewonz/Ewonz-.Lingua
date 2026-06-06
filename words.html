@@ -6,23 +6,83 @@
 
 <title>Japanese Writing System</title>
 
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
 
+body{
+    margin:0;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0b0b0b;
+    font-family:'Poppins', sans-serif;
+
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:450px;
+}
+
+.title{
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+    color:gold;
+    margin-bottom:30px;
+    white-space:nowrap;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+}
+
+.btn{
+    width:85%;
+    padding:18px;
+
+    border:none;
+    border-radius:15px;
+
+    font-size:18px;
+    font-weight:700;
+
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.hira{
+    background:linear-gradient(135deg,#ff4d4d,#b30000);
+}
+
+.kata{
+    background:linear-gradient(135deg,#4d79ff,#001f66);
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- TITLE -->
     <div class="title">
         Japanese Writing System 🇯🇵
     </div>
 
-    <!-- BUTTONS -->
     <div class="menu">
 
         <button class="btn hira">
