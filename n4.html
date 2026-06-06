@@ -7,6 +7,32 @@
 <title>JLPT N4 Kanji</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* fallback safety if style.css missing */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b0b0b;
+    color:white;
+}
+
+input#searchBox{
+    width:90%;
+    display:block;
+    margin:10px auto;
+    padding:10px;
+    border:2px solid gold;
+    border-radius:10px;
+    background:#111;
+    color:white;
+}
+
+.container{
+    padding:10px;
+}
+</style>
+
 </head>
 
 <body>
@@ -26,11 +52,11 @@
 
 let box = document.getElementById("list");
 
-/* ✅ SAFE MERGE (FIXED) */
+/* SAFE MERGE (NO ERROR VERSION) */
 let kanjiN4_all = [
-    ...(window.kanjiN4_1 || []),
-    ...(window.kanjiN4_2 || []),
-    ...(window.kanjiN4_3 || [])
+    ...(window.kanjiN4_1 ?? []),
+    ...(window.kanjiN4_2 ?? []),
+    ...(window.kanjiN4_3 ?? [])
 ];
 
 /* RENDER FUNCTION */
@@ -40,7 +66,7 @@ function render(data){
     for(let i=0; i<data.length; i+=2){
 
         let k1 = data[i];
-        let k2 = data[i+1];
+        let k2 = data[i+1] || {};
 
         box.innerHTML += `
         <div class="row">
@@ -63,10 +89,10 @@ function render(data){
     }
 }
 
-/* FIRST LOAD */
+/* INITIAL LOAD */
 render(kanjiN4_all);
 
-/* SEARCH (SAFE) */
+/* SEARCH */
 document.getElementById("searchBox").addEventListener("keyup", function(){
 
 let val = this.value.toLowerCase();
@@ -84,7 +110,7 @@ render(filtered);
 
 </script>
 
-<!-- FLOAT NAV (OPTIONAL) -->
+<!-- BOTTOM NAV -->
 <div class="bottom-nav">
     <button class="nav-btn back" onclick="history.back()">←</button>
     <button class="nav-btn home" onclick="location.href='index.html'">🏠</button>
