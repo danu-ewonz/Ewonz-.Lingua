@@ -12,6 +12,9 @@ body{
 
     /* mobile scroll enable */
     touch-action:pan-y;
+
+    /* space for bottom nav */
+    padding-bottom:70px;
 }
 
 /* SMOOTH UI */
@@ -33,7 +36,7 @@ html{
     align-items:center;
 
     min-height:100vh;
-    padding-bottom:40px;
+    padding-bottom:20px;
 }
 
 /* TITLE */
@@ -96,6 +99,57 @@ html{
 /* EXAM BUTTON */
 .exam{
     background:linear-gradient(135deg,#d4af37,#8c6b00);
+    color:black;
+}
+
+/* =========================
+   🔥 GLOBAL BUTTON FIX (ALL PAGES)
+========================= */
+button{
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   📱 BOTTOM NAV (ALL PAGES)
+========================= */
+.bottom-nav{
+    position:fixed;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:10px;
+
+    background:rgba(0,0,0,0.85);
+    border:1px solid gold;
+    border-radius:12px;
+
+    padding:6px;
+}
+
+/* SMALL SPLIT BUTTONS */
+.nav-btn{
+    padding:6px 12px;
+    font-size:12px;
+
+    border:none;
+    border-radius:8px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* BACK */
+.nav-btn.back{
+    background:#e74c3c;
+    color:white;
+}
+
+/* HOME */
+.nav-btn.home{
+    background:gold;
     color:black;
 }
 
