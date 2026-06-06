@@ -3,17 +3,15 @@ margin:0;
 background:#0b0b0b;
 font-family:Arial, sans-serif;
 
-/* SCROLL FIX */  
-overflow-y:auto;  
-overflow-x:hidden;  
+overflow-y:auto;
+overflow-x:hidden;
 
-user-select:none;  
--webkit-user-select:none;  
+user-select:none;
+-webkit-user-select:none;
 
-touch-action:pan-y;  
+touch-action:pan-y;
 
 padding-bottom:80px;
-
 }
 
 /* GLOBAL RESET */
@@ -26,16 +24,17 @@ html{
 scroll-behavior:smooth;
 }
 
-/* CENTER */
+/* =========================
+📦 MAIN PAGE CONTAINER (HOME)
+========================= */
 .container{
 display:flex;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
 
-min-height:100vh;  
+min-height:100vh;
 padding-bottom:20px;
-
 }
 
 /* TITLE */
@@ -45,17 +44,16 @@ color:gold;
 font-weight:bold;
 margin-bottom:30px;
 
-text-shadow:  
--2px -2px 0 #000,  
- 2px -2px 0 #000,  
--2px  2px 0 #000,  
- 2px  2px 0 #000;  
+text-shadow:
+-2px -2px 0 #000,
+ 2px -2px 0 #000,
+-2px  2px 0 #000,
+ 2px  2px 0 #000;
 
 animation:fadeInUp 0.6s ease;
-
 }
 
-/* BUTTONS */
+/* BUTTONS (HOME) */
 .buttons{
 display:flex;
 flex-direction:column;
@@ -63,26 +61,25 @@ gap:15px;
 width:80%;
 }
 
-/* BUTTON */
+/* BUTTON (HOME) */
 .btn{
 padding:15px;
 
-border:3px solid gold;  
-border-radius:15px;  
+border:3px solid gold;
+border-radius:15px;
 
-font-size:16px;  
-font-weight:bold;  
+font-size:16px;
+font-weight:bold;
 
-color:black;  
+color:black;
 
-background:rgba(255,255,255,0.15);  
+background:rgba(255,255,255,0.15);
 
-backdrop-filter:blur(3px);  
+backdrop-filter:blur(3px);
 
-box-shadow:0 0 8px rgba(255,215,0,0.4);  
+box-shadow:0 0 8px rgba(255,215,0,0.4);
 
 transition:0.2s ease;
-
 }
 
 .btn:active{
@@ -90,45 +87,43 @@ transform:scale(0.96);
 opacity:0.85;
 }
 
-/* EXAM */
+/* EXAM BUTTON SPECIAL */
 .exam{
 background:linear-gradient(135deg,#d4af37,#8c6b00);
 color:black;
 }
 
 /* =========================
-📱 FLOAT NAV (FINAL FIX)
+📱 FLOAT NAV
 ========================= */
 .bottom-nav{
 position:fixed;
 bottom:12px;
 right:12px;
 
-display:flex;  
-gap:6px;  
+display:flex;
+gap:6px;
 
 z-index:999;
-
 }
 
 .nav-btn{
 width:42px;
 height:42px;
 
-border:none;  
-border-radius:50%;  
+border:none;
+border-radius:50%;
 
-font-size:14px;  
-font-weight:bold;  
+font-size:14px;
+font-weight:bold;
 
-display:flex;  
-align-items:center;  
-justify-content:center;  
+display:flex;
+align-items:center;
+justify-content:center;
 
-cursor:pointer;  
+cursor:pointer;
 
 box-shadow:0 0 10px rgba(255,215,0,0.25);
-
 }
 
 .nav-btn.back{
@@ -142,7 +137,7 @@ color:black;
 }
 
 /* =========================
-🟢 KANJI SYSTEM
+🟢 KANJI / CONTENT CARDS (FIXED NAME)
 ========================= */
 
 .row{
@@ -152,23 +147,23 @@ margin-bottom:10px;
 width:90%;
 }
 
-.card{
+/* IMPORTANT FIX: renamed from .card → .lang-card */
+.lang-card{
 flex:1;
 
-border:2px solid gold;  
-border-radius:12px;  
+border:2px solid gold;
+border-radius:12px;
 
-padding:10px;  
+padding:10px;
 
-background:rgba(255,255,255,0.05);  
+background:rgba(255,255,255,0.05);
 
-text-align:center;  
+text-align:center;
 
 transition:0.2s ease;
-
 }
 
-.card:active{
+.lang-card:active{
 transform:scale(0.97);
 opacity:0.9;
 }
@@ -207,4 +202,4 @@ to{
 opacity:1;
 transform:translateY(0);
 }
-} 
+}
