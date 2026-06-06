@@ -11,7 +11,7 @@ body{
     font-family:Arial, sans-serif;
 }
 
-/* 3:4 APP SCREEN */
+/* APP SCREEN */
 .container{
     width:90vw;
     max-width:420px;
@@ -34,41 +34,59 @@ body{
     background:rgba(0,0,0,0.45);
 }
 
-/* GOLD TITLE */
+/* GOLD TITLE + BLACK OUTLINE */
 .title{
     position:absolute;
     top:30px;
     width:100%;
     text-align:center;
 
-    font-size:28px;
+    font-family:'Montserrat', sans-serif;
+    font-size:30px;
     font-weight:900;
     letter-spacing:3px;
     text-transform:uppercase;
 
+    /* GOLD */
     background: linear-gradient(90deg,#d4af37,#ffd700,#b8860b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+
+    /* BLACK OUTLINE */
+    -webkit-text-stroke:1px black;
 }
 
-/* TAGLINE */
+/* TAGLINE (animated + lifted up) */
 .tagline{
     position:absolute;
-    top:75px;
-    width:80%;
+    top:68px;
+    width:85%;
     left:50%;
     transform:translateX(-50%);
     text-align:center;
 
     font-size:12px;
-    color:rgba(255,255,255,0.85);
+    color:rgba(255,255,255,0.9);
     line-height:1.5;
 
     background:rgba(255,255,255,0.05);
     padding:8px 12px;
     border-radius:12px;
-
     backdrop-filter: blur(6px);
+
+    animation: fadeUp 2s ease-in-out infinite alternate;
+}
+
+/* TAGLINE ANIMATION */
+@keyframes fadeUp{
+    0%{
+        transform:translateX(-50%) translateY(0px);
+        opacity:0.7;
+    }
+    100%{
+        transform:translateX(-50%) translateY(-6px);
+        opacity:1;
+    }
 }
 
 /* BUTTON AREA */
@@ -109,7 +127,7 @@ body{
     background:linear-gradient(135deg,#4d79ff,#001f66);
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .btn:hover{
     transform:scale(1.05);
 }
