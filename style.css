@@ -1,50 +1,20 @@
 /* =========================
-   BODY BACKGROUND (OUTSIDE CARD)
+   FULL BACKGROUND SCREEN
 ========================= */
 body{
     margin:0;
     height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    width:100vw;
 
     overflow:hidden;
 
     font-family:'Montserrat', sans-serif;
 
-    /* premium dark background */
-    background: radial-gradient(circle at top,
-        #1a1a1a 0%,
-        #0d0d0d 40%,
-        #000000 100%);
-}
-
-/* =========================
-   3:4 MAIN CARD
-========================= */
-.container{
-    width:90vw;
-    max-width:420px;
-    aspect-ratio:3/4;
-
-    position:relative;
-
     background:url("1780704324974.png") no-repeat center center;
     background-size:cover;
-
-    border-radius:20px;
-    overflow:hidden;
-
-    /* premium shadow + glow */
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.6),
-        0 0 25px rgba(255,215,0,0.12);
 }
 
-/* =========================
-   DARK OVERLAY
-========================= */
+/* DARK OVERLAY */
 .overlay{
     position:absolute;
     inset:0;
@@ -52,47 +22,44 @@ body{
 }
 
 /* =========================
-   TITLE (GOLD PREMIUM)
+   TITLE (LARGER + CLEAN POSITION)
 ========================= */
 .title{
     position:absolute;
-    top:30px;
+    top:18%;
     width:100%;
     text-align:center;
 
-    font-size:30px;
+    font-size:38px;   /* 🔥 bigger */
     font-weight:900;
     letter-spacing:3px;
 
     text-transform:uppercase;
 
-    /* gold gradient */
     background: linear-gradient(90deg,#d4af37,#ffd700,#b8860b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    /* black outline */
     -webkit-text-stroke:1px black;
 }
 
 /* =========================
-   TAGLINE (ANIMATED)
+   TAGLINE (LIFTED UP)
 ========================= */
 .tagline{
     position:absolute;
-    top:75px;
-    width:85%;
+    top:30%;   /* 🔥 moved up */
+    width:80%;
     left:50%;
     transform:translateX(-50%);
 
     text-align:center;
 
-    font-size:12px;
+    font-size:13px;
     color:rgba(255,255,255,0.9);
-    line-height:1.5;
 
     background:rgba(255,255,255,0.05);
-    padding:8px 12px;
+    padding:10px 12px;
     border-radius:12px;
 
     backdrop-filter: blur(6px);
@@ -100,15 +67,13 @@ body{
     animation: float 2.5s ease-in-out infinite alternate;
 }
 
-/* float animation */
+/* FLOAT ANIMATION */
 @keyframes float{
     0%{
         transform:translateX(-50%) translateY(0px);
-        opacity:0.8;
     }
     100%{
         transform:translateX(-50%) translateY(-6px);
-        opacity:1;
     }
 }
 
@@ -117,7 +82,7 @@ body{
 ========================= */
 .buttons{
     position:absolute;
-    bottom:60px;
+    bottom:12%;
     width:100%;
 
     display:flex;
@@ -126,9 +91,7 @@ body{
     gap:15px;
 }
 
-/* =========================
-   BUTTON STYLE
-========================= */
+/* BUTTON STYLE */
 .btn{
     width:75%;
     padding:14px;
@@ -142,26 +105,14 @@ body{
     color:white;
     cursor:pointer;
 
-    transition:0.3s ease;
+    transition:0.3s;
 }
 
-/* hover */
 .btn:hover{
     transform:scale(1.05);
 }
 
-/* =========================
-   LANGUAGE COLORS
-========================= */
-.jp{
-    background:linear-gradient(135deg,#ff4d4d,#b30000);
-}
-
-.cn{
-    background:linear-gradient(135deg,#ffcc00,#ff8800);
-    color:#000;
-}
-
-.kr{
-    background:linear-gradient(135deg,#4d79ff,#001f66);
-}
+/* COLORS */
+.jp{ background:linear-gradient(135deg,#ff4d4d,#b30000); }
+.cn{ background:linear-gradient(135deg,#ffcc00,#ff8800); color:#000; }
+.kr{ background:linear-gradient(135deg,#4d79ff,#001f66); }
