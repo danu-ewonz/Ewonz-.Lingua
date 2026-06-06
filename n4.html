@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>N4 Kanji</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="title">JLPT N4 Kanji</div>
+
+<input id="searchBox" placeholder="Search Kanji..." />
+
+<div class="container" id="list"></div>
+
+<!-- DATA FILE -->
+<script src="n4-data.js"></script>
+
+<script>
+
+let box = document.getElementById("list");
+
+/* RENDER */
+function render(data){
+
+box.innerHTML = "";
+
+for(let i=0; i<data.length; i+=2){
+
+let k1 = data[i];
+let k2 = data[i+1];
+
+box.innerHTML += `
+<div class="row">
+
+<div class="card">
+<div class="kanji">${k1?.kanji || ""}</div>
+<div class="kana">${k1?.kana || ""}</div>
+<div class="romaji">${k1?.romaji || ""}</div>
+<div class="meaning">${k1?.meaning || ""}</div>
+</div>
+
+<div class="card">
+<div class="kanji">${k2?.kanji || ""}</div>
+<div class="kana">${k2?.kana || ""}</div>
+<div class="romaji">${k2?.romaji || ""}</div>
+<div class="meaning">${k2?.meaning || ""}</div>
+</div>
+
+</div>`;
+}
+
+}
+
+render(kanjiN4);
+
+/* SEARCH */
+document.getElementById("searchBox").addEventListener("keyup", function(){
+
+let value = this.value.toLowerCase();
+
+let filtered = kanjiN4.filter(k =>
+    k.kanji.includes(value) ||
+    k.kana.includes(value) ||
+    k.romaji.toLowerCase().includes(value) ||
+    k.meaning.includes(value)
+);
+
+render(filtered);
+
+});
+
+</script>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+    <button class="nav-btn back" onclick="history.back()">⬅ Back</button>
+    <button class="nav-btn home" onclick="location.href='index.html'">🏠 Home</button>
+
+</div>
+
+</body>
+</html>
