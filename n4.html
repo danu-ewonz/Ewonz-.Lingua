@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>JLPT N4 Kanji</title>
 
@@ -23,16 +23,21 @@
 <script src="n4-data-3.js"></script>
 
 <script>
+
 let box = document.getElementById("list");
 
-/* COMBINE ALL DATA */
-let kanjiN4_all = [...kanjiN4_1, ...kanjiN4_2, ...kanjiN4_3];
+/* ✅ SAFE MERGE (FIXED) */
+let kanjiN4_all = [
+    ...(window.kanjiN4_1 || []),
+    ...(window.kanjiN4_2 || []),
+    ...(window.kanjiN4_3 || [])
+];
 
-/* RENDER */
+/* RENDER FUNCTION */
 function render(data){
     box.innerHTML = "";
 
-    for(let i=0;i<data.length;i+=2){
+    for(let i=0; i<data.length; i+=2){
 
         let k1 = data[i];
         let k2 = data[i+1];
@@ -58,26 +63,28 @@ function render(data){
     }
 }
 
+/* FIRST LOAD */
 render(kanjiN4_all);
 
-/* SEARCH */
+/* SEARCH (SAFE) */
 document.getElementById("searchBox").addEventListener("keyup", function(){
 
 let val = this.value.toLowerCase();
 
 let filtered = kanjiN4_all.filter(k =>
-    k.kanji.includes(val) ||
-    k.kana.includes(val) ||
-    k.romaji.toLowerCase().includes(val) ||
-    k.meaning.includes(val)
+    (k.kanji || "").includes(val) ||
+    (k.kana || "").includes(val) ||
+    (k.romaji || "").toLowerCase().includes(val) ||
+    (k.meaning || "").includes(val)
 );
 
 render(filtered);
 
 });
+
 </script>
 
-<!-- NAV -->
+<!-- FLOAT NAV (OPTIONAL) -->
 <div class="bottom-nav">
     <button class="nav-btn back" onclick="history.back()">←</button>
     <button class="nav-btn home" onclick="location.href='index.html'">🏠</button>
