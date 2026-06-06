@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Japanese Exams</title>
 
@@ -13,7 +13,14 @@ body{
     font-family:Arial, sans-serif;
     background:#0b0b0b;
     color:white;
+
     padding:20px;
+    padding-bottom:80px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    touch-action:pan-y;
 }
 
 /* TITLE */
@@ -23,23 +30,87 @@ body{
     color:gold;
     font-weight:bold;
     margin-bottom:25px;
+
+    text-shadow:0 0 10px rgba(255,215,0,0.3);
 }
 
-/* TREE STYLE BOX */
+/* TREE BOX */
 .tree{
     font-size:14px;
     line-height:1.8;
-
-    white-space:pre-line;
 
     border:2px solid gold;
     padding:15px;
     border-radius:12px;
 
     background:rgba(255,255,255,0.05);
+
+    white-space:pre-line;
 }
 
-/* SMALL NOTE */
+/* CLICKABLE ITEMS */
+.exam-btn{
+    display:block;
+    width:100%;
+
+    margin:6px 0;
+    padding:10px;
+
+    border:2px solid gold;
+    border-radius:10px;
+
+    background:rgba(255,255,255,0.08);
+    color:white;
+
+    font-weight:bold;
+    text-align:left;
+
+    transition:0.2s ease;
+}
+
+.exam-btn:active{
+    transform:scale(0.97);
+    background:rgba(255,215,0,0.15);
+}
+
+/* FLOAT NAV */
+.bottom-nav{
+    position:fixed;
+    bottom:12px;
+    right:12px;
+
+    display:flex;
+    gap:6px;
+}
+
+.nav-btn{
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    font-weight:bold;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:0 0 10px rgba(255,215,0,0.25);
+}
+
+.nav-btn.back{
+    background:#e74c3c;
+    color:white;
+}
+
+.nav-btn.home{
+    background:gold;
+    color:black;
+}
+
 .note{
     font-size:12px;
     color:#aaa;
@@ -56,27 +127,39 @@ body{
 🇯🇵 JAPANESE EXAMS
 </div>
 
+<!-- CLICKABLE SYSTEM -->
 <div class="tree">
-├── JLPT (Main System)
-│   ├── N5
-│   ├── N4
-│   ├── N3
-│   ├── N2
-│   └── N1
-│
-├── NAT-TEST (Practice System)
-│   ├── 5Q
-│   ├── 4Q
-│   ├── 3Q
-│   ├── 2Q
-│   └── 1Q
-│
-└── JFT-Basic (SSW Visa)
-    └── Basic Level (N5–N4 Kanji)
+
+<button class="exam-btn">JLPT - N5</button>
+<button class="exam-btn">JLPT - N4</button>
+<button class="exam-btn">JLPT - N3</button>
+<button class="exam-btn">JLPT - N2</button>
+<button class="exam-btn">JLPT - N1</button>
+
+<br>
+
+<button class="exam-btn">NAT - 5Q</button>
+<button class="exam-btn">NAT - 4Q</button>
+<button class="exam-btn">NAT - 3Q</button>
+<button class="exam-btn">NAT - 2Q</button>
+<button class="exam-btn">NAT - 1Q</button>
+
+<br>
+
+<button class="exam-btn">JFT Basic (SSW)</button>
+
 </div>
 
 <div class="note">
-Kanji (Japanese Exams)
+Kanji (Japanese Exams System)
+</div>
+
+<!-- FLOAT NAV -->
+<div class="bottom-nav">
+
+    <button class="nav-btn back" onclick="history.back()">←</button>
+    <button class="nav-btn home" onclick="location.href='index.html'">🏠</button>
+
 </div>
 
 </body>
