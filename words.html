@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Japanese Language</title>
+<title>Japanese Writing System</title>
 
 <style>
 
 body{
     margin:0;
     background:#0b0b0b;
-    color:white;
     font-family:Arial,sans-serif;
+    color:white;
 
     display:flex;
     justify-content:center;
@@ -21,27 +21,39 @@ body{
     min-height:100vh;
 }
 
+/* MAIN CONTAINER */
 .container{
     width:90%;
     max-width:450px;
 }
 
+/* TITLE */
 .title{
     text-align:center;
-    font-size:30px;
-    font-weight:bold;
+    font-size:26px;
+    font-weight:800;
+
     color:gold;
-    margin-bottom:30px;
+
+    margin-bottom:35px;
+
+    white-space:nowrap;
+    letter-spacing:1px;
 }
 
+/* BUTTON LIST */
 .menu{
     display:flex;
     flex-direction:column;
     gap:15px;
+    align-items:center;
 }
 
+/* BUTTON STYLE */
 .btn{
+    width:85%;
     padding:18px;
+
     border:none;
     border-radius:15px;
 
@@ -50,33 +62,44 @@ body{
 
     cursor:pointer;
     color:white;
+
+    transition:0.3s;
 }
 
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* HIRAGANA */
 .hira{
     background:linear-gradient(135deg,#ff4d4d,#b30000);
 }
 
+/* KATAKANA */
 .kata{
     background:linear-gradient(135deg,#4d79ff,#001f66);
 }
 
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
+    <!-- TITLE -->
     <div class="title">
-        🇯🇵 Japanese Language
+        Japanese Writing System 🇯🇵
     </div>
 
+    <!-- BUTTONS -->
     <div class="menu">
 
-        <button class="btn hira">
+        <button class="btn hira" onclick="alert('Hiragana page next step')">
             あ Hiragana
         </button>
 
-        <button class="btn kata">
+        <button class="btn kata" onclick="alert('Katakana page next step')">
             ア Katakana
         </button>
 
