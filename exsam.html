@@ -16,22 +16,33 @@ body{
     padding:20px;
 }
 
+/* MAIN TITLE */
 .title{
     text-align:center;
-    font-size:24px;
-    color:gold;
+    font-size:26px;
     font-weight:bold;
-    margin-bottom:25px;
+    color:gold;
+    margin-bottom:20px;
 }
 
+/* SECTION BOX */
 .section{
     border:2px solid gold;
-    border-radius:12px;
+    border-radius:15px;
     padding:15px;
-    background:rgba(255,255,255,0.05);
+    margin-bottom:15px;
+
+    background:rgba(255,255,255,0.03);
 }
 
-.exam-btn{
+/* SECTION HEAD */
+.section h3{
+    color:gold;
+    margin-bottom:10px;
+}
+
+/* BUTTON STYLE */
+.btn{
     width:100%;
     padding:12px;
     margin:6px 0;
@@ -39,60 +50,64 @@ body{
     background:transparent;
     color:gold;
 
-    border:1px solid gold;
+    border:2px solid gold;
     border-radius:10px;
 
     font-size:15px;
     font-weight:bold;
+
+    transition:0.2s ease;
 }
 
-.exam-btn:active{
-    transform:scale(0.98);
+/* CLICK EFFECT */
+.btn:active{
+    transform:scale(0.97);
+    opacity:0.8;
 }
 
-/* FLOAT NAV */
-.bottom-nav{
-    position:fixed;
-    bottom:10px;
-    right:10px;
-    display:flex;
-    gap:6px;
+/* HOVER */
+.btn:hover{
+    box-shadow:0 0 8px gold;
 }
-
-.nav-btn{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    font-weight:bold;
-}
-
-.back{background:#e74c3c;color:white;}
-.home{background:gold;color:black;}
 
 </style>
 </head>
 
 <body>
 
-<div class="title">🇯🇵 JAPANESE EXAMS</div>
-
-<div class="section">
-
-<h3>JLPT</h3>
-
-<button class="exam-btn" onclick="window.location.href='n5.html'">N5</button>
-<button class="exam-btn" onclick="window.location.href='n4.html'">N4</button>
-<button class="exam-btn" onclick="window.location.href='n3.html'">N3</button>
-<button class="exam-btn" onclick="window.location.href='n2.html'">N2</button>
-<button class="exam-btn" onclick="window.location.href='n1.html'">N1</button>
-
+<div class="title">
+🇯🇵 JAPANESE EXAMS
 </div>
 
-<!-- NAV -->
-<div class="bottom-nav">
-    <button class="nav-btn back" onclick="history.back()">←</button>
-    <button class="nav-btn home" onclick="window.location.href='index.html'">🏠</button>
+<!-- 1 JLPT -->
+<div class="section">
+    <h3>JLPT (Main System)</h3>
+
+    <button class="btn" onclick="location.href='n5.html'">N5</button>
+    <button class="btn" onclick="location.href='n4.html'">N4</button>
+    <button class="btn" onclick="location.href='n3.html'">N3</button>
+    <button class="btn" onclick="location.href='n2.html'">N2</button>
+    <button class="btn" onclick="location.href='n1.html'">N1</button>
+</div>
+
+<!-- 2 NAT -->
+<div class="section">
+    <h3>NAT-TEST (Practice System)</h3>
+
+    <button class="btn">Q5</button>
+    <button class="btn">Q4</button>
+    <button class="btn">Q3</button>
+    <button class="btn">Q2</button>
+    <button class="btn">Q1</button>
+</div>
+
+<!-- 3 JFT -->
+<div class="section">
+    <h3>JFT-Basic (SSW Visa)</h3>
+
+    <button class="btn" onclick="location.href='jft.html'">
+        N2 (Basic Level)
+    </button>
 </div>
 
 </body>
