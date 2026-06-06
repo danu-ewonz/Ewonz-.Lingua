@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,88 +11,68 @@
 body{
     margin:0;
     background:#0b0b0b;
+    font-family:Arial;
     color:white;
-    font-family:sans-serif;
     padding:20px;
 }
 
-h1{
-    color:gold;
+.title{
     text-align:center;
-}
-
-/* MAIN BUTTONS */
-.card{
-    border:1px solid gold;
-    padding:15px;
-    margin:10px;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-/* LEVEL PANEL */
-.levels{
-    display:none;
-    margin-left:20px;
-    margin-top:10px;
-}
-
-.level{
-    font-size:12px;
     color:gold;
-    margin:5px 0;
-    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
+/* MAIN BOX */
+.box{
+    border:1px solid gold;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+/* SUB ITEMS */
+.sub{
+    margin-left:20px;
+    font-size:13px;
+    color:#ccc;
+}
+
+/* HIDE SHOW (future expand ready) */
 </style>
+
 </head>
 
 <body>
 
-<h1>🇯🇵 JAPANESE EXAMS</h1>
+<div class="title">🇯🇵 JAPANESE EXAMS</div>
 
-<!-- JLPT -->
-<div class="card" onclick="toggle('jlpt')">
-    JLPT - Exam
-    <div id="jlpt" class="levels">
-        <div class="level">N5</div>
-        <div class="level">N4</div>
-        <div class="level">N3</div>
-        <div class="level">N2</div>
-        <div class="level">N1</div>
-    </div>
+<div class="box">
+    ├── JLPT (Main System)
+
+    <div class="sub">├── N5</div>
+    <div class="sub">├── N4</div>
+    <div class="sub">├── N3</div>
+    <div class="sub">├── N2</div>
+    <div class="sub">└── N1</div>
 </div>
 
-<!-- NAT -->
-<div class="card" onclick="toggle('nat')">
-    NAT Test
-    <div id="nat" class="levels">
-        <div class="level">5Q</div>
-        <div class="level">4Q</div>
-        <div class="level">3Q</div>
-        <div class="level">2Q</div>
-        <div class="level">1Q</div>
-    </div>
+<div class="box">
+    ├── NAT-TEST (Practice System)
+
+    <div class="sub">├── 5Q</div>
+    <div class="sub">├── 4Q</div>
+    <div class="sub">├── 3Q</div>
+    <div class="sub">├── 2Q</div>
+    <div class="sub">└── 1Q</div>
 </div>
 
-<!-- JFT -->
-<div class="card" onclick="toggle('jft')">
-    JFT - Basic (SSW)
-    <div id="jft" class="levels">
-        <div class="level">Basic Level (N5–N4)</div>
-    </div>
-</div>
+<div class="box">
+    └── JFT-Basic (SSW Visa)
 
-<script>
-function toggle(id){
-    let el = document.getElementById(id);
-    if(el.style.display === "block"){
-        el.style.display = "none";
-    } else {
-        el.style.display = "block";
-    }
-}
-</script>
+    <div class="sub">└── Basic Level (N5–N4 Kanji)</div>
+</div>
 
 </body>
 </html>
