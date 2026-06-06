@@ -7,20 +7,92 @@
 <title>Japanese Exams</title>
 
 <style>
-body{background:#0b0b0b;color:white;font-family:sans-serif;padding:20px;}
-h1{color:gold;text-align:center;}
-.card{border:1px solid gold;padding:15px;margin:10px;border-radius:10px;}
-</style>
 
+body{
+    margin:0;
+    background:#0b0b0b;
+    color:white;
+    font-family:sans-serif;
+    padding:20px;
+}
+
+h1{
+    color:gold;
+    text-align:center;
+}
+
+/* MAIN BUTTONS */
+.card{
+    border:1px solid gold;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* LEVEL PANEL */
+.levels{
+    display:none;
+    margin-left:20px;
+    margin-top:10px;
+}
+
+.level{
+    font-size:12px;
+    color:gold;
+    margin:5px 0;
+    cursor:pointer;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Japanese Exams (Required Kanji)</h1>
+<h1>🇯🇵 JAPANESE EXAMS</h1>
 
-<div class="card" onclick="location.href='jlpt.html'">JLPT System</div>
-<div class="card" onclick="location.href='nat.html'">NAT Test</div>
-<div class="card" onclick="location.href='jft.html'">JFT-Basic (SSW)</div>
+<!-- JLPT -->
+<div class="card" onclick="toggle('jlpt')">
+    JLPT - Exam
+    <div id="jlpt" class="levels">
+        <div class="level">N5</div>
+        <div class="level">N4</div>
+        <div class="level">N3</div>
+        <div class="level">N2</div>
+        <div class="level">N1</div>
+    </div>
+</div>
+
+<!-- NAT -->
+<div class="card" onclick="toggle('nat')">
+    NAT Test
+    <div id="nat" class="levels">
+        <div class="level">5Q</div>
+        <div class="level">4Q</div>
+        <div class="level">3Q</div>
+        <div class="level">2Q</div>
+        <div class="level">1Q</div>
+    </div>
+</div>
+
+<!-- JFT -->
+<div class="card" onclick="toggle('jft')">
+    JFT - Basic (SSW)
+    <div id="jft" class="levels">
+        <div class="level">Basic Level (N5–N4)</div>
+    </div>
+</div>
+
+<script>
+function toggle(id){
+    let el = document.getElementById(id);
+    if(el.style.display === "block"){
+        el.style.display = "none";
+    } else {
+        el.style.display = "block";
+    }
+}
+</script>
 
 </body>
 </html>
