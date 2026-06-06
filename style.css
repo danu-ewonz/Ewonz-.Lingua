@@ -103,7 +103,7 @@ html{
 }
 
 /* =========================
-   🔥 GLOBAL BUTTON FIX (ALL PAGES)
+   🔥 GLOBAL BUTTON FIX
 ========================= */
 button{
     -webkit-tap-highlight-color: transparent;
@@ -128,7 +128,6 @@ button{
     padding:6px;
 }
 
-/* SMALL SPLIT BUTTONS */
 .nav-btn{
     padding:6px 12px;
     font-size:12px;
@@ -141,16 +140,76 @@ button{
     cursor:pointer;
 }
 
-/* BACK */
 .nav-btn.back{
     background:#e74c3c;
     color:white;
 }
 
-/* HOME */
 .nav-btn.home{
     background:gold;
     color:black;
+}
+
+/* =========================
+   🟢 KANJI SYSTEM (NEW ADD)
+========================= */
+
+/* ROW = 2 kanji layout */
+.row{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+    width:90%;
+}
+
+/* KANJI CARD */
+.card{
+    flex:1;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    padding:10px;
+
+    background:rgba(255,255,255,0.05);
+
+    text-align:center;
+
+    transition:0.2s ease;
+}
+
+/* CARD TAP EFFECT */
+.card:active{
+    transform:scale(0.97);
+    opacity:0.9;
+}
+
+/* KANJI BIG TEXT */
+.kanji{
+    font-size:30px;
+    color:gold;
+    font-weight:bold;
+}
+
+/* HIRAGANA */
+.kana{
+    font-size:11px;
+    color:#aaa;
+    margin-top:3px;
+}
+
+/* ROMAJI */
+.romaji{
+    font-size:12px;
+    color:#00ffcc;
+    margin-top:5px;
+}
+
+/* SINHALA MEANING */
+.meaning{
+    font-size:12px;
+    color:white;
+    margin-top:5px;
 }
 
 /* ANIMATION */
