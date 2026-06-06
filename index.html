@@ -1,186 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  <title>Ewonz Lingua</title>  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">  <style>  
+  
+/* FULL SCREEN */  
+body{  
+    margin:0;  
+    height:100vh;  
+    overflow:hidden;  
+    font-family:Arial, sans-serif;  
+    background:#000;  
+    display:flex;  
+    justify-content:center;  
+    align-items:center;  
+}  
+  
+/* MAIN CARD */  
+.card{  
+    width:320px;  
+    height:430px;  
+  
+    border:2px solid gold;  
+    border-radius:20px;  
+  
+    background:url("1780704324974.png") center/cover no-repeat;  
+  
+    display:flex;  
+    flex-direction:column;  
+    align-items:center;  
+  
+    padding:10px;  
+    box-sizing:border-box;  
+  
+    position:relative;  
+}  
+  
+/* TITLE */  
+.title{  
+    font-family:'Playfair Display', serif;  
+  
+    font-size:26px;  
+    font-weight:bold;  
+  
+    color:gold;  
+  
+    text-align:center;  
+  
+    margin-top:5px;  
+    margin-bottom:10px;  
+  
+    text-shadow:  
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;  
+}  
+  
+/* ABOUT */  
+.about{  
+    font-size:12px;  
+    color:black;  
+    font-weight:600;  
+  
+    text-align:center;  
+  
+    padding:5px 15px;  
+  
+    margin-top:40px;  
+    margin-bottom:70px;  
+  
+    animation:fadeUp 2s ease;  
+}  
+  
+/* BUTTON AREA */  
+.buttons{  
+    width:100%;  
+    display:flex;  
+    flex-direction:column;  
+    gap:12px;  
+}  
+  
+/* BUTTON STYLE */  
+.btn{  
+    padding:12px;  
+  
+    border:2px solid gold;  
+  
+    border-radius:12px;  
+  
+    font-size:14px;  
+    font-weight:bold;  
+  
+    background:rgba(255,255,255,0.20);  
+  
+    color:black;  
+  
+    backdrop-filter:blur(3px);  
+  
+    transition:0.2s ease;  
+}  
+  
+/* CLICK EFFECT */  
+.btn:active{  
+    transform:scale(0.97);  
+    opacity:0.8;  
+}  
+  
+/* ANIMATION */  
+@keyframes fadeUp{  
+    from{  
+        opacity:0;  
+        transform:translateY(20px);  
+    }  
+    to{  
+        opacity:1;  
+        transform:translateY(0);  
+    }  
+}  
+  
+</style>  </head>  <body>  <div class="card">  <div class="title">  
+    EWONZ LINGUA  
+</div>  
 
-<title>Ewonz Lingua</title>
+<div class="about">  
+    Discover the world through language, connect globally, and grow beyond limits.  
+</div>  
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<div class="buttons">  
 
-<style>
+    <button class="btn" onclick="location.href='words.html'">  
+        Japanese Language 🇯🇵  
+    </button>  
 
-/* FULL SCREEN */
-body{
-    margin:0;
-    height:100vh;
-    overflow:hidden;
-    font-family:Arial, sans-serif;
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+    <button class="btn">  
+        Chinese Language 🇨🇳  
+    </button>  
 
-/* MAIN CARD */
-.card{
-    width:320px;
-    height:430px;
-
-    border:2px solid gold;
-    border-radius:20px;
-
-    background:url("1780704324974.png") center/cover no-repeat;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    padding:10px;
-    box-sizing:border-box;
-
-    position:relative;
-}
-
-/* TITLE */
-.title{
-    font-family:'Playfair Display', serif;
-    font-size:26px;
-    font-weight:bold;
-    color:gold;
-    text-align:center;
-
-    margin-top:5px;
-    margin-bottom:10px;
-
-    text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
-}
-
-/* ABOUT */
-.about{
-    font-size:12px;
-    color:black;
-    font-weight:600;
-
-    text-align:center;
-    padding:5px 15px;
-
-    margin-top:40px;
-    margin-bottom:70px;
-
-    animation:fadeUp 2s ease;
-}
-
-/* BUTTON AREA */
-.buttons{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-/* BUTTON STYLE */
-.btn{
-    padding:12px;
-
-    border:2px solid gold;
-    border-radius:12px;
-
-    font-size:14px;
-    font-weight:bold;
-
-    background:rgba(255,255,255,0.20);
-
-    color:black;
-
-    backdrop-filter:blur(3px);
-
-    transition:0.2s ease;
-}
-
-/* CLICK EFFECT */
-.btn:active{
-    transform:scale(0.97);
-    opacity:0.8;
-}
-
-/* HIDE */
-.hidden{
-    display:none;
-}
-
-/* ANIMATION */
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="card">
-
-    <div class="title">
-        EWONZ LINGUA
-    </div>
-
-    <!-- HOME MENU -->
-    <div id="homeMenu" class="buttons">
-
-        <button class="btn" onclick="openJapanese()">
-            Japanese Language 🇯🇵
-        </button>
-
-        <button class="btn">
-            Chinese Language 🇨🇳
-        </button>
-
-        <button class="btn">
-            Korean Language 🇰🇷
-        </button>
-
-    </div>
-
-    <!-- JAPANESE MENU -->
-    <div id="jpMenu" class="buttons hidden">
-
-        <button class="btn">Hiragana</button>
-        <button class="btn">Katakana</button>
-        <button class="btn">Kanji</button>
-
-        <button class="btn" onclick="goBack()">
-            ⬅ Back
-        </button>
-
-    </div>
+    <button class="btn">  
+        Korean Language 🇰🇷  
+    </button>  
 
 </div>
 
-<script>
-
-function openJapanese(){
-    document.getElementById("homeMenu").classList.add("hidden");
-    document.getElementById("jpMenu").classList.remove("hidden");
-}
-
-function goBack(){
-    document.getElementById("jpMenu").classList.add("hidden");
-    document.getElementById("homeMenu").classList.remove("hidden");
-}
-
-</script>
-
-</body>
-</html>
+</div>  </body>  
+</html> 
