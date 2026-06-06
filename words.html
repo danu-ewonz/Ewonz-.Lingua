@@ -2,90 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Words - Ewonz Lingua</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+<title>Japanese Language</title>
 
 <style>
+
 body{
     margin:0;
-    font-family:Arial;
-    background:#0f0f0f;
+    background:#0b0b0b;
+    color:white;
+    font-family:Arial,sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:450px;
+}
+
+.title{
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    color:gold;
+    margin-bottom:30px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn{
+    padding:18px;
+    border:none;
+    border-radius:15px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
     color:white;
 }
 
-.header{
-    text-align:center;
-    padding:20px;
-    font-size:22px;
-    font-weight:bold;
+.hira{
+    background:linear-gradient(135deg,#ff4d4d,#b30000);
 }
 
-.word-list{
-    width:90%;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+.kata{
+    background:linear-gradient(135deg,#4d79ff,#001f66);
 }
 
-.card{
-    background:linear-gradient(135deg,#1e1e1e,#2a2a2a);
-    padding:15px;
-    border-radius:12px;
-    cursor:pointer;
-    transition:0.3s;
+.btn:hover{
+    transform:scale(1.03);
 }
 
-.card:hover{
-    transform:scale(1.02);
-}
-
-.word{
-    font-size:18px;
-    font-weight:bold;
-}
-
-.meaning{
-    margin-top:8px;
-    font-size:14px;
-    color:#00ffcc;
-    display:none;
-}
 </style>
 </head>
-
 <body>
 
-<div class="header">Japanese Basic Words</div>
+<div class="container">
 
-<div class="word-list">
-
-    <div class="card" onclick="toggle(this)">
-        <div class="word">こんにちは</div>
-        <div class="meaning">Hello (Konnichiwa)</div>
+    <div class="title">
+        🇯🇵 Japanese Language
     </div>
 
-    <div class="card" onclick="toggle(this)">
-        <div class="word">ありがとう</div>
-        <div class="meaning">Thank you (Arigatou)</div>
-    </div>
+    <div class="menu">
 
-    <div class="card" onclick="toggle(this)">
-        <div class="word">さようなら</div>
-        <div class="meaning">Goodbye (Sayounara)</div>
+        <button class="btn hira"
+        onclick="location.href='hiragana.html'">
+            あ Hiragana
+        </button>
+
+        <button class="btn kata"
+        onclick="location.href='katakana.html'">
+            ア Katakana
+        </button>
+
     </div>
 
 </div>
-
-<script>
-function toggle(card){
-    let meaning = card.querySelector(".meaning");
-
-    meaning.style.display = (meaning.style.display === "block") ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
