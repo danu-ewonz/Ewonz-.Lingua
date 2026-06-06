@@ -15,7 +15,7 @@ body{
 }
 
 /* =========================
-   CARD (3:4 SCREEN)
+   CARD (3:4 + GOLD BORDER)
 ========================= */
 .card{
     width:92vw;
@@ -82,6 +82,7 @@ body{
 
     font-size:13px;
     color:white;
+
     line-height:1.5;
 
     animation:float 3s ease-in-out infinite;
@@ -94,7 +95,7 @@ body{
 }
 
 /* =========================
-   BUTTONS
+   BUTTON AREA
 ========================= */
 .buttons{
     position:absolute;
@@ -107,6 +108,7 @@ body{
     gap:14px;
 }
 
+/* BUTTON STYLE */
 .btn{
     width:78%;
     padding:14px;
