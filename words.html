@@ -1,3 +1,92 @@
-<button onclick="location.href='hiragana.html'">Hiragana</button>
-<button onclick="location.href='katakana.html'">Katakana</button>
-<button onclick="location.href='kanji.html'">Kanji (Required)</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Japanese Writing System</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0b0b0b;
+    font-family:Arial;
+    overflow:hidden;
+}
+
+/* MAIN CARD */
+.container{
+    width:90%;
+    max-width:400px;
+    border:2px solid gold;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+}
+
+/* TITLE */
+.title{
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* BUTTONS */
+.btn{
+    width:100%;
+    padding:15px;
+    margin:8px 0;
+
+    border:none;
+    border-radius:12px;
+
+    font-size:16px;
+    font-weight:bold;
+
+    color:white;
+    cursor:pointer;
+}
+
+/* COLORS */
+.hira{background:#c0392b;}
+.kata{background:#2980b9;}
+.kanji{background:linear-gradient(135deg,#d4af37,#8c6b00); color:black;}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        Japanese Writing System 🇯🇵
+    </div>
+
+    <!-- HIRAGANA -->
+    <button class="btn hira" onclick="location.href='hiragana.html'">
+        Hiragana あ
+    </button>
+
+    <!-- KATAKANA -->
+    <button class="btn kata" onclick="location.href='katakana.html'">
+        Katakana ア
+    </button>
+
+    <!-- KANJI -->
+    <button class="btn kanji" onclick="location.href='kanji.html'">
+        Kanji (Required 漢字)
+    </button>
+
+</div>
+
+</body>
+</html>
