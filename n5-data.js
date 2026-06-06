@@ -1,10 +1,10 @@
 const kanjiN5 = [
-{kanji:"日",romaji:"nichi / hi",meaning:"දවස"},
-{kanji:"月",romaji:"getsu / tsuki",meaning:"මාසය"},
+{kanji:"日",romaji:"nichi/hi",meaning:"දවස"},
+{kanji:"月",romaji:"getsu/tsuki",meaning:"මාසය"},
 {kanji:"火",romaji:"hi",meaning:"ගිනි"},
 {kanji:"水",romaji:"mizu",meaning:"වතුර"},
 {kanji:"木",romaji:"ki",meaning:"ගස"},
-{kanji:"金",romaji:"kin / kane",meaning:"සල්ලි"},
+{kanji:"金",romaji:"kin",meaning:"සල්ලි"},
 {kanji:"土",romaji:"tsuchi",meaning:"පොළොව"},
 
 {kanji:"人",romaji:"hito",meaning:"මිනිසා"},
@@ -25,7 +25,6 @@ const kanjiN5 = [
 {kanji:"田",romaji:"ta",meaning:"කුඹුර"},
 {kanji:"空",romaji:"sora",meaning:"අහස"},
 {kanji:"雨",romaji:"ame",meaning:"වැස්ස"},
-{kanji:"風",romaji:"kaze",meaning:"සුළඟ"},
 
 {kanji:"上",romaji:"ue",meaning:"ඉහළ"},
 {kanji:"下",romaji:"shita",meaning:"පහළ"},
@@ -84,4 +83,4 @@ const kanjiN5 = [
 {kanji:"道",romaji:"michi",meaning:"පාර"}
 ];
 
-console.log("N5 Kanji loaded:", kanjiN5.length);
+console.log("FINAL COUNT =", kanjiN5.length);
