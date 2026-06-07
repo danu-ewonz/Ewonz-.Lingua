@@ -1,68 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <title>Hiragana Dakuten</title>
 
 <style>
+
 body{
-margin:0;
-background:#000;
-font-family:Arial;
-color:#fff;
-padding:20px;
-text-align:center;
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0b0b0b;
+    font-family:Arial;
+    padding:20px;
 }
 
-h1{
-color:gold;
-margin-bottom:20px;
+/* CONTAINER */
+.container{
+    width:95%;
+    max-width:500px;
+
+    border:2px solid gold;
+    border-radius:20px;
+
+    padding:20px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.03);
 }
 
-/* GROUP */
-.group{
-margin-bottom:25px;
+/* TITLE */
+.title{
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
-/* GROUP TITLE */
-.group-title{
-color:gold;
-font-size:16px;
-margin:10px 0;
-text-align:left;
+.subtitle{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:20px;
 }
 
-/* GRID (2 CARDS PER ROW) */
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+/* SECTION */
+.section{
+    color:gold;
+    font-size:14px;
+    font-weight:bold;
+    margin:18px 0 10px;
 }
 
-/* CARD */
-.card{
-border:2px solid gold;
-border-radius:12px;
-padding:10px;
-background:rgba(255,255,255,0.03);
-text-align:center;
-font-size:18px;
+/* ROW */
+.row{
+    display:flex;
+    gap:10px;
+    margin-bottom:12px;
 }
 
-/* ROMAJI */
+/* BOX */
+.box{
+    flex:1;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    padding:12px;
+
+    background:rgba(255,255,255,0.05);
+}
+
+/* BIG */
+.big{
+    font-size:26px;
+    color:white;
+    font-weight:bold;
+}
+
+/* SMALL */
 .small{
-display:block;
-color:#ffd700;
-font-size:13px;
-margin-top:5px;
-}
-
-/* RESPONSIVE */
-@media(max-width:500px){
-.grid{
-grid-template-columns:1fr 1fr;
-}
+    font-size:12px;
+    color:#aaa;
+    margin-top:5px;
 }
 
 </style>
@@ -70,62 +95,67 @@ grid-template-columns:1fr 1fr;
 
 <body>
 
-<h1>Hiragana Dakuten</h1>
+<div class="container">
 
-<!-- 🔥 G ROW -->
-<div class="group">
-<div class="group-title">G-Row</div>
-<div class="grid">
+    <div class="title">Hiragana Dakuten</div>
+    <div class="subtitle">Voiced sound conversion system</div>
 
-<div class="card">か → が<span class="small">ka → ga</span></div>
-<div class="card">き → ぎ<span class="small">ki → gi</span></div>
-<div class="card">く → ぐ<span class="small">ku → gu</span></div>
-<div class="card">け → げ<span class="small">ke → ge</span></div>
-<div class="card">こ → ご<span class="small">ko → go</span></div>
+    <!-- 🔥 K GROUP -->
+    <div class="section">K-group</div>
 
-</div>
-</div>
+    <div class="row">
+        <div class="box"><div class="big">か</div><div class="small">ka → ga</div></div>
+        <div class="box"><div class="big">き</div><div class="small">ki → gi</div></div>
+        <div class="box"><div class="big">く</div><div class="small">ku → gu</div></div>
+    </div>
 
-<!-- 🔥 Z ROW -->
-<div class="group">
-<div class="group-title">Z-Row</div>
-<div class="grid">
+    <div class="row">
+        <div class="box"><div class="big">け</div><div class="small">ke → ge</div></div>
+        <div class="box"><div class="big">こ</div><div class="small">ko → go</div></div>
+    </div>
 
-<div class="card">さ → ざ<span class="small">sa → za</span></div>
-<div class="card">し → じ<span class="small">shi → ji</span></div>
-<div class="card">す → ず<span class="small">su → zu</span></div>
-<div class="card">せ → ぜ<span class="small">se → ze</span></div>
-<div class="card">そ → ぞ<span class="small">so → zo</span></div>
+    <!-- 🔥 S GROUP -->
+    <div class="section">S-group</div>
 
-</div>
-</div>
+    <div class="row">
+        <div class="box"><div class="big">さ</div><div class="small">sa → za</div></div>
+        <div class="box"><div class="big">し</div><div class="small">shi → ji</div></div>
+        <div class="box"><div class="big">す</div><div class="small">su → zu</div></div>
+    </div>
 
-<!-- 🔥 D ROW -->
-<div class="group">
-<div class="group-title">D-Row</div>
-<div class="grid">
+    <div class="row">
+        <div class="box"><div class="big">せ</div><div class="small">se → ze</div></div>
+        <div class="box"><div class="big">そ</div><div class="small">so → zo</div></div>
+    </div>
 
-<div class="card">た → だ<span class="small">ta → da</span></div>
-<div class="card">ち → ぢ<span class="small">chi → ji</span></div>
-<div class="card">つ → づ<span class="small">tsu → zu</span></div>
-<div class="card">て → で<span class="small">te → de</span></div>
-<div class="card">と → ど<span class="small">to → do</span></div>
+    <!-- 🔥 T GROUP -->
+    <div class="section">T-group</div>
 
-</div>
-</div>
+    <div class="row">
+        <div class="box"><div class="big">た</div><div class="small">ta → da</div></div>
+        <div class="box"><div class="big">ち</div><div class="small">chi → ji</div></div>
+        <div class="box"><div class="big">つ</div><div class="small">tsu → zu</div></div>
+    </div>
 
-<!-- 🔥 B ROW -->
-<div class="group">
-<div class="group-title">B-Row</div>
-<div class="grid">
+    <div class="row">
+        <div class="box"><div class="big">て</div><div class="small">te → de</div></div>
+        <div class="box"><div class="big">と</div><div class="small">to → do</div></div>
+    </div>
 
-<div class="card">は → ば<span class="small">ha → ba</span></div>
-<div class="card">ひ → び<span class="small">hi → bi</span></div>
-<div class="card">ふ → ぶ<span class="small">fu → bu</span></div>
-<div class="card">へ → べ<span class="small">he → be</span></div>
-<div class="card">ほ → ぼ<span class="small">ho → bo</span></div>
+    <!-- 🔥 H GROUP -->
+    <div class="section">H-group</div>
 
-</div>
+    <div class="row">
+        <div class="box"><div class="big">は</div><div class="small">ha → ba</div></div>
+        <div class="box"><div class="big">ひ</div><div class="small">hi → bi</div></div>
+        <div class="box"><div class="big">ふ</div><div class="small">fu → bu</div></div>
+    </div>
+
+    <div class="row">
+        <div class="box"><div class="big">へ</div><div class="small">he → be</div></div>
+        <div class="box"><div class="big">ほ</div><div class="small">ho → bo</div></div>
+    </div>
+
 </div>
 
 </body>
