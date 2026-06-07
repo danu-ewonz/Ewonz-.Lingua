@@ -20,122 +20,158 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* MAIN BOX */
-.chart{
+/* GROUP BOX */
+.group{
 border:2px solid gold;
 border-radius:12px;
+margin-bottom:10px;
 overflow:hidden;
 }
 
-/* ROW STYLE */
-.row{
-padding:14px;
-border-bottom:1px solid gold;
-font-size:18px;
-line-height:1.7;
+/* HEADER */
+.group-title{
+background:rgba(255,215,0,0.1);
+padding:12px;
+cursor:pointer;
+font-weight:bold;
+color:gold;
 }
 
-.row:last-child{
+/* CONTENT (hidden by default) */
+.group-content{
+display:none;
+padding:10px;
+border-top:1px solid gold;
+}
+
+/* ROW */
+.item{
+padding:8px;
+border-bottom:1px solid rgba(255,215,0,0.3);
+font-size:18px;
+}
+
+.item:last-child{
 border-bottom:none;
 }
 
-/* EXAMPLE BOX */
-.examples{
-margin-top:20px;
-padding:15px;
-border:2px solid gold;
-border-radius:12px;
-text-align:left;
-}
-
-.examples h2{
-color:gold;
-margin-bottom:10px;
-font-size:18px;
-}
-
-.examples p{
-margin:6px 0;
-font-size:14px;
-opacity:0.9;
-}
-
+/* ROMAJI */
 .small{
-color:#ffd700;
+font-size:12px;
+opacity:0.7;
+display:block;
+margin-top:3px;
 }
-
 </style>
 </head>
 
 <body>
 
-<h1>Katakana Youon (拗音)</h1>
+<h1>Katakana Youon (Grouped)</h1>
 
-<!-- CHART -->
-<div class="chart">
-
-<div class="row">キャ - kya</div>
-<div class="row">キュ - kyu</div>
-<div class="row">キョ - kyo</div>
-
-<div class="row">シャ - sha</div>
-<div class="row">シュ - shu</div>
-<div class="row">ショ - sho</div>
-
-<div class="row">チャ - cha</div>
-<div class="row">チュ - chu</div>
-<div class="row">チョ - cho</div>
-
-<div class="row">ニャ - nya</div>
-<div class="row">ニュ - nyu</div>
-<div class="row">ニョ - nyo</div>
-
-<div class="row">ヒャ - hya</div>
-<div class="row">ヒュ - hyu</div>
-<div class="row">ヒョ - hyo</div>
-
-<div class="row">ミャ - mya</div>
-<div class="row">ミュ - myu</div>
-<div class="row">ミョ - myo</div>
-
-<div class="row">リャ - rya</div>
-<div class="row">リュ - ryu</div>
-<div class="row">リョ - ryo</div>
-
-<div class="row">ギャ - gya</div>
-<div class="row">ギュ - gyu</div>
-<div class="row">ギョ - gyo</div>
-
-<div class="row">ジャ - ja</div>
-<div class="row">ジュ - ju</div>
-<div class="row">ジョ - jo</div>
-
-<div class="row">ビャ - bya</div>
-<div class="row">ビュ - byu</div>
-<div class="row">ビョ - byo</div>
-
-<div class="row">ピャ - pya</div>
-<div class="row">ピュ - pyu</div>
-<div class="row">ピョ - pyo</div>
-
+<!-- K ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">K-Row (キャ行)</div>
+<div class="group-content">
+<div class="item">キャ <span class="small">kya</span></div>
+<div class="item">キュ <span class="small">kyu</span></div>
+<div class="item">キョ <span class="small">kyo</span></div>
+</div>
 </div>
 
-<!-- EXAMPLES -->
-<div class="examples">
-
-<h2>Examples</h2>
-
-<p>キャット → <span class="small">kyatto</span></p>
-<p>キュート → <span class="small">kyuuto</span></p>
-<p>ショップ → <span class="small">shoppu</span></p>
-<p>チョコ → <span class="small">choko</span></p>
-<p>ニャンコ → <span class="small">nyanko</span></p>
-<p>ヒューマン → <span class="small">hyuuman</span></p>
-<p>ギャング → <span class="small">gyangu</span></p>
-<p>ジョーク → <span class="small">jouku</span></p>
-<p>ピアノ → <span class="small">piano</span></p>
-
+<!-- S ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">S-Row (シャ行)</div>
+<div class="group-content">
+<div class="item">シャ <span class="small">sha</span></div>
+<div class="item">シュ <span class="small">shu</span></div>
+<div class="item">ショ <span class="small">sho</span></div>
 </div>
+</div>
+
+<!-- T ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">T-Row (チャ行)</div>
+<div class="group-content">
+<div class="item">チャ <span class="small">cha</span></div>
+<div class="item">チュ <span class="small">chu</span></div>
+<div class="item">チョ <span class="small">cho</span></div>
+</div>
+</div>
+
+<!-- N ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">N-Row (ニャ行)</div>
+<div class="group-content">
+<div class="item">ニャ <span class="small">nya</span></div>
+<div class="item">ニュ <span class="small">nyu</span></div>
+<div class="item">ニョ <span class="small">nyo</span></div>
+</div>
+</div>
+
+<!-- H ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">H-Row (ヒャ行)</div>
+<div class="group-content">
+<div class="item">ヒャ <span class="small">hya</span></div>
+<div class="item">ヒュ <span class="small">hyu</span></div>
+<div class="item">ヒョ <span class="small">hyo</span></div>
+</div>
+</div>
+
+<!-- M ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">M-Row (ミャ行)</div>
+<div class="group-content">
+<div class="item">ミャ <span class="small">mya</span></div>
+<div class="item">ミュ <span class="small">myu</span></div>
+<div class="item">ミョ <span class="small">myo</span></div>
+</div>
+</div>
+
+<!-- R ROW -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">R-Row (リャ行)</div>
+<div class="group-content">
+<div class="item">リャ <span class="small">rya</span></div>
+<div class="item">リュ <span class="small">ryu</span></div>
+<div class="item">リョ <span class="small">ryo</span></div>
+</div>
+</div>
+
+<!-- G / J / B / P -->
+<div class="group">
+<div class="group-title" onclick="toggle(this)">G / J / B / P</div>
+<div class="group-content">
+<div class="item">ギャ <span class="small">gya</span></div>
+<div class="item">ギュ <span class="small">gyu</span></div>
+<div class="item">ギョ <span class="small">gyo</span></div>
+
+<div class="item">ジャ <span class="small">ja</span></div>
+<div class="item">ジュ <span class="small">ju</span></div>
+<div class="item">ジョ <span class="small">jo</span></div>
+
+<div class="item">ビャ <span class="small">bya</span></div>
+<div class="item">ビュ <span class="small">byu</span></div>
+<div class="item">ビョ <span class="small">byo</span></div>
+
+<div class="item">ピャ <span class="small">pya</span></div>
+<div class="item">ピュ <span class="small">pyu</span></div>
+<div class="item">ピョ <span class="small">pyo</span></div>
+</div>
+</div>
+
+<script>
+function toggle(el){
+let content = el.nextElementSibling;
+
+if(content.style.display === "block"){
+content.style.display = "none";
+}else{
+content.style.display = "block";
+}
+}
+</script>
 
 </body>
 </html>
