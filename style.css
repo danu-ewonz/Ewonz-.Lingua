@@ -14,7 +14,7 @@ body{
 
     touch-action:pan-y;
 
-    padding-bottom:80px;
+    padding-bottom:80px; /* bottom bar space */
 }
 
 /* RESET */
@@ -98,7 +98,7 @@ html{
 }
 
 /* =========================
-📱 FLOAT NAV (BACK + HOME)
+📱 FLOAT NAV (OLD OPTIONAL)
 ========================= */
 .bottom-nav{
     position:fixed;
@@ -136,16 +136,64 @@ html{
     transform:scale(0.88);
 }
 
-/* BACK (RED) */
 .nav-btn.back{
     background:#e74c3c;
     color:white;
 }
 
-/* HOME (GOLD) */
 .nav-btn.home{
     background:gold;
     color:black;
+}
+
+/* =========================
+📱 NEW BOTTOM BAR (FINAL)
+========================= */
+.bottom-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:10px 20px;
+
+    background:rgba(0,0,0,0.95);
+    border-top:1px solid rgba(255,0,0,0.4);
+
+    z-index:999;
+}
+
+/* BUTTON STYLE */
+.bar-btn{
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    border:none;
+
+    background:red;
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    box-shadow:0 0 10px rgba(255,0,0,0.4);
+
+    transition:0.2s ease;
+}
+
+.bar-btn:active{
+    transform:scale(0.88);
 }
 
 /* =========================
