@@ -1,30 +1,95 @@
-<!-- 1 JLPT -->
-<div class="section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="section-title">
-        (1) JLPT EXAM
-    </div>
+<title>Kanji - Japanese Exam Required</title>
 
-    <!-- N5 -->
-    <button class="btn" onclick="location.href='n5.html'">
-        JLPT - N5
-    </button>
+<style>
 
-    <!-- FIXED N4 -->
-    <button class="btn" onclick="location.href='n4.html'">
-        JLPT - N4
-    </button>
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:Arial,sans-serif;
+    color:white;
+    padding:20px;
+}
 
-    <button class="btn" onclick="location.href='n3.html'">
-        JLPT - N3
-    </button>
+.title{
+    text-align:center;
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
 
-    <button class="btn" onclick="location.href='n2.html'">
-        JLPT - N2
-    </button>
+.section{
+    border:2px solid gold;
+    border-radius:20px;
+    padding:15px;
+    margin-bottom:20px;
+}
 
-    <button class="btn" onclick="location.href='n1.html'">
-        JLPT - N1
-    </button>
+.section h3{
+    color:gold;
+    margin-top:0;
+    text-align:center;
+}
 
+.btn{
+    width:100%;
+    padding:16px;
+    margin:8px 0;
+
+    background:transparent;
+    color:gold;
+
+    border:2px solid gold;
+    border-radius:15px;
+
+    font-size:17px;
+    font-weight:bold;
+}
+
+.btn:active{
+    transform:scale(0.98);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">
+Kanji - Japanese Exam Required
 </div>
+
+<div class="section">
+    <h3>JLPT EXAM</h3>
+
+    <button class="btn" onclick="location.href='n5.html'">JLPT - N5</button>
+    <button class="btn" onclick="location.href='n4.html'">JLPT - N4</button>
+    <button class="btn" onclick="location.href='n3.html'">JLPT - N3</button>
+    <button class="btn" onclick="location.href='n2.html'">JLPT - N2</button>
+    <button class="btn" onclick="location.href='n1.html'">JLPT - N1</button>
+</div>
+
+<div class="section">
+    <h3>NAT-TEST</h3>
+
+    <button class="btn">Q5</button>
+    <button class="btn">Q4</button>
+    <button class="btn">Q3</button>
+    <button class="btn">Q2</button>
+    <button class="btn">Q1</button>
+</div>
+
+<div class="section">
+    <h3>JFT-Basic (SSW)</h3>
+
+    <button class="btn">N2</button>
+</div>
+
+</body>
+</html>
