@@ -1,41 +1,15 @@
-var kanjiN4_2 = [
-{kanji:"売", kana:"うる", romaji:"uru", meaning:"sell"},
-{kanji:"行", kana:"いく", romaji:"iku", meaning:"go"},
-{kanji:"来", kana:"くる", romaji:"kuru", meaning:"come"},
-{kanji:"帰", kana:"かえる", romaji:"kaeru", meaning:"return"},
-{kanji:"休", kana:"やすむ", romaji:"yasumu", meaning:"rest"},
-{kanji:"働", kana:"はたらく", romaji:"hataraku", meaning:"work"},
-{kanji:"会", kana:"あう", romaji:"au", meaning:"meet"},
-{kanji:"住", kana:"すむ", romaji:"sumu", meaning:"live"},
-{kanji:"考", kana:"かんがえる", romaji:"kangaeru", meaning:"think deeply"},
-{kanji:"知", kana:"しる", romaji:"shiru", meaning:"know"},
+window.kanjiList = window.kanjiList.concat([
+  {k:"年",en:"Year",si:"අවුරුද්ද",h:"ねん",r:"nen"},
+  {k:"時",en:"Time",si:"වේලාව",h:"じ",r:"ji"},
+  {k:"人",en:"Person",si:"මනුස්සයා",h:"ひと",r:"hito"},
+  {k:"男",en:"Man",si:"පිරිමි",h:"おとこ",r:"otoko"},
+  {k:"女",en:"Woman",si:"ගැහැණු",h:"おんな",r:"onna"},
+  {k:"子",en:"Child",si:"ළමයා",h:"こ",r:"ko"},
 
-{kanji:"待", kana:"まつ", romaji:"matsu", meaning:"wait"},
-{kanji:"使", kana:"つかう", romaji:"tsukau", meaning:"use"},
-{kanji:"始", kana:"はじまる", romaji:"hajimaru", meaning:"start"},
-{kanji:"終", kana:"おわる", romaji:"owaru", meaning:"end"},
-{kanji:"立", kana:"たつ", romaji:"tatsu", meaning:"stand"},
-{kanji:"座", kana:"すわる", romaji:"suwaru", meaning:"sit"},
-{kanji:"入", kana:"はいる", romaji:"hairu", meaning:"enter"},
-{kanji:"出", kana:"でる", romaji:"deru", meaning:"exit"},
-{kanji:"持", kana:"もつ", romaji:"motsu", meaning:"hold"},
-{kanji:"取", kana:"とる", romaji:"toru", meaning:"take"},
-
-{kanji:"作", kana:"つくる", romaji:"tsukuru", meaning:"make"},
-{kanji:"送", kana:"おくる", romaji:"okuru", meaning:"send"},
-{kanji:"走", kana:"はしる", romaji:"hashiru", meaning:"run"},
-{kanji:"歩", kana:"あるく", romaji:"aruku", meaning:"walk"},
-{kanji:"歌", kana:"うたう", romaji:"utau", meaning:"sing"},
-{kanji:"泳", kana:"およぐ", romaji:"oyogu", meaning:"swim"},
-{kanji:"洗", kana:"あらう", romaji:"arau", meaning:"wash"},
-{kanji:"教", kana:"おしえる", romaji:"oshieru", meaning:"teach"},
-{kanji:"習", kana:"ならう", romaji:"narau", meaning:"learn"},
-{kanji:"考", kana:"かんがえる", romaji:"kangaeru", meaning:"think"},
-
-// filler exam words
-{kanji:"電", kana:"でん", romaji:"den", meaning:"electric"},
-{kanji:"車", kana:"くるま", romaji:"kuruma", meaning:"car"},
-{kanji:"駅", kana:"えき", romaji:"eki", meaning:"station"},
-{kanji:"病", kana:"びょう", romaji:"byou", meaning:"illness"},
-{kanji:"院", kana:"いん", romaji:"in", meaning:"institution"}
-];
+  {k:"上",en:"Up",si:"උඩ",h:"うえ",r:"ue"},
+  {k:"下",en:"Down",si:"යට",h:"した",r:"shita"},
+  {k:"左",en:"Left",si:"වම",h:"ひだり",r:"hidari"},
+  {k:"右",en:"Right",si:"දකුණ",h:"みぎ",r:"migi"},
+  {k:"中",en:"Middle",si:"මැද",h:"なか",r:"naka"},
+  {k:"外",en:"Outside",si:"එළිය",h:"そと",r:"soto"}
+]);
