@@ -20,31 +20,49 @@ color:gold;
 margin-bottom:20px;
 }
 
+/* GROUP */
+.group{
+margin-bottom:25px;
+}
+
+/* GROUP TITLE */
+.group-title{
+color:gold;
+font-size:16px;
+margin:10px 0;
+text-align:left;
+}
+
+/* GRID (2 CARDS PER ROW) */
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
 /* CARD */
 .card{
 border:2px solid gold;
 border-radius:12px;
-padding:15px;
-text-align:left;
+padding:10px;
 background:rgba(255,255,255,0.03);
-}
-
-/* LINE */
-.line{
+text-align:center;
 font-size:18px;
-line-height:1.8;
-padding:4px 0;
-border-bottom:1px solid rgba(255,215,0,0.2);
-}
-
-.line:last-child{
-border-bottom:none;
 }
 
 /* ROMAJI */
 .small{
+display:block;
 color:#ffd700;
-font-size:14px;
+font-size:13px;
+margin-top:5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+.grid{
+grid-template-columns:1fr 1fr;
+}
 }
 
 </style>
@@ -54,32 +72,60 @@ font-size:14px;
 
 <h1>Hiragana Dakuten</h1>
 
-<div class="card">
+<!-- 🔥 G ROW -->
+<div class="group">
+<div class="group-title">G-Row</div>
+<div class="grid">
 
-<div class="line">か → が <span class="small">(ka → ga)</span></div>
-<div class="line">き → ぎ <span class="small">(ki → gi)</span></div>
-<div class="line">く → ぐ <span class="small">(ku → gu)</span></div>
-<div class="line">け → げ <span class="small">(ke → ge)</span></div>
-<div class="line">こ → ご <span class="small">(ko → go)</span></div>
+<div class="card">か → が<span class="small">ka → ga</span></div>
+<div class="card">き → ぎ<span class="small">ki → gi</span></div>
+<div class="card">く → ぐ<span class="small">ku → gu</span></div>
+<div class="card">け → げ<span class="small">ke → ge</span></div>
+<div class="card">こ → ご<span class="small">ko → go</span></div>
 
-<div class="line">さ → ざ <span class="small">(sa → za)</span></div>
-<div class="line">し → じ <span class="small">(shi → ji)</span></div>
-<div class="line">す → ず <span class="small">(su → zu)</span></div>
-<div class="line">せ → ぜ <span class="small">(se → ze)</span></div>
-<div class="line">そ → ぞ <span class="small">(so → zo)</span></div>
+</div>
+</div>
 
-<div class="line">た → だ <span class="small">(ta → da)</span></div>
-<div class="line">ち → ぢ <span class="small">(chi → ji)</span></div>
-<div class="line">つ → づ <span class="small">(tsu → zu)</span></div>
-<div class="line">て → で <span class="small">(te → de)</span></div>
-<div class="line">と → ど <span class="small">(to → do)</span></div>
+<!-- 🔥 Z ROW -->
+<div class="group">
+<div class="group-title">Z-Row</div>
+<div class="grid">
 
-<div class="line">は → ば <span class="small">(ha → ba)</span></div>
-<div class="line">ひ → び <span class="small">(hi → bi)</span></div>
-<div class="line">ふ → ぶ <span class="small">(fu → bu)</span></div>
-<div class="line">へ → べ <span class="small">(he → be)</span></div>
-<div class="line">ほ → ぼ <span class="small">(ho → bo)</span></div>
+<div class="card">さ → ざ<span class="small">sa → za</span></div>
+<div class="card">し → じ<span class="small">shi → ji</span></div>
+<div class="card">す → ず<span class="small">su → zu</span></div>
+<div class="card">せ → ぜ<span class="small">se → ze</span></div>
+<div class="card">そ → ぞ<span class="small">so → zo</span></div>
 
+</div>
+</div>
+
+<!-- 🔥 D ROW -->
+<div class="group">
+<div class="group-title">D-Row</div>
+<div class="grid">
+
+<div class="card">た → だ<span class="small">ta → da</span></div>
+<div class="card">ち → ぢ<span class="small">chi → ji</span></div>
+<div class="card">つ → づ<span class="small">tsu → zu</span></div>
+<div class="card">て → で<span class="small">te → de</span></div>
+<div class="card">と → ど<span class="small">to → do</span></div>
+
+</div>
+</div>
+
+<!-- 🔥 B ROW -->
+<div class="group">
+<div class="group-title">B-Row</div>
+<div class="grid">
+
+<div class="card">は → ば<span class="small">ha → ba</span></div>
+<div class="card">ひ → び<span class="small">hi → bi</span></div>
+<div class="card">ふ → ぶ<span class="small">fu → bu</span></div>
+<div class="card">へ → べ<span class="small">he → be</span></div>
+<div class="card">ほ → ぼ<span class="small">ho → bo</span></div>
+
+</div>
 </div>
 
 </body>
