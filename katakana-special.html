@@ -14,11 +14,14 @@
 body{
     margin:0;
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     background:radial-gradient(circle at top, #1a1a1a, #000);
     font-family:Arial, sans-serif;
+
     padding:20px 0;
 }
 
@@ -49,13 +52,7 @@ MAIN CARD
     inset:-2px;
     border-radius:22px;
 
-    background:linear-gradient(
-        45deg,
-        #ffd700,
-        #ffcc00,
-        #fff3b0,
-        #ffae00
-    );
+    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0,#ffae00);
 
     z-index:-1;
     filter:blur(6px);
@@ -67,10 +64,7 @@ MAIN CARD
     color:#ffd700;
     font-size:22px;
     font-weight:bold;
-
     margin-bottom:20px;
-
-    text-shadow:0 0 10px rgba(255,215,0,0.3);
 }
 
 /* BUTTON */
@@ -94,11 +88,35 @@ MAIN CARD
 
 .btn:hover{
     transform:scale(1.03);
-
     background:rgba(255,215,0,0.9);
     color:#000;
-
     box-shadow:0 0 18px rgba(255,215,0,0.4);
+}
+
+/* =========================
+BACK BUTTON
+========================= */
+.back-btn{
+    position:fixed;
+    top:15px;
+    left:15px;
+
+    padding:10px 14px;
+    border-radius:10px;
+
+    border:1px solid gold;
+    background:rgba(255,215,0,0.1);
+
+    color:gold;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.2s ease;
+}
+
+.back-btn:hover{
+    background:gold;
+    color:#000;
 }
 
 </style>
@@ -106,10 +124,15 @@ MAIN CARD
 
 <body>
 
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="history.back()">
+⬅ Back
+</button>
+
 <div class="container">
 
     <div class="title">
-        Katakana Special ✨
+        Katakana Special 
     </div>
 
     <!-- 1 -->
