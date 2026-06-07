@@ -8,95 +8,146 @@
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     background:#0b0b0b;
     color:white;
-    overflow-x:hidden;
 }
 
+/* HEADER */
 .header{
     text-align:center;
-    padding:20px;
-    font-size:26px;
+    padding:18px;
+    font-size:24px;
     font-weight:bold;
     color:#ffd700;
-    letter-spacing:3px;
     border-bottom:2px solid #ffd700;
 }
 
+/* SEARCH */
+.search-box{
+    padding:10px;
+    text-align:center;
+}
+
+.search-box input{
+    width:92%;
+    padding:12px;
+    border-radius:10px;
+    border:2px solid #ffd700;
+    background:#111;
+    color:white;
+    outline:none;
+}
+
+/* GRID */
 .grid{
     display:grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:12px;
     padding:15px;
 }
 
+/* CARD */
 .card{
     background:#111;
     border:2px solid #ffd700;
     border-radius:12px;
-    padding:14px 10px;
+    padding:14px;
     text-align:center;
-    box-shadow:0 0 10px rgba(255,215,0,0.12);
     transition:0.2s;
 }
 
-.card:active{ transform:scale(0.96); }
+.card:active{
+    transform:scale(0.97);
+}
 
-.kanji{ font-size:42px; font-weight:bold; color:white; }
-.en{ margin-top:6px; font-size:12px; color:white; }
-.si{ margin-top:3px; font-size:13px; color:#ffd700; font-weight:bold; }
-.hira{ margin-top:4px; font-size:12px; color:#ccc; }
-.roma{ margin-top:2px; font-size:11px; color:#aaa; font-style:italic; }
-
-.container{ padding-bottom:80px; }
+/* TEXT */
+.kanji{font-size:40px;font-weight:bold;}
+.en{font-size:12px;color:white;margin-top:6px;}
+.si{font-size:13px;color:#ffd700;margin-top:3px;font-weight:bold;}
+.hira{font-size:12px;color:#ccc;margin-top:4px;}
+.roma{font-size:11px;color:#aaa;font-style:italic;margin-top:2px;}
 </style>
 </head>
 
 <body>
 
-<div class="header">JLPT - N4 KANJI</div>
+<div class="header">JLPT N4 KANJI</div>
 
-<div class="container">
-<div id="grid" class="grid"></div>
+<!-- 🔥 SEARCH -->
+<div class="search-box">
+<input type="text" id="search" placeholder="Search kanji / English / Sinhala / reading...">
 </div>
 
-<script>
-const kanjiList = [
-    {k:"会", en:"Meet / Association", si:"හමුවීම", h:"かい", r:"kai"},
-    {k:"同", en:"Same", si:"එකම", h:"どう", r:"dou"},
-    {k:"事", en:"Thing / Matter", si:"දේ", h:"こと", r:"koto"},
-    {k:"自", en:"Self", si:"තමා", h:"じ", r:"ji"},
-    {k:"社", en:"Company", si:"සමාගම", h:"しゃ", r:"sha"},
-    {k:"発", en:"Start", si:"ආරම්භය", h:"はつ", r:"hatsu"},
-    {k:"者", en:"Person", si:"පුද්ගලයා", h:"しゃ", r:"sha"},
-    {k:"地", en:"Earth", si:"පොළොව", h:"ち", r:"chi"},
-    {k:"業", en:"Work", si:"වැඩ", h:"ぎょう", r:"gyou"},
-    {k:"方", en:"Direction", si:"දිශාව", h:"ほう", r:"hou"},
+<!-- GRID -->
+<div id="grid" class="grid"></div>
 
-    {k:"入", en:"Enter", si:"ඇතුල් වීම", h:"にゅう", r:"nyuu"},
-    {k:"出", en:"Exit", si:"පිටවීම", h:"しゅつ", r:"shutsu"},
-    {k:"時", en:"Time", si:"කාලය", h:"じ", r:"ji"},
-    {k:"間", en:"Interval", si:"අතර", h:"かん", r:"kan"},
-    {k:"行", en:"Go", si:"යනවා", h:"こう", r:"kou"},
-    {k:"見", en:"See", si:"බලනවා", h:"けん", r:"ken"},
-    {k:"知", en:"Know", si:"දන්නවා", h:"ち", r:"chi"},
-    {k:"国", en:"Country", si:"රට", h:"こく", r:"koku"}
+<script>
+
+/* 🔥 N4 KANJI LIST */
+const kanjiList = [
+{ k:"力", en:"Power", si:"ශක්තිය", h:"ちから", r:"chikara" },
+{ k:"何", en:"What", si:"කුමක්ද", h:"なに", r:"nani" },
+{ k:"時", en:"Time", si:"කාලය", h:"とき", r:"toki" },
+{ k:"間", en:"Interval", si:"අතර", h:"あいだ", r:"aida" },
+{ k:"長", en:"Long", si:"දිග", h:"ながい", r:"nagai" },
+
+{ k:"高", en:"High", si:"උස", h:"たかい", r:"takai" },
+{ k:"安", en:"Cheap / Peace", si:"ලාභ / සැනසීම", h:"やすい", r:"yasui" },
+{ k:"新", en:"New", si:"නව", h:"あたらしい", r:"atarashii" },
+{ k:"古", en:"Old", si:"පැරණි", h:"ふるい", r:"furui" },
+{ k:"大", en:"Big", si:"ලොකු", h:"おおきい", r:"ookii" },
+
+{ k:"小", en:"Small", si:"කුඩා", h:"ちいさい", r:"chiisai" },
+{ k:"上", en:"Up", si:"ඉහළ", h:"うえ", r:"ue" },
+{ k:"下", en:"Down", si:"පහළ", h:"した", r:"shita" },
+{ k:"中", en:"Inside", si:"ඇතුළත", h:"なか", r:"naka" },
+{ k:"外", en:"Outside", si:"පිටත", h:"そと", r:"soto" },
+
+{ k:"東", en:"East", si:"නැගෙනහිර", h:"ひがし", r:"higashi" },
+{ k:"西", en:"West", si:"බටහිර", h:"にし", r:"nishi" },
+{ k:"南", en:"South", si:"දකුණ", h:"みなみ", r:"minami" },
+{ k:"北", en:"North", si:"උතුර", h:"きた", r:"kita" },
+
+{ k:"天", en:"Sky", si:"අහස", h:"てん", r:"ten" },
+{ k:"気", en:"Spirit / Air", si:"වාතය", h:"き", r:"ki" },
+{ k:"雨", en:"Rain", si:"වැස්ස", h:"あめ", r:"ame" }
 ];
 
-const grid=document.getElementById("grid");
+const grid = document.getElementById("grid");
+const search = document.getElementById("search");
 
-kanjiList.forEach(i=>{
-    const c=document.createElement("div");
-    c.className="card";
-    c.innerHTML=`
-        <div class="kanji">${i.k}</div>
-        <div class="en">${i.en}</div>
-        <div class="si">${i.si}</div>
-        <div class="hira">${i.h}</div>
-        <div class="roma">${i.r}</div>
-    `;
-    grid.appendChild(c);
+/* RENDER */
+function render(list){
+grid.innerHTML="";
+
+list.forEach(i=>{
+grid.innerHTML += `
+<div class="card">
+<div class="kanji">${i.k}</div>
+<div class="en">${i.en}</div>
+<div class="si">${i.si}</div>
+<div class="hira">${i.h}</div>
+<div class="roma">${i.r}</div>
+</div>`;
+});
+}
+
+render(kanjiList);
+
+/* SEARCH */
+search.addEventListener("input",()=>{
+let v = search.value.toLowerCase();
+
+let filtered = kanjiList.filter(i =>
+i.k.includes(v) ||
+i.en.toLowerCase().includes(v) ||
+i.si.includes(v) ||
+i.h.includes(v) ||
+i.r.toLowerCase().includes(v)
+);
+
+render(filtered);
 });
 </script>
 
