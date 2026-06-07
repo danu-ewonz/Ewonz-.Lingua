@@ -7,66 +7,55 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Arial;
-    background:#0b0b0b;
-    color:white;
+  margin:0;
+  font-family:Arial;
+  background:#0b0b0b;
+  color:white;
 }
 
-/* HEADER */
 .header{
-    text-align:center;
-    padding:18px;
-    font-size:24px;
-    font-weight:bold;
-    color:#ffd700;
-    border-bottom:2px solid #ffd700;
+  text-align:center;
+  padding:18px;
+  font-size:22px;
+  color:#ffd700;
+  border-bottom:2px solid #ffd700;
 }
 
-/* SEARCH */
 .search-box{
-    padding:10px;
-    text-align:center;
+  padding:10px;
+  text-align:center;
 }
 
 .search-box input{
-    width:92%;
-    padding:12px;
-    border-radius:10px;
-    border:2px solid #ffd700;
-    background:#111;
-    color:white;
-    outline:none;
+  width:92%;
+  padding:12px;
+  border-radius:10px;
+  border:2px solid #ffd700;
+  background:#111;
+  color:white;
+  outline:none;
 }
 
-/* GRID */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    padding:15px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  padding:15px;
 }
 
-/* CARD */
 .card{
-    background:#111;
-    border:2px solid #ffd700;
-    border-radius:12px;
-    padding:14px;
-    text-align:center;
-    transition:0.2s;
+  background:#111;
+  border:2px solid #ffd700;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
 }
 
-.card:active{
-    transform:scale(0.97);
-}
-
-/* TEXT */
-.kanji{font-size:40px;font-weight:bold;}
-.en{font-size:12px;color:white;margin-top:6px;}
-.si{font-size:13px;color:#ffd700;margin-top:3px;font-weight:bold;}
-.hira{font-size:12px;color:#ccc;margin-top:4px;}
-.roma{font-size:11px;color:#aaa;font-style:italic;margin-top:2px;}
+.kanji{font-size:40px;}
+.en{font-size:12px;}
+.si{color:#ffd700;font-size:13px;}
+.hira{color:#ccc;font-size:12px;}
+.roma{color:#aaa;font-size:11px;}
 </style>
 </head>
 
@@ -74,80 +63,50 @@ body{
 
 <div class="header">JLPT N4 KANJI</div>
 
-<!-- 🔥 SEARCH -->
 <div class="search-box">
-<input type="text" id="search" placeholder="Search kanji / English / Sinhala / reading...">
+<input id="search" placeholder="Search kanji / English / Sinhala / Romaji...">
 </div>
 
-<!-- GRID -->
 <div id="grid" class="grid"></div>
 
+<!-- DATA FILES -->
+<script src="n4-data-1.js"></script>
+<script src="n4-data-2.js"></script>
+<script src="n4-data-3.js"></script>
+
 <script>
-
-/* 🔥 N4 KANJI LIST */
-const kanjiList = [
-{ k:"力", en:"Power", si:"ශක්තිය", h:"ちから", r:"chikara" },
-{ k:"何", en:"What", si:"කුමක්ද", h:"なに", r:"nani" },
-{ k:"時", en:"Time", si:"කාලය", h:"とき", r:"toki" },
-{ k:"間", en:"Interval", si:"අතර", h:"あいだ", r:"aida" },
-{ k:"長", en:"Long", si:"දිග", h:"ながい", r:"nagai" },
-
-{ k:"高", en:"High", si:"උස", h:"たかい", r:"takai" },
-{ k:"安", en:"Cheap / Peace", si:"ලාභ / සැනසීම", h:"やすい", r:"yasui" },
-{ k:"新", en:"New", si:"නව", h:"あたらしい", r:"atarashii" },
-{ k:"古", en:"Old", si:"පැරණි", h:"ふるい", r:"furui" },
-{ k:"大", en:"Big", si:"ලොකු", h:"おおきい", r:"ookii" },
-
-{ k:"小", en:"Small", si:"කුඩා", h:"ちいさい", r:"chiisai" },
-{ k:"上", en:"Up", si:"ඉහළ", h:"うえ", r:"ue" },
-{ k:"下", en:"Down", si:"පහළ", h:"した", r:"shita" },
-{ k:"中", en:"Inside", si:"ඇතුළත", h:"なか", r:"naka" },
-{ k:"外", en:"Outside", si:"පිටත", h:"そと", r:"soto" },
-
-{ k:"東", en:"East", si:"නැගෙනහිර", h:"ひがし", r:"higashi" },
-{ k:"西", en:"West", si:"බටහිර", h:"にし", r:"nishi" },
-{ k:"南", en:"South", si:"දකුණ", h:"みなみ", r:"minami" },
-{ k:"北", en:"North", si:"උතුර", h:"きた", r:"kita" },
-
-{ k:"天", en:"Sky", si:"අහස", h:"てん", r:"ten" },
-{ k:"気", en:"Spirit / Air", si:"වාතය", h:"き", r:"ki" },
-{ k:"雨", en:"Rain", si:"වැස්ස", h:"あめ", r:"ame" }
-];
-
 const grid = document.getElementById("grid");
 const search = document.getElementById("search");
 
 /* RENDER */
 function render(list){
-grid.innerHTML="";
-
-list.forEach(i=>{
-grid.innerHTML += `
-<div class="card">
-<div class="kanji">${i.k}</div>
-<div class="en">${i.en}</div>
-<div class="si">${i.si}</div>
-<div class="hira">${i.h}</div>
-<div class="roma">${i.r}</div>
-</div>`;
-});
+  grid.innerHTML = "";
+  list.forEach(i=>{
+    grid.innerHTML += `
+      <div class="card">
+        <div class="kanji">${i.k}</div>
+        <div class="en">${i.en}</div>
+        <div class="si">${i.si}</div>
+        <div class="hira">${i.h}</div>
+        <div class="roma">${i.r}</div>
+      </div>
+    `;
+  });
 }
 
+/* INITIAL LOAD */
 render(kanjiList);
 
 /* SEARCH */
 search.addEventListener("input",()=>{
-let v = search.value.toLowerCase();
-
-let filtered = kanjiList.filter(i =>
-i.k.includes(v) ||
-i.en.toLowerCase().includes(v) ||
-i.si.includes(v) ||
-i.h.includes(v) ||
-i.r.toLowerCase().includes(v)
-);
-
-render(filtered);
+  let v = search.value.toLowerCase();
+  render(kanjiList.filter(i =>
+    i.k.includes(v) ||
+    i.en.toLowerCase().includes(v) ||
+    i.si.includes(v) ||
+    i.h.includes(v) ||
+    i.r.toLowerCase().includes(v)
+  ));
 });
 </script>
 
