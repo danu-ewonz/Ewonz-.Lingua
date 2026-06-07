@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JLPT Kanji System</title>
+<title>JLPT Kanji Hub</title>
 
 <style>
 body{
@@ -16,183 +16,79 @@ body{
 /* HEADER */
 .header{
     text-align:center;
-    padding:18px;
-    font-size:26px;
+    padding:20px;
+    font-size:28px;
     font-weight:bold;
     color:#ffd700;
     border-bottom:2px solid #ffd700;
     letter-spacing:2px;
 }
 
-/* JLPT BUTTONS */
-.tabs{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    padding:10px;
-}
-
-.tab{
-    padding:8px 22px;
-    border:2px solid #ffd700;
-    border-radius:20px;
-    background:#111;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.2s;
-}
-
-.tab.active{
-    background:#ffd700;
-    color:black;
-}
-
-/* SEARCH */
-.search-box{
-    padding:10px;
-    text-align:center;
-}
-
-.search-box input{
-    width:92%;
-    padding:12px;
-    border-radius:10px;
-    border:2px solid #ffd700;
-    background:#111;
-    color:white;
-    outline:none;
-}
-
-/* GRID */
-.grid{
+/* GRID MENU */
+.menu{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-    gap:12px;
-    padding:15px;
+    gap:15px;
+    padding:20px;
 }
 
-/* CARD */
-.card{
+/* BUTTON CARD */
+.btn{
     background:#111;
     border:2px solid #ffd700;
-    border-radius:12px;
-    padding:14px 10px;
+    border-radius:14px;
+    padding:25px 10px;
     text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
     transition:0.2s;
+    box-shadow:0 0 10px rgba(255,215,0,0.12);
+    cursor:pointer;
 }
 
-.card:active{
+.btn:active{
     transform:scale(0.96);
 }
 
-.kanji{ font-size:42px; font-weight:bold; color:white; }
-.en{ font-size:12px; color:white; margin-top:6px; }
-.si{ font-size:13px; color:#ffd700; font-weight:bold; margin-top:3px; }
-.hira{ font-size:12px; color:#ccc; margin-top:4px; }
-.roma{ font-size:11px; color:#aaa; font-style:italic; margin-top:2px; }
-
-.container{ padding-bottom:80px; }
+/* SUB TEXT */
+.sub{
+    font-size:12px;
+    color:#ccc;
+    margin-top:6px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="header">JLPT KANJI</div>
+<div class="header">JLPT KANJI SYSTEM</div>
 
-<!-- JLPT BUTTONS -->
-<div class="tabs">
-    <div class="tab active" onclick="switchLevel('n5', event)">N5</div>
-    <div class="tab" onclick="switchLevel('n4', event)">N4</div>
+<div class="menu">
+
+    <!-- JLPT LEVELS -->
+    <div class="btn" onclick="location.href='n5.html'">
+        N5 KANJI
+        <div class="sub">Beginner Level</div>
+    </div>
+
+    <div class="btn" onclick="location.href='n4.html'">
+        N4 KANJI
+        <div class="sub">Basic Level</div>
+    </div>
+
+    <!-- EXAMS -->
+    <div class="btn" onclick="alert('Coming Soon')">
+        JLPT EXAMS
+        <div class="sub">Practice Tests</div>
+    </div>
+
+    <div class="btn" onclick="alert('Coming Soon')">
+        JFT BASIC
+        <div class="sub">Exam Practice</div>
+    </div>
+
 </div>
-
-<!-- SEARCH -->
-<div class="search-box">
-<input type="text" id="search" placeholder="Search kanji / English / Sinhala / reading...">
-</div>
-
-<div class="container">
-<div id="grid" class="grid"></div>
-</div>
-
-<script>
-
-/* 🔥 N5 DATA */
-const n5 = [
-    {k:"一", en:"One", si:"එක", h:"いち", r:"ichi"},
-    {k:"二", en:"Two", si:"දෙක", h:"に", r:"ni"},
-    {k:"三", en:"Three", si:"තුන", h:"さん", r:"san"},
-    {k:"日", en:"Day", si:"දින", h:"にち", r:"nichi"},
-    {k:"月", en:"Moon", si:"සඳ", h:"げつ", r:"getsu"}
-];
-
-/* 🔥 N4 DATA */
-const n4 = [
-    {k:"会", en:"Meet", si:"හමුවීම", h:"かい", r:"kai"},
-    {k:"同", en:"Same", si:"එකම", h:"どう", r:"dou"},
-    {k:"事", en:"Thing", si:"දේ", h:"こと", r:"koto"},
-    {k:"人", en:"Person", si:"පුද්ගලයා", h:"ひと", r:"hito"},
-    {k:"国", en:"Country", si:"රට", h:"こく", r:"koku"}
-];
-
-let current = "n5";
-
-const grid = document.getElementById("grid");
-const search = document.getElementById("search");
-
-/* GET DATA */
-function getData(){
-    return current === "n5" ? n5 : n4;
-}
-
-/* RENDER */
-function render(list){
-    grid.innerHTML = "";
-
-    list.forEach(i=>{
-        const card = document.createElement("div");
-        card.className = "card";
-
-        card.innerHTML = `
-            <div class="kanji">${i.k}</div>
-            <div class="en">${i.en}</div>
-            <div class="si">${i.si}</div>
-            <div class="hira">${i.h}</div>
-            <div class="roma">${i.r}</div>
-        `;
-
-        grid.appendChild(card);
-    });
-}
-
-render(getData());
-
-/* SEARCH */
-search.addEventListener("input", function(){
-    let val = this.value.toLowerCase();
-
-    let filtered = getData().filter(i =>
-        i.k.includes(val) ||
-        i.en.toLowerCase().includes(val) ||
-        i.si.includes(val) ||
-        i.h.includes(val) ||
-        i.r.toLowerCase().includes(val)
-    );
-
-    render(filtered);
-});
-
-/* SWITCH JLPT */
-function switchLevel(level, event){
-    current = level;
-    search.value = "";
-
-    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
-    event.target.classList.add("active");
-
-    render(getData());
-}
-</script>
 
 </body>
 </html>
