@@ -3,67 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Handakuten</title>
+<title>Katakana Handakuten Chart</title>
 
 <style>
 body{
 margin:0;
 background:#000;
-color:#fff;
 font-family:Arial;
+color:#fff;
 padding:20px;
 text-align:center;
 }
 
-h1{color:gold;}
-
-.back-btn{
-position:fixed;
-top:15px;
-left:15px;
-padding:10px 14px;
-border:1px solid gold;
-background:rgba(255,215,0,0.1);
+h1{
 color:gold;
-border-radius:10px;
-cursor:pointer;
+margin-bottom:20px;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
+/* BOX */
+.chart{
+border:2px solid gold;
+border-radius:12px;
+overflow:hidden;
 }
 
-td{
-border:1px solid gold;
+/* ROW */
+.row{
 padding:15px;
-font-size:22px;
+border-bottom:1px solid gold;
+font-size:20px;
 }
 
+.row:last-child{
+border-bottom:none;
+}
+
+/* ROMAJI */
 .small{
+display:block;
 font-size:12px;
 opacity:0.7;
-display:block;
+margin-top:5px;
 }
+
 </style>
 </head>
 
 <body>
 
-<button class="back-btn" onclick="history.back()">⬅ Back</button>
-
 <h1>Katakana Handakuten</h1>
 
-<table>
-<tr>
-<td>パ<span class="small">pa</span></td>
-<td>ピ<span class="small">pi</span></td>
-<td>プ<span class="small">pu</span></td>
-<td>ペ<span class="small">pe</span></td>
-<td>ポ<span class="small">po</span></td>
-</tr>
-</table>
+<div class="chart">
+
+<div class="row">
+ハ → パ <span class="small">ha → pa</span>
+</div>
+
+<div class="row">
+ヒ → ピ <span class="small">hi → pi</span>
+</div>
+
+<div class="row">
+フ → プ <span class="small">fu → pu</span>
+</div>
+
+<div class="row">
+ヘ → ペ <span class="small">he → pe</span>
+</div>
+
+<div class="row">
+ホ → ポ <span class="small">ho → po</span>
+</div>
+
+</div>
 
 </body>
 </html>
