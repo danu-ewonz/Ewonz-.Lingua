@@ -127,14 +127,22 @@ html{
 
     cursor:pointer;
 
-    box-shadow:0 0 10px rgba(255,215,0,0.25);
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+    transition:0.2s ease;
 }
 
+.nav-btn:active{
+    transform:scale(0.88);
+}
+
+/* BACK (RED) */
 .nav-btn.back{
     background:#e74c3c;
     color:white;
 }
 
+/* HOME (GOLD) */
 .nav-btn.home{
     background:gold;
     color:black;
@@ -241,7 +249,7 @@ html{
 }
 
 /* =========================
-🔴 SPECIAL BOX (HIRAGANA SYSTEM)
+🔴 SPECIAL BOX
 ========================= */
 .special-box{
     width:90%;
@@ -262,7 +270,6 @@ html{
     margin-bottom:10px;
 }
 
-/* ✅ FIXED TEXT COLOR ISSUE */
 .special-btn{
     width:100%;
     padding:10px;
@@ -273,7 +280,7 @@ html{
     border-radius:10px;
 
     background:rgba(255,255,255,0.1);
-    color:#ffffff;   /* FIX: always white */
+    color:#ffffff;
 
     font-size:13px;
     font-weight:bold;
