@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Dakuten (Ten-Ten) Full Chart</title>
+
+<style>
+
+body{
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0b0b0b;
+    font-family:Arial;
+    padding:20px;
+}
+
+/* CARD */
+.container{
+    width:95%;
+    max-width:450px;
+
+    border:2px solid gold;
+    border-radius:20px;
+
+    padding:20px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.03);
+}
+
+/* TITLE */
+.title{
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+/* ROW */
+.row{
+    display:flex;
+    gap:8px;
+    margin-bottom:10px;
+}
+
+/* BOX */
+.box{
+    flex:1;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    padding:10px;
+
+    background:rgba(255,255,255,0.05);
+}
+
+/* BIG CHAR */
+.big{
+    font-size:26px;
+    color:white;
+    font-weight:bold;
+}
+
+/* SMALL TEXT */
+.small{
+    font-size:11px;
+    color:#aaa;
+    margin-top:4px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    background:transparent;
+    color:white;
+
+    font-weight:bold;
+}
+
+.back-btn:active{
+    transform:scale(0.97);
+}
+
+/* SECTION TITLE */
+.section{
+    color:gold;
+    font-size:14px;
+    margin:12px 0 6px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">Dakuten (゛) Full Chart</div>
+    <div class="subtitle">Hiragana voiced sound transformation</div>
+
+    <div class="section">G-group</div>
+    <div class="row">
+        <div class="box"><div class="big">か → が</div><div class="small">ka → ga</div></div>
+        <div class="box"><div class="big">き → ぎ</div><div class="small">ki → gi</div></div>
+        <div class="box"><div class="big">く → ぐ</div><div class="small">ku → gu</div></div>
+        <div class="box"><div class="big">け → げ</div><div class="small">ke → ge</div></div>
+        <div class="box"><div class="big">こ → ご</div><div class="small">ko → go</div></div>
+    </div>
+
+    <div class="section">S-group</div>
+    <div class="row">
+        <div class="box"><div class="big">さ → ざ</div><div class="small">sa → za</div></div>
+        <div class="box"><div class="big">し → じ</div><div class="small">shi → ji</div></div>
+        <div class="box"><div class="big">す → ず</div><div class="small">su → zu</div></div>
+        <div class="box"><div class="big">せ → ぜ</div><div class="small">se → ze</div></div>
+        <div class="box"><div class="big">そ → ぞ</div><div class="small">so → zo</div></div>
+    </div>
+
+    <div class="section">T-group</div>
+    <div class="row">
+        <div class="box"><div class="big">た → だ</div><div class="small">ta → da</div></div>
+        <div class="box"><div class="big">ち → ぢ</div><div class="small">chi → ji</div></div>
+        <div class="box"><div class="big">つ → づ</div><div class="small">tsu → zu</div></div>
+        <div class="box"><div class="big">て → で</div><div class="small">te → de</div></div>
+        <div class="box"><div class="big">と → ど</div><div class="small">to → do</div></div>
+    </div>
+
+    <div class="section">H-group (Main Dakuten)</div>
+    <div class="row">
+        <div class="box"><div class="big">は → ば</div><div class="small">ha → ba</div></div>
+        <div class="box"><div class="big">ひ → び</div><div class="small">hi → bi</div></div>
+        <div class="box"><div class="big">ふ → ぶ</div><div class="small">fu → bu</div></div>
+        <div class="box"><div class="big">へ → べ</div><div class="small">he → be</div></div>
+        <div class="box"><div class="big">ほ → ぼ</div><div class="small">ho → bo</div></div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='words.html'">
+        ← Back
+    </button>
+
+</div>
+
+</body>
+</html>
