@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale="1.0">
-<title>Katakana Handakuten</title>
+<title>Katakana Handakuten Chart</title>
 
 <style>
 body{
@@ -20,36 +20,24 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* BOX */
-.box{
+/* CHART BOX */
+.chart{
 border:2px solid gold;
 border-radius:12px;
 overflow:hidden;
 text-align:left;
 }
 
-/* GROUP */
-.group{
+/* ROW */
+.row{
 padding:12px 15px;
 border-bottom:1px solid rgba(255,215,0,0.3);
-}
-
-.group:last-child{
-border-bottom:none;
-}
-
-/* TITLE */
-.title{
-color:gold;
-font-weight:bold;
-font-size:16px;
-margin-bottom:8px;
-}
-
-/* LINE */
-.line{
 font-size:18px;
 line-height:1.8;
+}
+
+.row:last-child{
+border-bottom:none;
 }
 
 /* ROMAJI */
@@ -65,16 +53,13 @@ font-size:14px;
 
 <h1>Katakana Handakuten</h1>
 
-<div class="box">
+<div class="chart">
 
-<div class="group">
-<div class="title">ハ行</div>
-<div class="line">ハ → パ <span class="small">(ha → pa)</span></div>
-<div class="line">ヒ → ピ <span class="small">(hi → pi)</span></div>
-<div class="line">フ → プ <span class="small">(fu → pu)</span></div>
-<div class="line">ヘ → ペ <span class="small">(he → pe)</span></div>
-<div class="line">ホ → ポ <span class="small">(ho → po)</span></div>
-</div>
+<div class="row">ハ → パ <span class="small">(ha → pa)</span></div>
+<div class="row">ヒ → ピ <span class="small">(hi → pi)</span></div>
+<div class="row">フ → プ <span class="small">(fu → pu)</span></div>
+<div class="row">ヘ → ペ <span class="small">(he → pe)</span></div>
+<div class="row">ホ → ポ <span class="small">(ho → po)</span></div>
 
 </div>
 
