@@ -103,12 +103,35 @@ body{
     backdrop-filter:blur(3px);
 
     transition:0.2s ease;
+
+    position:relative;
 }
 
 /* CLICK EFFECT */
 .btn:active{
     transform:scale(0.97);
     opacity:0.8;
+}
+
+/* LOCK BUTTON */
+.locked{
+    opacity:0.7;
+}
+
+/* LOCK BADGE */
+.badge{
+    position:absolute;
+    top:4px;
+    right:8px;
+
+    background:red;
+    color:white;
+
+    font-size:9px;
+    font-weight:bold;
+
+    padding:2px 6px;
+    border-radius:5px;
 }
 
 /* ANIMATION */
@@ -140,21 +163,32 @@ body{
 
     <div class="buttons">
 
+        <!-- OPEN -->
         <button class="btn" onclick="window.location.href='words.html'">
             Japanese Language 🇯🇵
         </button>
 
-        <button class="btn" onclick="alert('Coming soon')">
+        <!-- LOCKED -->
+        <button class="btn locked" onclick="comingSoon()">
             Chinese Language 🇨🇳
+            <span class="badge">LOCK</span>
         </button>
 
-        <button class="btn" onclick="alert('Coming soon')">
+        <!-- LOCKED -->
+        <button class="btn locked" onclick="comingSoon()">
             Korean Language 🇰🇷
+            <span class="badge">LOCK</span>
         </button>
 
     </div>
 
 </div>
+
+<script>
+function comingSoon(){
+    alert("Coming Soon - 2026.11.28");
+}
+</script>
 
 </body>
 </html>
