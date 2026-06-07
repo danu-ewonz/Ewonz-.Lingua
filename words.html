@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>Japanese Writing System</title>
-
-<style>
-
 body{
     margin:0;
     min-height:100vh;
@@ -16,8 +6,9 @@ body{
     justify-content:center;
     align-items:center;
 
-    background:black;
+    background:radial-gradient(circle at top, #1a1a1a, #000);
     font-family:Arial;
+
     overflow-y:auto;
     padding:20px 0;
 }
@@ -27,56 +18,118 @@ body{
     width:90%;
     max-width:400px;
 
-    border:2px solid gold;
+    border:1.5px solid rgba(255,215,0,0.6);
     border-radius:20px;
 
     padding:20px;
     text-align:center;
 
-    background:rgba(255,255,255,0.03);
+    background:rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+
+    box-shadow:0 0 25px rgba(255,215,0,0.08);
+
+    position:relative;
+}
+
+/* Neon glow border effect */
+.container::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    padding:1.5px;
+
+    background:linear-gradient(
+        45deg,
+        #ffd700,
+        #ffcc00,
+        #fff3b0,
+        #ffae00
+    );
+
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events:none;
+
+    filter:drop-shadow(0 0 8px rgba(255,215,0,0.6));
+    animation: glowMove 3s infinite linear;
 }
 
 /* TITLE */
 .title{
-    color:white;
+    color:#ffd700;
     font-size:22px;
     font-weight:bold;
     margin-bottom:20px;
+
+    text-shadow:0 0 10px rgba(255,215,0,0.3);
 }
 
 /* =========================
-MAIN LANGUAGE BUTTONS
+BUTTONS (FIXED + NEON)
 ========================= */
 .btn{
     width:100%;
     padding:15px;
     margin:8px 0;
 
-    border:2px solid gold;
     border-radius:12px;
+    border:1px solid rgba(255,215,0,0.5);
 
     font-size:16px;
     font-weight:bold;
 
-    background:transparent;
-
-    color:black;
+    background:rgba(255,255,255,0.03);
+    color:#fff;
 
     cursor:pointer;
-    transition:0.2s ease;
+    transition:0.3s ease;
+
+    backdrop-filter: blur(8px);
+
+    position:relative;
 }
 
-.btn:active{
-    transform:scale(0.97);
-    opacity:0.8;
+/* button glow border */
+.btn::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:12px;
+    padding:1px;
+
+    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0);
+
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events:none;
+
+    filter:drop-shadow(0 0 6px rgba(255,215,0,0.5));
 }
 
-/* extra safety (no colors anywhere) */
+.btn:hover{
+    transform:scale(1.04);
+    background:#ffd700;
+    color:#000;
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+/* ensure text visibility fix */
 .hira,
 .kata,
 .kanji{
-    background:transparent;
-    color:white;
+    color:#fff;
 }
 
 /* =========================
@@ -86,102 +139,66 @@ SPECIAL BOX
     margin-top:25px;
     padding:15px;
 
-    border:2px solid gold;
     border-radius:15px;
 
-    background:rgba(255,255,255,0.05)
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,215,0,0.4);
+
+    backdrop-filter: blur(10px);
+    position:relative;
 }
 
-.special-title{
-    font-size:14px;
-    color:white;
-    font-weight:bold;
-    margin-bottom:12px;
+/* glow border */
+.special-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:15px;
+    padding:1px;
+
+    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0);
+
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events:none;
+
+    filter:drop-shadow(0 0 6px rgba(255,215,0,0.4));
 }
 
+/* SPECIAL BUTTONS */
 .special-btn{
     width:100%;
     padding:10px;
 
     margin:6px 0;
 
-    border:1px solid gold;
     border-radius:10px;
+    border:1px solid rgba(255,215,0,0.4);
 
-    background:rgba(255,255,255,0.1);
-
-    color:white;
+    background:rgba(255,255,255,0.04);
+    color:#fff;
 
     font-size:13px;
     font-weight:bold;
 
     cursor:pointer;
-    transition:0.2s ease;
+    transition:0.3s ease;
 }
 
-.special-btn:active{
-    transform:scale(0.97);
-    opacity:0.85;
+.special-btn:hover{
+    transform:scale(1.03);
+    background:rgba(255,215,0,0.2);
+    box-shadow:0 0 15px rgba(255,215,0,0.3);
 }
 
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="title">
-        Japanese Writing System 🇯🇵
-    </div>
-
-    <!-- HIRAGANA -->
-    <button class="btn hira" onclick="go('hiragana.html')">
-        Hiragana あ
-    </button>
-
-    <!-- KATAKANA -->
-    <button class="btn kata" onclick="go('katakana.html')">
-        Katakana ア
-    </button>
-
-    <!-- KANJI -->
-    <button class="btn kanji" onclick="go('kanji.html')">
-        Kanji (Required 漢字)
-    </button>
-
-    <!-- SPECIAL CHARACTERS -->
-    <div class="special-box">
-
-        <div class="special-title">
-            Hiragana Special Characters
-        </div>
-
-        <button class="special-btn" onclick="go('dakuten.html')">
-            Dakuten (゛)
-        </button>
-
-        <button class="special-btn" onclick="go('handakuten.html')">
-            Handakuten (゜)
-        </button>
-
-        <button class="special-btn" onclick="go('youon.html')">
-            Youon (බැදි අක්ෂර)
-        </button>
-
-        <button class="special-btn" onclick="go('chouon.html')">
-            Chouon (දිර්ඝ අක්ෂර)
-        </button>
-
-    </div>
-
-</div>
-
-<script>
-function go(page){
-    window.location.href = page;
+/* ANIMATION */
+@keyframes glowMove{
+    0%{ filter:drop-shadow(0 0 6px rgba(255,215,0,0.4)); }
+    50%{ filter:drop-shadow(0 0 12px rgba(255,215,0,0.8)); }
+    100%{ filter:drop-shadow(0 0 6px rgba(255,215,0,0.4)); }
 }
-</script>
-
-</body>
-</html>
