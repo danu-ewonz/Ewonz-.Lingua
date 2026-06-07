@@ -1,60 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Youon Cards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Youon (ャュョ) - Katakana</title>
 
 <style>
+
 body{
-margin:0;
-background:#000;
-font-family:Arial;
-color:#fff;
-padding:20px;
-text-align:center;
-}
+    margin:0;
+    min-height:100vh;
 
-h1{
-color:gold;
-margin-bottom:20px;
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:1fr;
-gap:12px;
+    background:#0b0b0b;
+    font-family:Arial;
+    padding:20px;
 }
 
 /* CARD */
-.card{
-border:2px solid gold;
-border-radius:12px;
-padding:12px;
-text-align:left;
-background:rgba(255,255,255,0.03);
+.container{
+    width:95%;
+    max-width:500px;
+
+    border:2px solid gold;
+    border-radius:20px;
+
+    padding:20px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.03);
 }
 
 /* TITLE */
 .title{
-color:gold;
-font-weight:bold;
-margin-bottom:8px;
-font-size:15px;
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
-/* TEXT */
-.text{
-font-size:17px;
-line-height:1.6;
+.subtitle{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:20px;
 }
 
-/* ROMAJI */
+/* ROW */
+.row{
+    display:flex;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+/* BOX */
+.box{
+    flex:1;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    padding:12px;
+
+    background:rgba(255,255,255,0.05);
+}
+
+/* BIG */
+.big{
+    font-size:26px;
+    color:white;
+    font-weight:bold;
+}
+
+/* SMALL */
 .small{
-color:#ffd700;
-font-size:14px;
-margin-left:5px;
+    font-size:12px;
+    color:#aaa;
+    margin-top:5px;
+}
+
+/* SECTION */
+.section{
+    color:gold;
+    font-size:14px;
+    font-weight:bold;
+    margin:15px 0 8px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    background:transparent;
+    color:white;
+
+    font-weight:bold;
+}
+
+.back-btn:active{
+    transform:scale(0.97);
 }
 
 </style>
@@ -62,117 +114,59 @@ margin-left:5px;
 
 <body>
 
-<h1>Katakana Youon</h1>
+<div class="container">
 
-<div class="grid">
+    <div class="title">Youon (ャュョ)</div>
+    <div class="subtitle">Small Y combination sounds</div>
 
-<div class="card">
-<div class="title">K-Row</div>
-<div class="text">
-キャ - <span class="small">kya</span><br>
-キュ - <span class="small">kyu</span><br>
-キョ - <span class="small">kyo</span>
-</div>
-</div>
+    <div class="section">K-group</div>
+    <div class="row">
+        <div class="box"><div class="big">キャ</div><div class="small">kya</div></div>
+        <div class="box"><div class="big">キュ</div><div class="small">kyu</div></div>
+        <div class="box"><div class="big">キョ</div><div class="small">kyo</div></div>
+    </div>
 
-<div class="card">
-<div class="title">G-Row</div>
-<div class="text">
-ギャ - <span class="small">gya</span><br>
-ギュ - <span class="small">gyu</span><br>
-ギョ - <span class="small">gyo</span>
-</div>
-</div>
+    <div class="section">S-group</div>
+    <div class="row">
+        <div class="box"><div class="big">シャ</div><div class="small">sha</div></div>
+        <div class="box"><div class="big">シュ</div><div class="small">shu</div></div>
+        <div class="box"><div class="big">ショ</div><div class="small">sho</div></div>
+    </div>
 
-<div class="card">
-<div class="title">S-Row</div>
-<div class="text">
-シャ - <span class="small">sha</span><br>
-シュ - <span class="small">shu</span><br>
-ショ - <span class="small">sho</span>
-</div>
-</div>
+    <div class="section">T-group</div>
+    <div class="row">
+        <div class="box"><div class="big">チャ</div><div class="small">cha</div></div>
+        <div class="box"><div class="big">チュ</div><div class="small">chu</div></div>
+        <div class="box"><div class="big">チョ</div><div class="small">cho</div></div>
+    </div>
 
-<div class="card">
-<div class="title">J-Row</div>
-<div class="text">
-ジャ - <span class="small">ja</span><br>
-ジュ - <span class="small">ju</span><br>
-ジョ - <span class="small">jo</span>
-</div>
-</div>
+    <div class="section">N-group</div>
+    <div class="row">
+        <div class="box"><div class="big">ニャ</div><div class="small">nya</div></div>
+        <div class="box"><div class="big">ニュ</div><div class="small">nyu</div></div>
+        <div class="box"><div class="big">ニョ</div><div class="small">nyo</div></div>
+    </div>
 
-<div class="card">
-<div class="title">T-Row</div>
-<div class="text">
-チャ - <span class="small">cha</span><br>
-チュ - <span class="small">chu</span><br>
-チョ - <span class="small">cho</span>
-</div>
-</div>
+    <div class="section">H-group</div>
+    <div class="row">
+        <div class="box"><div class="big">ヒャ</div><div class="small">hya</div></div>
+        <div class="box"><div class="big">ヒュ</div><div class="small">hyu</div></div>
+        <div class="box"><div class="big">ヒョ</div><div class="small">hyo</div></div>
+    </div>
 
-<div class="card">
-<div class="title">D-Row</div>
-<div class="text">
-ヂャ - <span class="small">dya</span><br>
-ヂュ - <span class="small">dyu</span><br>
-ヂョ - <span class="small">dyo</span>
-</div>
-</div>
+    <div class="section">M-group</div>
+    <div class="row">
+        <div class="box"><div class="big">ミャ</div><div class="small">mya</div></div>
+        <div class="box"><div class="big">ミュ</div><div class="small">myu</div></div>
+        <div class="box"><div class="big">ミョ</div><div class="small">myo</div></div>
+    </div>
 
-<div class="card">
-<div class="title">N-Row</div>
-<div class="text">
-ニャ - <span class="small">nya</span><br>
-ニュ - <span class="small">nyu</span><br>
-ニョ - <span class="small">nyo</span>
-</div>
-</div>
-
-<div class="card">
-<div class="title">H-Row</div>
-<div class="text">
-ヒャ - <span class="small">hya</span><br>
-ヒュ - <span class="small">hyu</span><br>
-ヒョ - <span class="small">hyo</span>
-</div>
-</div>
-
-<div class="card">
-<div class="title">B-Row</div>
-<div class="text">
-ビャ - <span class="small">bya</span><br>
-ビュ - <span class="small">byu</span><br>
-ビョ - <span class="small">byo</span>
-</div>
-</div>
-
-<div class="card">
-<div class="title">P-Row</div>
-<div class="text">
-ピャ - <span class="small">pya</span><br>
-ピュ - <span class="small">pyu</span><br>
-ピョ - <span class="small">pyo</span>
-</div>
-</div>
-
-<div class="card">
-<div class="title">M-Row</div>
-<div class="text">
-ミャ - <span class="small">mya</span><br>
-ミュ - <span class="small">myu</span><br>
-ミョ - <span class="small">myo</span>
-</div>
-</div>
-
-<div class="card">
-<div class="title">R-Row</div>
-<div class="text">
-リャ - <span class="small">rya</span><br>
-リュ - <span class="small">ryu</span><br>
-リョ - <span class="small">ryo</span>
-</div>
-</div>
+    <div class="section">R-group</div>
+    <div class="row">
+        <div class="box"><div class="big">リャ</div><div class="small">rya</div></div>
+        <div class="box"><div class="big">リュ</div><div class="small">ryu</div></div>
+        <div class="box"><div class="big">リョ</div><div class="small">ryo</div></div>
+    </div>
 
 </div>
 
