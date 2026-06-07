@@ -262,6 +262,7 @@ html{
     margin-bottom:10px;
 }
 
+/* ✅ FIXED TEXT COLOR ISSUE */
 .special-btn{
     width:100%;
     padding:10px;
@@ -272,7 +273,7 @@ html{
     border-radius:10px;
 
     background:rgba(255,255,255,0.1);
-    color:White;
+    color:#ffffff;   /* FIX: always white */
 
     font-size:13px;
     font-weight:bold;
