@@ -1,15 +1,56 @@
-window.kanjiList = window.kanjiList.concat([
-  {k:"年",en:"Year",si:"අවුරුද්ද",h:"ねん",r:"nen"},
-  {k:"時",en:"Time",si:"වේලාව",h:"じ",r:"ji"},
-  {k:"人",en:"Person",si:"මනුස්සයා",h:"ひと",r:"hito"},
-  {k:"男",en:"Man",si:"පිරිමි",h:"おとこ",r:"otoko"},
-  {k:"女",en:"Woman",si:"ගැහැණු",h:"おんな",r:"onna"},
-  {k:"子",en:"Child",si:"ළමයා",h:"こ",r:"ko"},
+window.kanjiList2 = [
+{k:"新",en:"New",si:"අලුත්",h:"あたらしい",r:"atarashii"},
+{k:"古",en:"Old",si:"පරණ",h:"ふるい",r:"furui"},
+{k:"長",en:"Long",si:"දිග",h:"ながい",r:"nagai"},
+{k:"多",en:"Many",si:"ගොඩක්",h:"おおい",r:"ooi"},
+{k:"少",en:"Few",si:"ටික",h:"すくない",r:"sukunai"},
+{k:"早",en:"Early",si:"ඉක්මන්",h:"はやい",r:"hayai"},
+{k:"白",en:"White",si:"සුදු",h:"しろい",r:"shiroi"},
+{k:"黒",en:"Black",si:"කළු",h:"くろい",r:"kuroi"},
 
-  {k:"上",en:"Up",si:"උඩ",h:"うえ",r:"ue"},
-  {k:"下",en:"Down",si:"යට",h:"した",r:"shita"},
-  {k:"左",en:"Left",si:"වම",h:"ひだり",r:"hidari"},
-  {k:"右",en:"Right",si:"දකුණ",h:"みぎ",r:"migi"},
-  {k:"中",en:"Middle",si:"මැද",h:"なか",r:"naka"},
-  {k:"外",en:"Outside",si:"එළිය",h:"そと",r:"soto"}
-]);
+{k:"山",en:"Mountain",si:"කන්ද",h:"やま",r:"yama"},
+{k:"川",en:"River",si:"ගඟ",h:"かわ",r:"kawa"},
+{k:"田",en:"Field",si:"කුඹුර",h:"た",r:"ta"},
+{k:"天",en:"Sky",si:"අහස",h:"てん",r:"ten"},
+
+{k:"学",en:"Study",si:"ඉගෙනීම",h:"がく",r:"gaku"},
+{k:"校",en:"School",si:"පාසල",h:"こう",r:"kou"},
+{k:"本",en:"Book",si:"පොත",h:"ほん",r:"hon"},
+{k:"国",en:"Country",si:"රට",h:"くに",r:"kuni"},
+{k:"車",en:"Car",si:"වාහනය",h:"くるま",r:"kuruma"},
+{k:"駅",en:"Station",si:"ස්ථානය",h:"えき",r:"eki"},
+{k:"道",en:"Road",si:"පාර",h:"みち",r:"michi"},
+{k:"雨",en:"Rain",si:"වැස්ස",h:"あめ",r:"ame"},
+
+{k:"電",en:"Electricity",si:"විදුලිය",h:"でん",r:"den"},
+{k:"話",en:"Talk",si:"කතා",h:"はなし",r:"hanashi"},
+{k:"見",en:"See",si:"බලන්න",h:"みる",r:"miru"},
+{k:"行",en:"Go",si:"යන්න",h:"いく",r:"iku"},
+{k:"来",en:"Come",si:"එන්න",h:"くる",r:"kuru"},
+{k:"食",en:"Eat",si:"කන්න",h:"たべる",r:"taberu"},
+{k:"飲",en:"Drink",si:"බොන්න",h:"のむ",r:"nomu"},
+
+{k:"買",en:"Buy",si:"ගන්න",h:"かう",r:"kau"},
+{k:"入",en:"Enter",si:"ඇතුල්",h:"いる",r:"iru"},
+{k:"出",en:"Exit",si:"පිට",h:"でる",r:"deru"},
+{k:"立",en:"Stand",si:"සිටින්න",h:"たつ",r:"tatsu"},
+{k:"休",en:"Rest",si:"විවේක",h:"やすむ",r:"yasumu"},
+
+{k:"書",en:"Write",si:"ලියන්න",h:"かく",r:"kaku"},
+{k:"読",en:"Read",si:"කියවන්න",h:"よむ",r:"yomu"},
+{k:"言",en:"Say",si:"කියන්න",h:"いう",r:"iu"},
+{k:"聞",en:"Hear",si:"අහන්න",h:"きく",r:"kiku"},
+{k:"語",en:"Language",si:"භාෂාව",h:"ご",r:"go"},
+
+{k:"体",en:"Body",si:"ශරීරය",h:"からだ",r:"karada"},
+{k:"心",en:"Heart",si:"හිත",h:"こころ",r:"kokoro"},
+{k:"顔",en:"Face",si:"මුහුණ",h:"かお",r:"kao"},
+{k:"色",en:"Color",si:"පාට",h:"いろ",r:"iro"},
+{k:"音",en:"Sound",si:"ශබ්ද",h:"おと",r:"oto"},
+
+{k:"空",en:"Sky",si:"අහස",h:"そら",r:"sora"},
+{k:"海",en:"Sea",si:"මුහුද",h:"うみ",r:"umi"},
+{k:"風",en:"Wind",si:"සුළඟ",h:"かぜ",r:"kaze"},
+{k:"病",en:"Sick",si:"අසනීප",h:"びょう",r:"byou"},
+{k:"医",en:"Doctor",si:"වෛද්‍ය",h:"い",r:"i"}
+];
