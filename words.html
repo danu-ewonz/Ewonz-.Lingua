@@ -72,7 +72,7 @@ TITLE
 }
 
 /* =========================
-MAIN BUTTONS
+BUTTONS
 ========================= */
 .btn{
     width:100%;
@@ -101,9 +101,7 @@ MAIN BUTTONS
     box-shadow:0 0 18px rgba(255,215,0,0.4);
 }
 
-/* =========================
-STACK TEXT INSIDE BUTTON
-========================= */
+/* STACK TEXT */
 .stack{
     display:block;
     font-size:11px;
@@ -127,10 +125,7 @@ STACK TEXT INSIDE BUTTON
 
     <!-- 1 -->
     <button class="btn" onclick="go('hiragana.html')">
-        Hiragana
-        <span class="stack">
-            Dakuten • Handakuten • Youon • Chouon
-        </span>
+        Hiragana あ
     </button>
 
     <!-- 2 -->
@@ -143,9 +138,13 @@ STACK TEXT INSIDE BUTTON
         Kanji (漢字)
     </button>
 
-    <!-- 4 -->
+    <!-- 4 SPECIAL (FIXED) -->
     <button class="btn" onclick="go('special.html')">
-        Special Characters Page
+        Hiragana Special
+
+        <span class="stack">
+            Dakuten • Handakuten • Youon • Chouon
+        </span>
     </button>
 
 </div>
