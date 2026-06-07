@@ -9,75 +9,102 @@
 body{
 margin:0;
 background:#000;
-color:#fff;
 font-family:Arial;
+color:#fff;
 padding:20px;
 text-align:center;
 }
 
-h1{color:gold;}
-
-.back-btn{
-position:fixed;
-top:15px;
-left:15px;
-padding:10px 14px;
-border:1px solid gold;
-background:rgba(255,215,0,0.1);
+h1{
 color:gold;
-border-radius:10px;
-cursor:pointer;
+margin-bottom:20px;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
+/* MAIN BOX */
+.chart{
+border:2px solid gold;
+border-radius:12px;
+overflow:hidden;
 }
 
-td{
-border:1px solid gold;
+/* ROW */
+.row{
 padding:15px;
-font-size:20px;
+border-bottom:1px solid gold;
+font-size:18px;
+line-height:1.7;
+}
+
+.row:last-child{
+border-bottom:none;
+}
+
+/* EXAMPLE BOX */
+.examples{
+margin-top:20px;
+padding:15px;
+border:2px solid gold;
+border-radius:12px;
+text-align:left;
+}
+
+.examples h2{
+color:gold;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.examples p{
+margin:6px 0;
+font-size:14px;
+opacity:0.9;
 }
 
 .small{
-font-size:12px;
-opacity:0.7;
-display:block;
+color:#ffd700;
 }
+
 </style>
 </head>
 
 <body>
 
-<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<h1>Katakana Chōon (ー)</h1>
 
-<h1>Katakana Chouon</h1>
+<!-- CHART -->
+<div class="chart">
 
-<table>
+<div class="row">
+ー (Chōon mark) - Long vowel sound
+</div>
 
-<tr>
-<td>コーヒー<span class="small">kōhī</span></td>
-</tr>
+<div class="row">
+Used to stretch vowel sound
+</div>
 
-<tr>
-<td>ケーキ<span class="small">kēki</span></td>
-</tr>
+<div class="row">
+Appears only in Katakana words
+</div>
 
-<tr>
-<td>スーパー<span class="small">sūpā</span></td>
-</tr>
+<div class="row">
+Extends pronunciation of previous vowel
+</div>
 
-<tr>
-<td>タクシー<span class="small">takushī</span></td>
-</tr>
+</div>
 
-<tr>
-<td>メール<span class="small">mēru</span></td>
-</tr>
+<!-- EXAMPLES -->
+<div class="examples">
 
-</table>
+<h2>Examples</h2>
+
+<p>コーヒー → <span class="small">kōhī</span> (Coffee)</p>
+<p>ケーキ → <span class="small">kēki</span> (Cake)</p>
+<p>スーパー → <span class="small">sūpā</span> (Supermarket)</p>
+<p>タクシー → <span class="small">takushī</span> (Taxi)</p>
+<p>メール → <span class="small">mēru</span> (Mail)</p>
+<p>バスー → <span class="small">basū (extended sound example)</span></p>
+
+</div>
 
 </body>
 </html>
