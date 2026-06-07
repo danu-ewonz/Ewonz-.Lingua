@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Youon (බැදි අක්ෂර)</title>
+<title>Katakana Youon Cards</title>
 
 <style>
 body{
@@ -20,25 +20,23 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* MAIN WRAPPER */
-.box{
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:12px;
+}
+
+/* CARD */
+.card{
 border:2px solid gold;
 border-radius:12px;
-overflow:hidden;
+padding:12px;
 text-align:left;
+background:rgba(255,255,255,0.03);
 }
 
-/* EACH SET */
-.set{
-border-bottom:1px solid gold;
-padding:12px 15px;
-}
-
-.set:last-child{
-border-bottom:none;
-}
-
-/* SET TITLE */
+/* TITLE */
 .title{
 color:gold;
 font-weight:bold;
@@ -46,10 +44,10 @@ margin-bottom:8px;
 font-size:15px;
 }
 
-/* ITEMS */
-.item{
+/* TEXT */
+.text{
 font-size:17px;
-line-height:1.7;
+line-height:1.6;
 }
 
 /* ROMAJI */
@@ -66,122 +64,110 @@ margin-left:5px;
 
 <h1>Katakana Youon</h1>
 
-<div class="box">
+<div class="grid">
 
-<!-- 1 -->
-<div class="set">
+<div class="card">
 <div class="title">K-Row</div>
-<div class="item">
+<div class="text">
 キャ - <span class="small">kya</span><br>
 キュ - <span class="small">kyu</span><br>
 キョ - <span class="small">kyo</span>
 </div>
 </div>
 
-<!-- 2 -->
-<div class="set">
+<div class="card">
 <div class="title">G-Row</div>
-<div class="item">
+<div class="text">
 ギャ - <span class="small">gya</span><br>
 ギュ - <span class="small">gyu</span><br>
 ギョ - <span class="small">gyo</span>
 </div>
 </div>
 
-<!-- 3 -->
-<div class="set">
+<div class="card">
 <div class="title">S-Row</div>
-<div class="item">
+<div class="text">
 シャ - <span class="small">sha</span><br>
 シュ - <span class="small">shu</span><br>
 ショ - <span class="small">sho</span>
 </div>
 </div>
 
-<!-- 4 -->
-<div class="set">
+<div class="card">
 <div class="title">J-Row</div>
-<div class="item">
+<div class="text">
 ジャ - <span class="small">ja</span><br>
 ジュ - <span class="small">ju</span><br>
 ジョ - <span class="small">jo</span>
 </div>
 </div>
 
-<!-- 5 -->
-<div class="set">
+<div class="card">
 <div class="title">T-Row</div>
-<div class="item">
+<div class="text">
 チャ - <span class="small">cha</span><br>
 チュ - <span class="small">chu</span><br>
 チョ - <span class="small">cho</span>
 </div>
 </div>
 
-<!-- 6 -->
-<div class="set">
+<div class="card">
 <div class="title">D-Row</div>
-<div class="item">
+<div class="text">
 ヂャ - <span class="small">dya</span><br>
 ヂュ - <span class="small">dyu</span><br>
 ヂョ - <span class="small">dyo</span>
 </div>
 </div>
 
-<!-- 7 -->
-<div class="set">
+<div class="card">
 <div class="title">N-Row</div>
-<div class="item">
+<div class="text">
 ニャ - <span class="small">nya</span><br>
 ニュ - <span class="small">nyu</span><br>
 ニョ - <span class="small">nyo</span>
 </div>
 </div>
 
-<!-- 8 -->
-<div class="set">
+<div class="card">
 <div class="title">H-Row</div>
-<div class="item">
+<div class="text">
 ヒャ - <span class="small">hya</span><br>
 ヒュ - <span class="small">hyu</span><br>
 ヒョ - <span class="small">hyo</span>
 </div>
 </div>
 
-<!-- 9 -->
-<div class="set">
+<div class="card">
 <div class="title">B-Row</div>
-<div class="item">
+<div class="text">
 ビャ - <span class="small">bya</span><br>
 ビュ - <span class="small">byu</span><br>
 ビョ - <span class="small">byo</span>
 </div>
 </div>
 
-<!-- 10 -->
-<div class="set">
+<div class="card">
 <div class="title">P-Row</div>
-<div class="item">
+<div class="text">
 ピャ - <span class="small">pya</span><br>
 ピュ - <span class="small">pyu</span><br>
 ピョ - <span class="small">pyo</span>
 </div>
 </div>
 
-<!-- 11 -->
-<div class="set">
+<div class="card">
 <div class="title">M-Row</div>
-<div class="item">
+<div class="text">
 ミャ - <span class="small">mya</span><br>
 ミュ - <span class="small">myu</span><br>
 ミョ - <span class="small">myo</span>
 </div>
 </div>
 
-<!-- 12 -->
-<div class="set">
+<div class="card">
 <div class="title">R-Row</div>
-<div class="item">
+<div class="text">
 リャ - <span class="small">rya</span><br>
 リュ - <span class="small">ryu</span><br>
 リョ - <span class="small">ryo</span>
