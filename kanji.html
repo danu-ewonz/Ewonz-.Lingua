@@ -3,118 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanji - Japanese Exam Required</title>
+<title>Kanji System</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial;
     background:#0b0b0b;
     color:white;
-    padding-bottom:40px;
 }
 
-/* HEADER */
 .header{
     text-align:center;
     padding:20px;
     font-size:24px;
-    font-weight:bold;
     color:#ffd700;
     border-bottom:2px solid #ffd700;
-    letter-spacing:2px;
 }
 
-/* SECTION TITLE */
 .section-title{
-    padding:15px;
-    font-size:18px;
-    font-weight:bold;
-    color:#ffd700;
-    border-left:4px solid #ffd700;
     margin:15px;
+    padding-left:10px;
+    border-left:4px solid #ffd700;
+    color:#ffd700;
+    font-weight:bold;
 }
 
-/* BOX */
 .level-box{
-    padding:0 15px 15px 15px;
+    padding:15px;
     display:flex;
     flex-direction:column;
     gap:10px;
 }
 
-/* BUTTON */
 .level-btn{
+    padding:14px;
     background:#111;
     border:2px solid #ffd700;
-    border-radius:12px;
-    padding:14px;
-    text-align:center;
-    font-size:16px;
-    font-weight:bold;
     color:white;
-    box-shadow:0 0 8px rgba(255,215,0,0.12);
-    transition:0.2s;
-    cursor:pointer;
-}
-
-.level-btn:active{
-    transform:scale(0.97);
-}
-
-/* JFT SPECIAL BOX */
-.jft-box{
-    padding:0 15px 15px 15px;
-}
-
-/* FOOT NOTE */
-.note{
-    padding:15px;
-    font-size:12px;
-    color:#aaa;
     text-align:center;
+    border-radius:12px;
+    cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">KANJI - JAPANESE EXAM REQUIRED</div>
+<div class="header">KANJI - JAPANESE EXAM</div>
 
-<!-- 🔥 JLPT -->
+<!-- JLPT -->
 <div class="section-title">JLPT - EXAM</div>
-
 <div class="level-box">
-    <div class="level-btn" onclick="location.href='jlpt-n5.html'">JLPT - N5</div>
-    <div class="level-btn" onclick="location.href='jlpt-n4.html'">JLPT - N4</div>
-    <div class="level-btn" onclick="location.href='jlpt-n3.html'">JLPT - N3</div>
-    <div class="level-btn" onclick="location.href='jlpt-n2.html'">JLPT - N2</div>
-    <div class="level-btn" onclick="location.href='jlpt-n1.html'">JLPT - N1</div>
+    <div class="level-btn" onclick="location.href='./n5.html'">JLPT - N5</div>
+    <div class="level-btn" onclick="location.href='./n4.html'">JLPT - N4</div>
+    <div class="level-btn" onclick="location.href='./n3.html'">JLPT - N3</div>
+    <div class="level-btn" onclick="location.href='./n2.html'">JLPT - N2</div>
+    <div class="level-btn" onclick="location.href='./n1.html'">JLPT - N1</div>
 </div>
 
-<!-- 🔥 NAT -->
+<!-- NAT -->
 <div class="section-title">NAT - TEST</div>
-
 <div class="level-box">
-    <div class="level-btn" onclick="location.href='nat-q5.html'">Q5</div>
-    <div class="level-btn" onclick="location.href='nat-q4.html'">Q4</div>
-    <div class="level-btn" onclick="location.href='nat-q3.html'">Q3</div>
-    <div class="level-btn" onclick="location.href='nat-q2.html'">Q2</div>
-    <div class="level-btn" onclick="location.href='nat-q1.html'">Q1</div>
+    <div class="level-btn" onclick="location.href='./nat-q5.html'">Q5</div>
+    <div class="level-btn" onclick="location.href='./nat-q4.html'">Q4</div>
+    <div class="level-btn" onclick="location.href='./nat-q3.html'">Q3</div>
+    <div class="level-btn" onclick="location.href='./nat-q2.html'">Q2</div>
+    <div class="level-btn" onclick="location.href='./nat-q1.html'">Q1</div>
 </div>
 
-<!-- 🔥 JFT -->
-<div class="section-title">JFT - BASIC (SSW)</div>
-
+<!-- JFT -->
+<div class="section-title">JFT - BASIC</div>
 <div class="level-box">
-    <div class="level-btn" onclick="location.href='jft-basic.html'">JFT - BASIC</div>
-    <div class="level-btn" onclick="location.href='jlpt-n2.html'">JLPT - N2 (SSW)</div>
-</div>
-
-<!-- NOTE -->
-<div class="note">
-Select your exam level to start kanji practice. Designed for JLPT, NAT & JFT learners.
+    <div class="level-btn" onclick="location.href='./jft-basic.html'">JFT BASIC</div>
 </div>
 
 </body>
