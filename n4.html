@@ -2,119 +2,128 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JLPT N4 Kanji</title>
 
-<link rel="stylesheet" href="style.css">
-
 <style>
-/* fallback safety if style.css missing */
 body{
     margin:0;
     font-family:Arial, sans-serif;
     background:#0b0b0b;
     color:white;
+    overflow-x:hidden;
 }
 
-input#searchBox{
-    width:90%;
-    display:block;
-    margin:10px auto;
-    padding:10px;
-    border:2px solid gold;
-    border-radius:10px;
+/* HEADER */
+.header{
+    text-align:center;
+    padding:20px;
+    font-size:26px;
+    font-weight:bold;
+    color:#ffd700;
+    letter-spacing:3px;
+    border-bottom:2px solid #ffd700;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+    padding:15px;
+}
+
+/* CARD */
+.card{
     background:#111;
-    color:white;
+    border:2px solid #ffd700;
+    border-radius:12px;
+    padding:18px 10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(255,215,0,0.15);
+    transition:0.2s;
 }
 
+.card:active{
+    transform:scale(0.96);
+}
+
+/* KANJI */
+.kanji{
+    font-size:42px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+/* MEANING */
+.meaning{
+    margin-top:8px;
+    font-size:13px;
+    color:#cccccc;
+}
+
+/* READING */
+.reading{
+    font-size:12px;
+    color:#999;
+    margin-top:4px;
+}
+
+/* WRAPPER */
 .container{
-    padding:10px;
+    padding-bottom:80px;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="title">JLPT N4 Kanji</div>
+<div class="header">JLPT - N4 KANJI</div>
 
-<input id="searchBox" placeholder="Search Kanji..." />
-
-<div class="container" id="list"></div>
-
-<!-- DATA FILES -->
-<script src="n4-data-1.js"></script>
-<script src="n4-data-2.js"></script>
-<script src="n4-data-3.js"></script>
+<div class="container">
+    <div id="grid" class="grid"></div>
+</div>
 
 <script>
+const kanjiList = [
+    {k:"会", m:"Meet / Association", r:"かい"},
+    {k:"同", m:"Same", r:"どう"},
+    {k:"事", m:"Thing / Matter", r:"こと"},
+    {k:"自", m:"Self", r:"じ"},
+    {k:"社", m:"Company / Shrine", r:"しゃ"},
+    {k:"発", m:"Start / Emit", r:"はつ"},
+    {k:"者", m:"Person", r:"しゃ"},
+    {k:"地", m:"Ground / Earth", r:"ち"},
+    {k:"業", m:"Business / Work", r:"ぎょう"},
+    {k:"方", m:"Direction / Person", r:"ほう"},
 
-let box = document.getElementById("list");
-
-/* SAFE MERGE (NO ERROR VERSION) */
-let kanjiN4_all = [
-    ...(window.kanjiN4_1 ?? []),
-    ...(window.kanjiN4_2 ?? []),
-    ...(window.kanjiN4_3 ?? [])
+    {k:"入", m:"Enter", r:"にゅう"},
+    {k:"出", m:"Exit", r:"しゅつ"},
+    {k:"時", m:"Time", r:"じ"},
+    {k:"間", m:"Interval", r:"かん"},
+    {k:"行", m:"Go", r:"こう"},
+    {k:"見", m:"See", r:"けん"},
+    {k:"月", m:"Month / Moon", r:"げつ"},
+    {k:"思", m:"Think", r:"おも"},
+    {k:"知", m:"Know", r:"ち"},
+    {k:"国", m:"Country", r:"こく"},
 ];
 
-/* RENDER FUNCTION */
-function render(data){
-    box.innerHTML = "";
+const grid = document.getElementById("grid");
 
-    for(let i=0; i<data.length; i+=2){
+kanjiList.forEach(item=>{
+    const card = document.createElement("div");
+    card.className = "card";
 
-        let k1 = data[i];
-        let k2 = data[i+1] || {};
+    card.innerHTML = `
+        <div class="kanji">${item.k}</div>
+        <div class="meaning">${item.m}</div>
+        <div class="reading">${item.r}</div>
+    `;
 
-        box.innerHTML += `
-        <div class="row">
-
-            <div class="card">
-                <div class="kanji">${k1?.kanji || ""}</div>
-                <div class="kana">${k1?.kana || ""}</div>
-                <div class="romaji">${k1?.romaji || ""}</div>
-                <div class="meaning">${k1?.meaning || ""}</div>
-            </div>
-
-            <div class="card">
-                <div class="kanji">${k2?.kanji || ""}</div>
-                <div class="kana">${k2?.kana || ""}</div>
-                <div class="romaji">${k2?.romaji || ""}</div>
-                <div class="meaning">${k2?.meaning || ""}</div>
-            </div>
-
-        </div>`;
-    }
-}
-
-/* INITIAL LOAD */
-render(kanjiN4_all);
-
-/* SEARCH */
-document.getElementById("searchBox").addEventListener("keyup", function(){
-
-let val = this.value.toLowerCase();
-
-let filtered = kanjiN4_all.filter(k =>
-    (k.kanji || "").includes(val) ||
-    (k.kana || "").includes(val) ||
-    (k.romaji || "").toLowerCase().includes(val) ||
-    (k.meaning || "").includes(val)
-);
-
-render(filtered);
-
+    grid.appendChild(card);
 });
-
 </script>
-
-<!-- BOTTOM NAV -->
-<div class="bottom-nav">
-    <button class="nav-btn back" onclick="history.back()">←</button>
-    <button class="nav-btn home" onclick="location.href='index.html'">🏠</button>
-</div>
 
 </body>
 </html>
