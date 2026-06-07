@@ -26,36 +26,26 @@ body{
 .card{
     width:320px;
     height:430px;
-
     border:2px solid gold;
     border-radius:20px;
-
     background:url("1780704324974.png") center/cover no-repeat;
-
     display:flex;
     flex-direction:column;
     align-items:center;
-
     padding:10px;
     box-sizing:border-box;
-
     position:relative;
 }
 
 /* TITLE */
 .title{
     font-family:'Playfair Display', serif;
-
     font-size:26px;
     font-weight:bold;
-
     color:gold;
-
     text-align:center;
-
     margin-top:5px;
     margin-bottom:10px;
-
     text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
@@ -68,13 +58,10 @@ body{
     font-size:12px;
     color:black;
     font-weight:600;
-
     text-align:center;
-
     padding:5px 15px;
-
     margin-top:40px;
-    margin-bottom:70px;
+    margin-bottom:20px;
 }
 
 /* BUTTON AREA */
@@ -88,39 +75,34 @@ body{
 /* BUTTON STYLE */
 .btn{
     padding:12px;
-
     border:2px solid gold;
-
     border-radius:12px;
-
     font-size:14px;
     font-weight:bold;
-
     background:rgba(255,255,255,0.20);
-
     color:black;
-
     backdrop-filter:blur(3px);
-
     transition:0.2s ease;
 }
 
-/* CLICK EFFECT */
 .btn:active{
     transform:scale(0.97);
     opacity:0.8;
 }
 
+/* NEW EXAM BUTTONS */
+.exam-title{
+    margin-top:10px;
+    font-size:14px;
+    color:gold;
+    font-weight:bold;
+    text-align:center;
+}
+
 /* ANIMATION */
 @keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
 </style>
@@ -130,9 +112,7 @@ body{
 
 <div class="card">
 
-    <div class="title">
-        EWONZ LINGUA
-    </div>
+    <div class="title">EWONZ LINGUA</div>
 
     <div class="about">
         Discover the world through language, connect globally, and grow beyond limits.
@@ -140,7 +120,7 @@ body{
 
     <div class="buttons">
 
-        <!-- FIXED LINKS -->
+        <!-- EXISTING -->
         <button class="btn" onclick="window.location.href='words.html'">
             Japanese Language 🇯🇵
         </button>
@@ -153,9 +133,33 @@ body{
             Korean Language 🇰🇷
         </button>
 
+        <!-- 🔥 NEW SECTION -->
+        <div class="exam-title">Kanji Exams</div>
+
+        <button class="btn" onclick="openExam('n5')">JLPT N5</button>
+        <button class="btn" onclick="openExam('n4')">JLPT N4</button>
+
+        <button class="btn" onclick="openSoon()">JLPT N3</button>
+        <button class="btn" onclick="openSoon()">JLPT N2</button>
+        <button class="btn" onclick="openSoon()">JLPT N1</button>
+
     </div>
 
 </div>
+
+<script>
+
+/* OPEN WORKING EXAMS */
+function openExam(level){
+    window.location.href = level + ".html";
+}
+
+/* LOCKED EXAMS */
+function openSoon(){
+    alert("🚧 Coming Soon - 2026.11.28 🚧");
+}
+
+</script>
 
 </body>
 </html>
