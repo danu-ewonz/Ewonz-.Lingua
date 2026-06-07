@@ -12,11 +12,21 @@ background:#000;
 color:#fff;
 font-family:Arial;
 padding:20px;
+text-align:center;
 }
 
-h1{
-text-align:center;
+h1{color:gold;}
+
+.back-btn{
+position:fixed;
+top:15px;
+left:15px;
+padding:10px 14px;
+border:1px solid gold;
+background:rgba(255,215,0,0.1);
 color:gold;
+border-radius:10px;
+cursor:pointer;
 }
 
 table{
@@ -28,29 +38,67 @@ margin-top:20px;
 td{
 border:1px solid gold;
 padding:12px;
-text-align:center;
-font-size:24px;
+font-size:20px;
+}
+
+.small{
+font-size:11px;
+opacity:0.7;
+display:block;
 }
 </style>
 </head>
 
 <body>
 
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
 <h1>Katakana Youon</h1>
 
 <table>
-<tr><td>キャ</td><td>キュ</td><td>キョ</td></tr>
-<tr><td>シャ</td><td>シュ</td><td>ショ</td></tr>
-<tr><td>チャ</td><td>チュ</td><td>チョ</td></tr>
-<tr><td>ニャ</td><td>ニュ</td><td>ニョ</td></tr>
-<tr><td>ヒャ</td><td>ヒュ</td><td>ヒョ</td></tr>
-<tr><td>ミャ</td><td>ミュ</td><td>ミョ</td></tr>
-<tr><td>リャ</td><td>リュ</td><td>リョ</td></tr>
 
-<tr><td>ギャ</td><td>ギュ</td><td>ギョ</td></tr>
-<tr><td>ジャ</td><td>ジュ</td><td>ジョ</td></tr>
-<tr><td>ビャ</td><td>ビュ</td><td>ビョ</td></tr>
-<tr><td>ピャ</td><td>ピュ</td><td>ピョ</td></tr>
+<tr>
+<td>キャ<span class="small">kya</span></td>
+<td>キュ<span class="small">kyu</span></td>
+<td>キョ<span class="small">kyo</span></td>
+</tr>
+
+<tr>
+<td>シャ<span class="small">sha</span></td>
+<td>シュ<span class="small">shu</span></td>
+<td>ショ<span class="small">sho</span></td>
+</tr>
+
+<tr>
+<td>チャ<span class="small">cha</span></td>
+<td>チュ<span class="small">chu</span></td>
+<td>チョ<span class="small">cho</span></td>
+</tr>
+
+<tr>
+<td>ニャ<span class="small">nya</span></td>
+<td>ニュ<span class="small">nyu</span></td>
+<td>ニョ<span class="small">nyo</span></td>
+</tr>
+
+<tr>
+<td>ヒャ<span class="small">hya</span></td>
+<td>ヒュ<span class="small">hyu</span></td>
+<td>ヒョ<span class="small">hyo</span></td>
+</tr>
+
+<tr>
+<td>ミャ<span class="small">mya</span></td>
+<td>ミュ<span class="small">myu</span></td>
+<td>ミョ<span class="small">myo</span></td>
+</tr>
+
+<tr>
+<td>リャ<span class="small">rya</span></td>
+<td>リュ<span class="small">ryu</span></td>
+<td>リョ<span class="small">ryo</span></td>
+</tr>
+
 </table>
 
 </body>
