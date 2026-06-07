@@ -10,7 +10,9 @@
 
 <style>
 
-/* FULL SCREEN */
+/* =========================
+GLOBAL
+========================= */
 body{
     margin:0;
     min-height:100vh;
@@ -22,11 +24,12 @@ body{
     align-items:center;
 
     font-family:Arial, sans-serif;
-
     padding:20px;
 }
 
-/* MAIN CARD */
+/* =========================
+MAIN CARD
+========================= */
 .card{
     width:320px;
     height:430px;
@@ -49,12 +52,9 @@ body{
 /* TITLE */
 .title{
     font-family:'Playfair Display', serif;
-
     font-size:26px;
     font-weight:bold;
-
     color:gold;
-
     text-align:center;
 
     margin-top:5px;
@@ -76,12 +76,11 @@ body{
     text-align:center;
 
     padding:5px 15px;
-
     margin-top:40px;
     margin-bottom:40px;
 }
 
-/* BUTTON AREA */
+/* BUTTONS */
 .buttons{
     width:100%;
     display:flex;
@@ -103,25 +102,23 @@ body{
     color:black;
 
     backdrop-filter:blur(3px);
-
     transition:0.2s ease;
 
     position:relative;
 }
 
-/* CLICK */
 .btn:active{
     transform:scale(0.97);
     opacity:0.8;
 }
 
-/* LOCK */
+/* LOCKED */
 .locked{
     opacity:0.6;
     pointer-events:none;
 }
 
-/* BADGE */
+/* LOCK BADGE */
 .badge{
     position:absolute;
     top:4px;
@@ -138,34 +135,30 @@ body{
 }
 
 /* =========================
-CREDITS SECTION
+CREDITS
 ========================= */
 .info-box{
     width:320px;
     margin-top:15px;
 
-    border:1px solid rgba(255,215,0,0.4);
-    border-radius:15px;
-
-    padding:12px;
-
-    background:rgba(255,255,255,0.05);
-    color:white;
-
     text-align:center;
+
+    padding:10px;
+
+    background:rgba(255,255,255,0.03);
+    border-radius:12px;
+
+    color:#aaa;
+    font-size:12px;
+    line-height:1.6;
 }
 
-.info-box h3{
+.info-title{
     color:gold;
-    margin-bottom:8px;
-}
-
-.info-box p{
     font-size:13px;
-    line-height:1.5;
+    margin-bottom:6px;
 }
 
-/* LINK */
 .info-box a{
     color:gold;
     text-decoration:none;
@@ -176,7 +169,7 @@ CREDITS SECTION
 
 <body>
 
-<!-- MAIN CARD -->
+<!-- CARD -->
 <div class="card">
 
     <div class="title">EWONZ LINGUA</div>
@@ -187,18 +180,15 @@ CREDITS SECTION
 
     <div class="buttons">
 
-        <!-- OPEN -->
         <button class="btn" onclick="window.location.href='words.html'">
             Japanese Language 🇯🇵
         </button>
 
-        <!-- LOCKED -->
         <button class="btn locked" onclick="comingSoon()">
             Chinese Language 🇨🇳
             <span class="badge">LOCK</span>
         </button>
 
-        <!-- LOCKED -->
         <button class="btn locked" onclick="comingSoon()">
             Korean Language 🇰🇷
             <span class="badge">LOCK</span>
@@ -207,23 +197,16 @@ CREDITS SECTION
     </div>
 </div>
 
-<!-- INFO / CREDITS -->
+<!-- CREDITS -->
 <div class="info-box">
 
-    <h3>Credits</h3>
+    <div class="info-title">Credits</div>
 
-    <p>
-        👤 Created by: <b>Danu Ewonz</b><br>
-        📱 WhatsApp: 
-        <a href="https://wa.me/+94778730530">Contact Me</a>
-    </p>
+    Created by <b>Danu Ewonz</b><br>
 
-    <hr style="border:0;border-top:1px solid rgba(255,215,0,0.2);">
+    WhatsApp:
+    <a href="https://wa.me/94778730530">Contact</a><br><br>
 
-    <p>
-        🌙 Special Thanks:<br>
-        <b>Japanese Language - Tsuki Sensei</b>
-    </p>
 
 </div>
 
