@@ -2,19 +2,93 @@
 <html>
 <head>
 <title>NAT Test</title>
+
 <style>
-body{background:#0b0b0b;color:white;padding:20px;}
-h1{color:gold;text-align:center;}
+body{
+    background:#0b0b0b;
+    color:white;
+    padding:20px;
+    font-family:Arial;
+}
+
+h1{
+    color:gold;
+    text-align:center;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+
+    border:2px solid gold;
+    background:transparent;
+    color:gold;
+
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+
+    position:relative;
+}
+
+.btn:active{
+    transform:scale(0.97);
+}
+
+/* 🔒 LOCK STYLE */
+.locked{
+    opacity:0.6;
+    pointer-events:none;
+}
+
+/* 🔴 BADGE */
+.badge{
+    position:absolute;
+    top:5px;
+    right:8px;
+
+    background:red;
+    color:white;
+
+    font-size:10px;
+    padding:2px 6px;
+    border-radius:6px;
+}
+
 </style>
 </head>
+
 <body>
 
 <h1>NAT Test</h1>
-<p>5Q - N5</p>
-<p>4Q - N4</p>
-<p>3Q - N3</p>
-<p>2Q - N2</p>
-<p>1Q - N1</p>
+
+<!-- 🔒 ALL LOCKED -->
+
+<button class="btn locked">
+    5Q - N5
+    <span class="badge">LOCK</span>
+</button>
+
+<button class="btn locked">
+    4Q - N4
+    <span class="badge">LOCK</span>
+</button>
+
+<button class="btn locked">
+    3Q - N3
+    <span class="badge">LOCK</span>
+</button>
+
+<button class="btn locked">
+    2Q - N2
+    <span class="badge">LOCK</span>
+</button>
+
+<button class="btn locked">
+    1Q - N1
+    <span class="badge">LOCK</span>
+</button>
 
 </body>
 </html>
