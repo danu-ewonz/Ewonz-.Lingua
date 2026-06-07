@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Chart</title>
+<title>Katakana Dakuten Chart</title>
 
 <style>
 body{
@@ -20,20 +20,22 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* TABLE STYLE */
-table{
-width:100%;
-border-collapse:collapse;
+/* BOX */
+.chart{
 border:2px solid gold;
-border-radius:10px;
+border-radius:12px;
 overflow:hidden;
 }
 
-/* CELLS */
-td{
-border:1px solid gold;
+/* ROW */
+.row{
 padding:15px;
-font-size:22px;
+border-bottom:1px solid gold;
+font-size:20px;
+}
+
+.row:last-child{
+border-bottom:none;
 }
 
 /* ROMAJI */
@@ -44,40 +46,32 @@ opacity:0.7;
 margin-top:5px;
 }
 
-/* ROW HOVER */
-tr:hover{
-background:rgba(255,215,0,0.08);
-}
 </style>
 </head>
 
 <body>
 
-<h1>Katakana Dakuten Chart</h1>
+<h1>Katakana Conversion</h1>
 
-<table>
+<div class="chart">
 
-<tr>
-<td>カ → ガ <span class="small">ka → ga</span></td>
-<td>サ → ザ <span class="small">sa → za</span></td>
-</tr>
+<div class="row">
+カ → ガ <span class="small">ka → ga</span>
+</div>
 
-<tr>
-<td>タ → ダ <span class="small">ta → da</span></td>
-<td>ハ → バ <span class="small">ha → ba</span></td>
-</tr>
+<div class="row">
+サ → ザ <span class="small">sa → za</span>
+</div>
 
-<tr>
-<td>ハ → パ <span class="small">ha → pa</span></td>
-<td>（Handakuten）<span class="small">semi voiced</span></td>
-</tr>
+<div class="row">
+タ → ダ <span class="small">ta → da</span>
+</div>
 
-<tr>
-<td>ガ / ザ / ダ / バ <span class="small">voiced sounds</span></td>
-<td>Japanese sound change rule</td>
-</tr>
+<div class="row">
+ハ → バ <span class="small">ha → ba</span>
+</div>
 
-</table>
+</div>
 
 </body>
 </html>
