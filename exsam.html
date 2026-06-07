@@ -16,7 +16,7 @@ body{
     padding:20px;
 }
 
-/* MAIN TITLE */
+/* TITLE */
 .title{
     text-align:center;
     font-size:26px;
@@ -25,7 +25,7 @@ body{
     margin-bottom:20px;
 }
 
-/* SECTION BOX */
+/* SECTION */
 .section{
     border:2px solid gold;
     border-radius:15px;
@@ -35,13 +35,13 @@ body{
     background:rgba(255,255,255,0.03);
 }
 
-/* SECTION HEAD */
+/* HEADING */
 .section h3{
     color:gold;
     margin-bottom:10px;
 }
 
-/* BUTTON STYLE */
+/* BUTTON */
 .btn{
     width:100%;
     padding:12px;
@@ -56,18 +56,41 @@ body{
     font-size:15px;
     font-weight:bold;
 
-    transition:0.2s ease;
+    position:relative;
 }
 
-/* CLICK EFFECT */
+/* ACTIVE CLICK */
 .btn:active{
     transform:scale(0.97);
-    opacity:0.8;
 }
 
 /* HOVER */
 .btn:hover{
     box-shadow:0 0 8px gold;
+}
+
+/* BADGE */
+.badge{
+    position:absolute;
+    top:5px;
+    right:6px;
+
+    font-size:9px;
+    padding:3px 5px;
+
+    background:red;
+    color:white;
+
+    border-radius:6px;
+    font-weight:bold;
+
+    pointer-events:none;
+}
+
+/* LOCKED STYLE */
+.locked{
+    opacity:0.6;
+    pointer-events:none;
 }
 
 </style>
@@ -79,34 +102,39 @@ body{
 🇯🇵 JAPANESE EXAMS
 </div>
 
-<!-- 1 JLPT -->
+<!-- JLPT -->
 <div class="section">
     <h3>JLPT (Main System)</h3>
 
+    <!-- OPEN -->
     <button class="btn" onclick="location.href='n5.html'">N5</button>
     <button class="btn" onclick="location.href='n4.html'">N4</button>
-    <button class="btn" onclick="location.href='n3.html'">N3</button>
-    <button class="btn" onclick="location.href='n2.html'">N2</button>
-    <button class="btn" onclick="location.href='n1.html'">N1</button>
+
+    <!-- LOCKED -->
+    <button class="btn locked">N3 <div class="badge">Coming Soon - 2026.11.28</div></button>
+    <button class="btn locked">N2 <div class="badge">Coming Soon - 2026.11.28</div></button>
+    <button class="btn locked">N1 <div class="badge">Coming Soon - 2026.11.28</div></button>
+
 </div>
 
-<!-- 2 NAT -->
+<!-- NAT -->
 <div class="section">
     <h3>NAT-TEST (Practice System)</h3>
 
-    <button class="btn">Q5</button>
-    <button class="btn">Q4</button>
-    <button class="btn">Q3</button>
-    <button class="btn">Q2</button>
-    <button class="btn">Q1</button>
+    <button class="btn locked">Q5 <div class="badge">Coming Soon - 2026.11.28</div></button>
+    <button class="btn locked">Q4 <div class="badge">Coming Soon - 2026.11.28</div></button>
+    <button class="btn locked">Q3 <div class="badge">Coming Soon - 2026.11.28</div></button>
+    <button class="btn locked">Q2 <div class="badge">Coming Soon - 2026.11.28</div></button>
+    <button class="btn locked">Q1 <div class="badge">Coming Soon - 2026.11.28</div></button>
 </div>
 
-<!-- 3 JFT -->
+<!-- JFT -->
 <div class="section">
     <h3>JFT-Basic (SSW Visa)</h3>
 
-    <button class="btn" onclick="location.href='jft.html'">
+    <button class="btn locked">
         N2 (Basic Level)
+        <div class="badge">Coming Soon - 2026.11.28</div>
     </button>
 </div>
 
