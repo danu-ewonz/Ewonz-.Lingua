@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Grammar System</title>
+
+<style>
+
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at top,#1a1a1a,#000);
+    font-family:Arial;
+    padding:20px 0;
+}
+
+.container{
+    width:90%;
+    max-width:400px;
+    border:1px solid rgba(255,215,0,0.6);
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    background:#000;
+    position:relative;
+}
+
+.container::after{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:22px;
+    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0,#ffae00);
+    z-index:-1;
+    filter:blur(6px);
+    opacity:0.6;
+}
+
+.title{
+    color:#ffd700;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+
+    border-radius:12px;
+    border:1px solid rgba(255,215,0,0.6);
+
+    background:rgba(255,255,255,0.03);
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:0.25s ease;
+
+    position:relative;
+}
+
+.btn:hover{
+    transform:scale(1.04);
+    background:rgba(255,215,0,0.9);
+    color:black;
+}
+
+.locked{
+    opacity:0.6;
+}
+
+.badge{
+    position:absolute;
+    top:6px;
+    right:8px;
+
+    background:red;
+    color:white;
+
+    font-size:10px;
+    padding:2px 6px;
+    border-radius:6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        Grammar System (文法)
+    </div>
+
+    <button class="btn" onclick="location.href='jlpt-n5-grammar.html'">
+        JLPT - N5 Grammar
+    </button>
+
+    <button class="btn" onclick="location.href='jlpt-n4-grammar.html'">
+        JLPT - N4 Grammar
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        JLPT - N3 Grammar
+        <span class="badge">LOCK</span>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        JLPT - N2 / N1 Grammar
+        <span class="badge">LOCK</span>
+    </button>
+
+</div>
+
+<script>
+function comingSoon(){
+    alert("Coming Soon - 2026.11.28");
+}
+</script>
+
+</body>
+</html>
