@@ -3,93 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kanji - Japanese Exam Required</title>
+<title>JLPT Kanji System</title>
 
 <style>
-
 body{
     margin:0;
+    font-family:Arial, sans-serif;
     background:#0b0b0b;
-    font-family:Arial,sans-serif;
     color:white;
-    padding:20px;
 }
 
-.title{
+/* HEADER */
+.header{
     text-align:center;
-    color:gold;
-    font-size:28px;
+    padding:18px;
+    font-size:26px;
     font-weight:bold;
-    margin-bottom:20px;
+    color:#ffd700;
+    border-bottom:2px solid #ffd700;
+    letter-spacing:2px;
 }
 
-.section{
-    border:2px solid gold;
-    border-radius:20px;
+/* SEARCH */
+.search-box{
+    padding:10px;
+    text-align:center;
+}
+
+.search-box input{
+    width:92%;
+    padding:12px;
+    border-radius:10px;
+    border:2px solid #ffd700;
+    background:#111;
+    color:white;
+    font-size:14px;
+    outline:none;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
     padding:15px;
-    margin-bottom:20px;
 }
 
-.section h3{
-    color:gold;
-    margin-top:0;
+/* CARD */
+.card{
+    background:#111;
+    border:2px solid #ffd700;
+    border-radius:12px;
+    padding:14px 10px;
     text-align:center;
+    box-shadow:0 0 10px rgba(255,215,0,0.12);
+    transition:0.2s;
 }
 
-.btn{
-    width:100%;
-    padding:16px;
-    margin:8px 0;
+.card:active{
+    transform:scale(0.96);
+}
 
-    background:transparent;
-    color:gold;
+/* TEXT STYLES */
+.kanji{
+    font-size:42px;
+    font-weight:bold;
+    color:white;
+}
 
-    border:2px solid gold;
-    border-radius:15px;
+.en{
+    margin-top:6px;
+    font-size:12px;
+    color:white;
+}
 
-    font-size:17px;
+.si{
+    margin-top:3px;
+    font-size:13px;
+    color:#ffd700;
     font-weight:bold;
 }
 
-.btn:active{
-    transform:scale(0.98);
+.hira{
+    margin-top:4px;
+    font-size:12px;
+    color:#ccc;
 }
 
+.roma{
+    margin-top:2px;
+    font-size:11px;
+    color:#aaa;
+    font-style:italic;
+}
+
+.container{
+    padding-bottom:80px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="title">
-Kanji - Japanese Exam Required
+<div class="header">JLPT KANJI</div>
+
+<div class="search-box">
+<input type="text" id="search" placeholder="Search kanji / English / Sinhala / Hiragana / Romaji...">
 </div>
 
-<div class="section">
-    <h3>JLPT EXAM</h3>
-
-    <button class="btn" onclick="location.href='n5.html'">JLPT - N5</button>
-    <button class="btn" onclick="location.href='n4.html'">JLPT - N4</button>
-    <button class="btn" onclick="location.href='n3.html'">JLPT - N3</button>
-    <button class="btn" onclick="location.href='n2.html'">JLPT - N2</button>
-    <button class="btn" onclick="location.href='n1.html'">JLPT - N1</button>
+<div class="container">
+<div id="grid" class="grid"></div>
 </div>
 
-<div class="section">
-    <h3>NAT-TEST</h3>
+<script>
 
-    <button class="btn">Q5</button>
-    <button class="btn">Q4</button>
-    <button class="btn">Q3</button>
-    <button class="btn">Q2</button>
-    <button class="btn">Q1</button>
-</div>
+/* 🔥 CHANGE ONLY THIS LIST FOR N5 / N4 */
 
-<div class="section">
-    <h3>JFT-Basic (SSW)</h3>
+const kanjiList = [
+    // N5 + N4 sample mix (replace as needed)
 
-    <button class="btn">N2</button>
-</div>
+    {k:"一", en:"One", si:"එක", h:"いち", r:"ichi"},
+    {k:"二", en:"Two", si:"දෙක", h:"に", r:"ni"},
+    {k:"三", en:"Three", si:"තුන", h:"さん", r:"san"},
+    {k:"四", en:"Four", si:"හතර", h:"よん", r:"yon"},
+    {k:"五", en:"Five", si:"පහ", h:"ご", r:"go"},
+
+    {k:"日", en:"Day", si:"දින", h:"にち", r:"nichi"},
+    {k:"月", en:"Month / Moon", si:"සඳ / මාසය", h:"げつ", r:"getsu"},
+    {k:"水", en:"Water", si:"ජලය", h:"すい", r:"sui"},
+    {k:"火", en:"Fire", si:"ගිනි", h:"か", r:"ka"},
+
+    {k:"会", en:"Meet", si:"හමුවීම", h:"かい", r:"kai"},
+    {k:"同", en:"Same", si:"එකම", h:"どう", r:"dou"},
+    {k:"事", en:"Thing", si:"දේ", h:"こと", r:"koto"},
+    {k:"人", en:"Person", si:"පුද්ගලයා", h:"ひと", r:"hito"},
+    {k:"国", en:"Country", si:"රට", h:"こく", r:"koku"}
+];
+
+const grid = document.getElementById("grid");
+const search = document.getElementById("search");
+
+/* RENDER FUNCTION */
+function render(list){
+    grid.innerHTML = "";
+
+    list.forEach(i=>{
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+            <div class="kanji">${i.k}</div>
+            <div class="en">${i.en}</div>
+            <div class="si">${i.si}</div>
+            <div class="hira">${i.h}</div>
+            <div class="roma">${i.r}</div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+/* INITIAL LOAD */
+render(kanjiList);
+
+/* SEARCH ENGINE */
+search.addEventListener("input", function(){
+    let val = this.value.toLowerCase();
+
+    let filtered = kanjiList.filter(i =>
+        i.k.includes(val) ||
+        i.en.toLowerCase().includes(val) ||
+        i.si.includes(val) ||
+        i.h.includes(val) ||
+        i.r.toLowerCase().includes(val)
+    );
+
+    render(filtered);
+});
+</script>
 
 </body>
 </html>
