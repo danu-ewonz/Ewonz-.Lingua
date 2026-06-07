@@ -7,55 +7,63 @@
 
 <style>
 body{
-  margin:0;
-  font-family:Arial;
-  background:#0b0b0b;
-  color:white;
+    margin:0;
+    font-family:Arial;
+    background:#0b0b0b;
+    color:white;
 }
 
+/* HEADER */
 .header{
-  text-align:center;
-  padding:18px;
-  font-size:22px;
-  color:#ffd700;
-  border-bottom:2px solid #ffd700;
+    text-align:center;
+    padding:18px;
+    font-size:22px;
+    font-weight:bold;
+    color:#ffd700;
+    border-bottom:2px solid #ffd700;
+    letter-spacing:2px;
 }
 
+/* SEARCH */
 .search-box{
-  padding:10px;
-  text-align:center;
+    padding:10px;
+    text-align:center;
 }
 
 .search-box input{
-  width:92%;
-  padding:12px;
-  border-radius:10px;
-  border:2px solid #ffd700;
-  background:#111;
-  color:white;
-  outline:none;
+    width:92%;
+    padding:12px;
+    border-radius:10px;
+    border:2px solid #ffd700;
+    background:#111;
+    color:white;
+    font-size:14px;
+    outline:none;
 }
 
+/* GRID */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  padding:15px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+    padding:15px;
 }
 
+/* CARD */
 .card{
-  background:#111;
-  border:2px solid #ffd700;
-  border-radius:12px;
-  padding:12px;
-  text-align:center;
+    background:#111;
+    border:2px solid #ffd700;
+    border-radius:12px;
+    padding:14px 10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(255,215,0,0.12);
 }
 
-.kanji{font-size:40px;}
-.en{font-size:12px;}
-.si{color:#ffd700;font-size:13px;}
-.hira{color:#ccc;font-size:12px;}
-.roma{color:#aaa;font-size:11px;}
+.kanji{font-size:42px;font-weight:bold;}
+.en{font-size:12px;color:white;}
+.si{font-size:13px;color:#ffd700;font-weight:bold;}
+.hira{font-size:12px;color:#ccc;}
+.roma{font-size:11px;color:#aaa;font-style:italic;}
 </style>
 </head>
 
@@ -75,23 +83,35 @@ body{
 <script src="n4-data-3.js"></script>
 
 <script>
+
+/* =========================
+   MERGE ALL FILES
+========================= */
+let kanjiList = [];
+
+if (window.kanjiList1) kanjiList = kanjiList.concat(window.kanjiList1);
+if (window.kanjiList2) kanjiList = kanjiList.concat(window.kanjiList2);
+if (window.kanjiList3) kanjiList = kanjiList.concat(window.kanjiList3);
+
+/* =========================
+   RENDER FUNCTION
+========================= */
 const grid = document.getElementById("grid");
 const search = document.getElementById("search");
 
-/* RENDER */
 function render(list){
-  grid.innerHTML = "";
-  list.forEach(i=>{
-    grid.innerHTML += `
-      <div class="card">
-        <div class="kanji">${i.k}</div>
-        <div class="en">${i.en}</div>
-        <div class="si">${i.si}</div>
-        <div class="hira">${i.h}</div>
-        <div class="roma">${i.r}</div>
-      </div>
-    `;
-  });
+    grid.innerHTML = "";
+
+    list.forEach(i=>{
+        grid.innerHTML += `
+        <div class="card">
+            <div class="kanji">${i.k}</div>
+            <div class="en">${i.en}</div>
+            <div class="si">${i.si}</div>
+            <div class="hira">${i.h}</div>
+            <div class="roma">${i.r}</div>
+        </div>`;
+    });
 }
 
 /* INITIAL LOAD */
@@ -99,15 +119,17 @@ render(kanjiList);
 
 /* SEARCH */
 search.addEventListener("input",()=>{
-  let v = search.value.toLowerCase();
-  render(kanjiList.filter(i =>
-    i.k.includes(v) ||
-    i.en.toLowerCase().includes(v) ||
-    i.si.includes(v) ||
-    i.h.includes(v) ||
-    i.r.toLowerCase().includes(v)
-  ));
+    let v = search.value.toLowerCase();
+
+    render(kanjiList.filter(i =>
+        i.k.includes(v) ||
+        i.en.toLowerCase().includes(v) ||
+        i.si.includes(v) ||
+        i.h.includes(v) ||
+        i.r.toLowerCase().includes(v)
+    ));
 });
+
 </script>
 
 </body>
