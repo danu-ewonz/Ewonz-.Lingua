@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Handakuten Chart</title>
+<title>Katakana Handakuten</title>
 
 <style>
 body{
@@ -11,26 +11,35 @@ margin:0;
 background:#000;
 font-family:Arial;
 color:#fff;
+
+/* 🔥 FIX: full screen feel */
+min-height:100vh;
 padding:20px;
-text-align:center;
+box-sizing:border-box;
 }
 
 h1{
 color:gold;
+text-align:center;
 margin-bottom:20px;
 }
 
-/* CHART BOX */
+/* 🔥 FULL WIDTH CHART */
 .chart{
+width:100%;
+max-width:500px;
+margin:0 auto;
+
 border:2px solid gold;
 border-radius:12px;
 overflow:hidden;
-text-align:left;
+
+background:rgba(255,255,255,0.03);
 }
 
 /* ROW */
 .row{
-padding:12px 15px;
+padding:15px;
 border-bottom:1px solid rgba(255,215,0,0.3);
 font-size:18px;
 line-height:1.8;
@@ -44,6 +53,11 @@ border-bottom:none;
 .small{
 color:#ffd700;
 font-size:14px;
+}
+
+/* 🔥 TITLE spacing fix */
+h1{
+margin-top:10px;
 }
 
 </style>
