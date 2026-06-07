@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JLPT Kanji Hub</title>
+<title>Kanji - Japanese Exam Required</title>
 
 <style>
 body{
@@ -17,33 +17,43 @@ body{
 .header{
     text-align:center;
     padding:20px;
-    font-size:28px;
+    font-size:24px;
     font-weight:bold;
     color:#ffd700;
     border-bottom:2px solid #ffd700;
     letter-spacing:2px;
 }
 
-/* GRID MENU */
-.menu{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:15px;
-    padding:20px;
+/* SECTION TITLE */
+.section-title{
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    color:#ffd700;
+    border-left:4px solid #ffd700;
+    margin:15px;
 }
 
-/* BUTTON CARD */
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
+    padding:15px;
+}
+
+/* BUTTON */
 .btn{
     background:#111;
     border:2px solid #ffd700;
     border-radius:14px;
-    padding:25px 10px;
+    padding:18px 10px;
     text-align:center;
-    font-size:18px;
+    font-size:16px;
     font-weight:bold;
     color:white;
-    transition:0.2s;
     box-shadow:0 0 10px rgba(255,215,0,0.12);
+    transition:0.2s;
     cursor:pointer;
 }
 
@@ -51,41 +61,76 @@ body{
     transform:scale(0.96);
 }
 
-/* SUB TEXT */
 .sub{
-    font-size:12px;
+    font-size:11px;
     color:#ccc;
-    margin-top:6px;
+    margin-top:5px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">JLPT KANJI SYSTEM</div>
+<div class="header">KANJI - JAPANESE EXAM REQUIRED</div>
 
-<div class="menu">
+<!-- 🔥 JLPT SECTION -->
+<div class="section-title">JLPT - EXAM</div>
 
-    <!-- JLPT LEVELS -->
-    <div class="btn" onclick="location.href='n5.html'">
-        N5 KANJI
+<div class="grid">
+
+    <div class="btn" onclick="location.href='jlpt-n5.html'">
+        JLPT - N5
         <div class="sub">Beginner Level</div>
     </div>
 
-    <div class="btn" onclick="location.href='n4.html'">
-        N4 KANJI
+    <div class="btn" onclick="location.href='jlpt-n4.html'">
+        JLPT - N4
         <div class="sub">Basic Level</div>
     </div>
 
-    <!-- EXAMS -->
-    <div class="btn" onclick="alert('Coming Soon')">
-        JLPT EXAMS
-        <div class="sub">Practice Tests</div>
+    <div class="btn" onclick="location.href='jlpt-n3.html'">
+        JLPT - N3
+        <div class="sub">Intermediate</div>
     </div>
 
-    <div class="btn" onclick="alert('Coming Soon')">
-        JFT BASIC
-        <div class="sub">Exam Practice</div>
+    <div class="btn" onclick="location.href='jlpt-n2.html'">
+        JLPT - N2
+        <div class="sub">Advanced</div>
+    </div>
+
+    <div class="btn" onclick="location.href='jlpt-n1.html'">
+        JLPT - N1
+        <div class="sub">Expert Level</div>
+    </div>
+
+</div>
+
+<!-- 🔥 NAT TEST SECTION -->
+<div class="section-title">NAT - TEST</div>
+
+<div class="grid">
+
+    <div class="btn" onclick="location.href='nat-q5.html'">Q5</div>
+    <div class="btn" onclick="location.href='nat-q4.html'">Q4</div>
+    <div class="btn" onclick="location.href='nat-q3.html'">Q3</div>
+    <div class="btn" onclick="location.href='nat-q2.html'">Q2</div>
+    <div class="btn" onclick="location.href='nat-q1.html'">Q1</div>
+
+</div>
+
+<!-- 🔥 JFT BASIC -->
+<div class="section-title">JFT - BASIC (SSW)</div>
+
+<div class="grid">
+
+    <div class="btn" onclick="location.href='jft-basic.html'">
+        JFT - BASIC
+        <div class="sub">SSW Exam</div>
+    </div>
+
+    <div class="btn" onclick="location.href='jlpt-n2.html'">
+        JLPT - N2 (SSW Related)
+        <div class="sub">Work Visa Level</div>
     </div>
 
 </div>
