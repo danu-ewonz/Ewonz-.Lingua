@@ -1,36 +1,171 @@
-<div class="title">
-    Japanese Writing System 🇯🇵
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Japanese Writing System</title>
+
+<style>
+
+/* =========================
+🌐 GLOBAL
+========================= */
+body{
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:radial-gradient(circle at top, #1a1a1a, #000);
+    font-family:Arial;
+
+    padding:20px 0;
+}
+
+/* =========================
+MAIN CARD
+========================= */
+.container{
+    width:90%;
+    max-width:400px;
+
+    border:1px solid rgba(255,215,0,0.6);
+    border-radius:20px;
+
+    padding:20px;
+    text-align:center;
+
+    background:#000;
+
+    position:relative;
+
+    box-shadow:0 0 20px rgba(255,215,0,0.08);
+}
+
+/* glow border */
+.container::after{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:22px;
+
+    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0,#ffae00);
+
+    z-index:-1;
+    filter:blur(6px);
+    opacity:0.6;
+}
+
+/* =========================
+TITLE
+========================= */
+.title{
+    color:#ffd700;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:20px;
+
+    text-shadow:0 0 8px rgba(255,215,0,0.3);
+}
+
+/* =========================
+BUTTONS
+========================= */
+.btn{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+
+    border-radius:12px;
+    border:1px solid rgba(255,215,0,0.6);
+
+    font-size:16px;
+    font-weight:bold;
+
+    background:rgba(255,255,255,0.03);
+    color:#fff;
+
+    cursor:pointer;
+    transition:0.25s ease;
+
+    position:relative;
+}
+
+/* hover effect */
+.btn:hover{
+    transform:scale(1.04);
+    background:rgba(255,215,0,0.9);
+    color:#000;
+    box-shadow:0 0 18px rgba(255,215,0,0.4);
+}
+
+/* small stack text */
+.stack{
+    display:block;
+    font-size:11px;
+    opacity:0.75;
+    margin-top:6px;
+    font-weight:normal;
+    letter-spacing:0.3px;
+    line-height:1.4;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        Japanese Writing System 🇯🇵
+    </div>
+
+    <!-- 1 -->
+    <button class="btn" onclick="go('hiragana.html')">
+        Hiragana あ
+    </button>
+
+    <!-- 2 -->
+    <button class="btn" onclick="go('katakana.html')">
+        Katakana ア
+    </button>
+
+    <!-- 3 -->
+    <button class="btn" onclick="go('kanji.html')">
+        Kanji (漢字)
+    </button>
+
+    <!-- 4 -->
+    <button class="btn" onclick="go('special.html')">
+        Hiragana Special
+
+        <span class="stack">
+            Dakuten • Handakuten • Youon • Chouon
+        </span>
+    </button>
+
+    <!-- 5 -->
+    <button class="btn" onclick="go('katakana-special.html')">
+        Katakana Special
+
+        <span class="stack">
+            Dakuten • Handakuten • Youon • Chouon
+        </span>
+    </button>
+
 </div>
 
-<!-- 1 -->
-<button class="btn" onclick="go('hiragana.html')">
-    Hiragana あ
-</button>
+<script>
 
-<!-- 2 -->
-<button class="btn" onclick="go('katakana.html')">
-    Katakana ア
-</button>
+function go(page){
+    window.location.href = page;
+}
 
-<!-- 3 -->
-<button class="btn" onclick="go('kanji.html')">
-    Kanji (漢字)
-</button>
+</script>
 
-<!-- 4 -->
-<button class="btn" onclick="go('special.html')">
-    Hiragana Special
-
-    <span class="stack">
-        Dakuten • Handakuten • Youon • Chouon
-    </span>
-</button>
-
-<!-- 5 -->
-<button class="btn" onclick="go('katakana-special.html')">
-    Katakana Special
-
-    <span class="stack">
-        Dakuten • Handakuten • Youon • Chouon
-    </span>
-</button>
+</body>
+</html>
