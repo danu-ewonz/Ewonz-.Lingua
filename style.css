@@ -14,7 +14,7 @@ body{
 
     touch-action:pan-y;
 
-    padding-bottom:80px; /* bottom bar space */
+    padding-bottom:80px;
 }
 
 /* RESET */
@@ -84,6 +84,8 @@ html{
     box-shadow:0 0 8px rgba(255,215,0,0.4);
 
     transition:0.2s ease;
+
+    position:relative; /* 🔥 REQUIRED for badge */
 }
 
 .btn:active{
@@ -196,17 +198,17 @@ html{
 }
 
 /* =========================
-🔒 LOCK SYSTEM (ADDED)
+🔒 LOCK SYSTEM (FIXED)
 ========================= */
 
+/* locked button */
 .locked{
-    opacity:0.6;
+    opacity:0.55;
+    pointer-events:none;
     position:relative;
-    cursor:not-allowed;
-    pointer-events:none; /* 🚫 block click */
 }
 
-/* RED BADGE */
+/* red badge */
 .badge{
     position:absolute;
     top:6px;
@@ -220,12 +222,6 @@ html{
     border-radius:6px;
 
     font-weight:bold;
-}
-
-/* disable hover */
-.locked:hover{
-    transform:none !important;
-    box-shadow:none !important;
 }
 
 /* =========================
