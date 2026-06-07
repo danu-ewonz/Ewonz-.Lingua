@@ -24,6 +24,30 @@ body{
     letter-spacing:2px;
 }
 
+/* JLPT BUTTONS */
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    padding:10px;
+}
+
+.tab{
+    padding:8px 22px;
+    border:2px solid #ffd700;
+    border-radius:20px;
+    background:#111;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.tab.active{
+    background:#ffd700;
+    color:black;
+}
+
 /* SEARCH */
 .search-box{
     padding:10px;
@@ -37,7 +61,6 @@ body{
     border:2px solid #ffd700;
     background:#111;
     color:white;
-    font-size:14px;
     outline:none;
 }
 
@@ -56,7 +79,6 @@ body{
     border-radius:12px;
     padding:14px 10px;
     text-align:center;
-    box-shadow:0 0 10px rgba(255,215,0,0.12);
     transition:0.2s;
 }
 
@@ -64,42 +86,13 @@ body{
     transform:scale(0.96);
 }
 
-/* TEXT STYLES */
-.kanji{
-    font-size:42px;
-    font-weight:bold;
-    color:white;
-}
+.kanji{ font-size:42px; font-weight:bold; color:white; }
+.en{ font-size:12px; color:white; margin-top:6px; }
+.si{ font-size:13px; color:#ffd700; font-weight:bold; margin-top:3px; }
+.hira{ font-size:12px; color:#ccc; margin-top:4px; }
+.roma{ font-size:11px; color:#aaa; font-style:italic; margin-top:2px; }
 
-.en{
-    margin-top:6px;
-    font-size:12px;
-    color:white;
-}
-
-.si{
-    margin-top:3px;
-    font-size:13px;
-    color:#ffd700;
-    font-weight:bold;
-}
-
-.hira{
-    margin-top:4px;
-    font-size:12px;
-    color:#ccc;
-}
-
-.roma{
-    margin-top:2px;
-    font-size:11px;
-    color:#aaa;
-    font-style:italic;
-}
-
-.container{
-    padding-bottom:80px;
-}
+.container{ padding-bottom:80px; }
 </style>
 </head>
 
@@ -107,8 +100,15 @@ body{
 
 <div class="header">JLPT KANJI</div>
 
+<!-- JLPT BUTTONS -->
+<div class="tabs">
+    <div class="tab active" onclick="switchLevel('n5', event)">N5</div>
+    <div class="tab" onclick="switchLevel('n4', event)">N4</div>
+</div>
+
+<!-- SEARCH -->
 <div class="search-box">
-<input type="text" id="search" placeholder="Search kanji / English / Sinhala / Hiragana / Romaji...">
+<input type="text" id="search" placeholder="Search kanji / English / Sinhala / reading...">
 </div>
 
 <div class="container">
@@ -117,22 +117,17 @@ body{
 
 <script>
 
-/* 🔥 CHANGE ONLY THIS LIST FOR N5 / N4 */
-
-const kanjiList = [
-    // N5 + N4 sample mix (replace as needed)
-
+/* 🔥 N5 DATA */
+const n5 = [
     {k:"一", en:"One", si:"එක", h:"いち", r:"ichi"},
     {k:"二", en:"Two", si:"දෙක", h:"に", r:"ni"},
     {k:"三", en:"Three", si:"තුන", h:"さん", r:"san"},
-    {k:"四", en:"Four", si:"හතර", h:"よん", r:"yon"},
-    {k:"五", en:"Five", si:"පහ", h:"ご", r:"go"},
-
     {k:"日", en:"Day", si:"දින", h:"にち", r:"nichi"},
-    {k:"月", en:"Month / Moon", si:"සඳ / මාසය", h:"げつ", r:"getsu"},
-    {k:"水", en:"Water", si:"ජලය", h:"すい", r:"sui"},
-    {k:"火", en:"Fire", si:"ගිනි", h:"か", r:"ka"},
+    {k:"月", en:"Moon", si:"සඳ", h:"げつ", r:"getsu"}
+];
 
+/* 🔥 N4 DATA */
+const n4 = [
     {k:"会", en:"Meet", si:"හමුවීම", h:"かい", r:"kai"},
     {k:"同", en:"Same", si:"එකම", h:"どう", r:"dou"},
     {k:"事", en:"Thing", si:"දේ", h:"こと", r:"koto"},
@@ -140,10 +135,17 @@ const kanjiList = [
     {k:"国", en:"Country", si:"රට", h:"こく", r:"koku"}
 ];
 
+let current = "n5";
+
 const grid = document.getElementById("grid");
 const search = document.getElementById("search");
 
-/* RENDER FUNCTION */
+/* GET DATA */
+function getData(){
+    return current === "n5" ? n5 : n4;
+}
+
+/* RENDER */
 function render(list){
     grid.innerHTML = "";
 
@@ -163,14 +165,13 @@ function render(list){
     });
 }
 
-/* INITIAL LOAD */
-render(kanjiList);
+render(getData());
 
-/* SEARCH ENGINE */
+/* SEARCH */
 search.addEventListener("input", function(){
     let val = this.value.toLowerCase();
 
-    let filtered = kanjiList.filter(i =>
+    let filtered = getData().filter(i =>
         i.k.includes(val) ||
         i.en.toLowerCase().includes(val) ||
         i.si.includes(val) ||
@@ -180,6 +181,17 @@ search.addEventListener("input", function(){
 
     render(filtered);
 });
+
+/* SWITCH JLPT */
+function switchLevel(level, event){
+    current = level;
+    search.value = "";
+
+    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+    event.target.classList.add("active");
+
+    render(getData());
+}
 </script>
 
 </body>
