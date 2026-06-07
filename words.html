@@ -99,6 +99,10 @@ BUTTONS
     box-shadow:0 0 18px rgba(255,215,0,0.4);
 }
 
+.btn:active{
+    transform:scale(0.97);
+}
+
 /* small text */
 .stack{
     display:block;
@@ -106,28 +110,27 @@ BUTTONS
     opacity:0.75;
     margin-top:6px;
     font-weight:normal;
-    letter-spacing:0.3px;
-    line-height:1.4;
 }
 
 /* =========================
-GRAMMAR BOX (NEW)
+LOCK STYLE
 ========================= */
-.box{
-    margin-top:15px;
-    padding:15px;
-
-    border:1px solid rgba(255,215,0,0.6);
-    border-radius:15px;
-
-    background:rgba(255,255,255,0.03);
+.locked{
+    opacity:0.6;
 }
 
-.box-title{
-    color:#ffd700;
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:10px;
+/* badge */
+.badge{
+    position:absolute;
+    top:6px;
+    right:10px;
+
+    font-size:10px;
+    background:red;
+    color:white;
+
+    padding:2px 6px;
+    border-radius:6px;
 }
 
 </style>
@@ -159,45 +162,19 @@ GRAMMAR BOX (NEW)
     <!-- 4 -->
     <button class="btn" onclick="go('special.html')">
         Hiragana Special
-
-        <span class="stack">
-            Dakuten • Handakuten • Youon • Chouon
-        </span>
+        <span class="stack">Dakuten • Handakuten • Youon • Chouon</span>
     </button>
 
     <!-- 5 -->
     <button class="btn" onclick="go('katakana-special.html')">
         Katakana Special
-
-        <span class="stack">
-            Dakuten • Handakuten • Youon • Chouon
-        </span>
+        <span class="stack">Dakuten • Handakuten • Youon • Chouon</span>
     </button>
 
-    <!-- 🔥 GRAMMAR SYSTEM (NEW SECTION) -->
-    <div class="box">
-
-        <div class="box-title">
-            Grammar System (文法)
-        </div>
-
-        <button class="btn" onclick="go('jlpt-n5-grammar.html')">
-            JLPT - N5 Grammar
-        </button>
-
-        <button class="btn" onclick="go('jlpt-n4-grammar.html')">
-            JLPT - N4 Grammar
-        </button>
-
-        <button class="btn" onclick="go('jlpt-n3-grammar.html')">
-            JLPT - N3 Grammar
-        </button>
-
-        <button class="btn" onclick="go('jlpt-n2-n1-grammar.html')">
-            JLPT - N2 / N1 Grammar
-        </button>
-
-    </div>
+    <!-- 6 GRAMMAR ONLY -->
+    <button class="btn" onclick="go('grammar-system.html')">
+        Grammar System (文法)
+    </button>
 
 </div>
 
