@@ -141,7 +141,7 @@ html{
 }
 
 /* =========================
-🇯🇵 LANGUAGE TYPE BUTTONS (HIRAGANA / KATAKANA / KANJI)
+🇯🇵 LANGUAGE TYPE BUTTONS
 ========================= */
 .lang-btn{
     width:80%;
@@ -161,8 +161,6 @@ html{
     text-align:center;
 
     transition:0.2s ease;
-
-    box-shadow:none;
 }
 
 .lang-btn:active{
@@ -240,4 +238,55 @@ html{
         opacity:1;
         transform:translateY(0);
     }
+}
+
+/* =========================
+🔴 HIRAGANA SPECIAL BOX (ADDED - SAFE)
+========================= */
+.special-box{
+    width:90%;
+    margin-top:20px;
+    padding:12px;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.05);
+
+    animation:fadeInUp 0.5s ease;
+}
+
+.special-title{
+    text-align:center;
+    font-size:14px;
+    color:gold;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.special-btn{
+    width:100%;
+    padding:10px;
+
+    margin-bottom:8px;
+
+    border:2px solid gold;
+    border-radius:10px;
+
+    background:rgba(255,255,255,0.1);
+    color:black;
+
+    font-size:13px;
+    font-weight:bold;
+
+    transition:0.2s ease;
+}
+
+.special-btn:active{
+    transform:scale(0.97);
+    opacity:0.85;
+}
+
+.special-btn:last-child{
+    margin-bottom:0;
 }
