@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Youon Chart</title>
+<title>Katakana Youon</title>
 
 <style>
 body{
@@ -20,39 +20,47 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* BOX */
+/* MAIN BOX */
 .chart{
 border:2px solid gold;
 border-radius:12px;
 overflow:hidden;
 }
 
-/* ROW */
+/* ROW STYLE */
 .row{
-padding:15px;
+padding:14px;
 border-bottom:1px solid gold;
 font-size:18px;
-line-height:1.6;
+line-height:1.7;
 }
 
 .row:last-child{
 border-bottom:none;
 }
 
-/* ROMAJI SMALL */
-.small{
-display:block;
-font-size:12px;
-opacity:0.7;
-margin-top:5px;
+/* EXAMPLE BOX */
+.examples{
+margin-top:20px;
+padding:15px;
+border:2px solid gold;
+border-radius:12px;
+text-align:left;
 }
 
-/* EXAMPLE STYLE */
-.example{
-display:block;
-font-size:13px;
-opacity:0.85;
-margin-top:5px;
+.examples h2{
+color:gold;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.examples p{
+margin:6px 0;
+font-size:14px;
+opacity:0.9;
+}
+
+.small{
 color:#ffd700;
 }
 
@@ -61,34 +69,71 @@ color:#ffd700;
 
 <body>
 
-<h1>Katakana Youon</h1>
+<h1>Katakana Youon (拗音)</h1>
 
+<!-- CHART -->
 <div class="chart">
 
-<div class="row">
-キャ - kya
-<span class="example">キャット → kyatto</span>
+<div class="row">キャ - kya</div>
+<div class="row">キュ - kyu</div>
+<div class="row">キョ - kyo</div>
+
+<div class="row">シャ - sha</div>
+<div class="row">シュ - shu</div>
+<div class="row">ショ - sho</div>
+
+<div class="row">チャ - cha</div>
+<div class="row">チュ - chu</div>
+<div class="row">チョ - cho</div>
+
+<div class="row">ニャ - nya</div>
+<div class="row">ニュ - nyu</div>
+<div class="row">ニョ - nyo</div>
+
+<div class="row">ヒャ - hya</div>
+<div class="row">ヒュ - hyu</div>
+<div class="row">ヒョ - hyo</div>
+
+<div class="row">ミャ - mya</div>
+<div class="row">ミュ - myu</div>
+<div class="row">ミョ - myo</div>
+
+<div class="row">リャ - rya</div>
+<div class="row">リュ - ryu</div>
+<div class="row">リョ - ryo</div>
+
+<div class="row">ギャ - gya</div>
+<div class="row">ギュ - gyu</div>
+<div class="row">ギョ - gyo</div>
+
+<div class="row">ジャ - ja</div>
+<div class="row">ジュ - ju</div>
+<div class="row">ジョ - jo</div>
+
+<div class="row">ビャ - bya</div>
+<div class="row">ビュ - byu</div>
+<div class="row">ビョ - byo</div>
+
+<div class="row">ピャ - pya</div>
+<div class="row">ピュ - pyu</div>
+<div class="row">ピョ - pyo</div>
+
 </div>
 
-<div class="row">
-シュ - shu
-<span class="example">ショップ → shoppu</span>
-</div>
+<!-- EXAMPLES -->
+<div class="examples">
 
-<div class="row">
-チョ - cho
-<span class="example">チョコ → choko</span>
-</div>
+<h2>Examples</h2>
 
-<div class="row">
-ニャ - nya
-<span class="example">ニャン → nyan</span>
-</div>
-
-<div class="row">
-ヒャ - hya
-<span class="example">ヒャク → hyaku</span>
-</div>
+<p>キャット → <span class="small">kyatto</span></p>
+<p>キュート → <span class="small">kyuuto</span></p>
+<p>ショップ → <span class="small">shoppu</span></p>
+<p>チョコ → <span class="small">choko</span></p>
+<p>ニャンコ → <span class="small">nyanko</span></p>
+<p>ヒューマン → <span class="small">hyuuman</span></p>
+<p>ギャング → <span class="small">gyangu</span></p>
+<p>ジョーク → <span class="small">jouku</span></p>
+<p>ピアノ → <span class="small">piano</span></p>
 
 </div>
 
