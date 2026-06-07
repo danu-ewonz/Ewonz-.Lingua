@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Dakuten Chart</title>
+<title>Katakana Dakuten</title>
 
 <style>
 body{
@@ -20,30 +20,31 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* BOX */
-.chart{
+/* CARD */
+.card{
 border:2px solid gold;
 border-radius:12px;
-overflow:hidden;
-}
-
-/* ROW */
-.row{
 padding:15px;
-border-bottom:1px solid gold;
-font-size:20px;
+text-align:left;
+background:rgba(255,255,255,0.03);
 }
 
-.row:last-child{
+/* LINE */
+.line{
+font-size:18px;
+line-height:1.8;
+padding:4px 0;
+border-bottom:1px solid rgba(255,215,0,0.2);
+}
+
+.line:last-child{
 border-bottom:none;
 }
 
 /* ROMAJI */
 .small{
-display:block;
-font-size:12px;
-opacity:0.7;
-margin-top:5px;
+color:#ffd700;
+font-size:14px;
 }
 
 </style>
@@ -51,25 +52,33 @@ margin-top:5px;
 
 <body>
 
-<h1>Katakana Conversion</h1>
+<h1>Katakana Dakuten</h1>
 
-<div class="chart">
+<div class="card">
 
-<div class="row">
-カ → ガ <span class="small">ka → ga</span>
-</div>
+<div class="line">カ → ガ <span class="small">(ka → ga)</span></div>
+<div class="line">キ → ギ <span class="small">(ki → gi)</span></div>
+<div class="line">ク → グ <span class="small">(ku → gu)</span></div>
+<div class="line">ケ → ゲ <span class="small">(ke → ge)</span></div>
+<div class="line">コ → ゴ <span class="small">(ko → go)</span></div>
 
-<div class="row">
-サ → ザ <span class="small">sa → za</span>
-</div>
+<div class="line">サ → ザ <span class="small">(sa → za)</span></div>
+<div class="line">シ → ジ <span class="small">(shi → ji)</span></div>
+<div class="line">ス → ズ <span class="small">(su → zu)</span></div>
+<div class="line">セ → ゼ <span class="small">(se → ze)</span></div>
+<div class="line">ソ → ゾ <span class="small">(so → zo)</span></div>
 
-<div class="row">
-タ → ダ <span class="small">ta → da</span>
-</div>
+<div class="line">タ → ダ <span class="small">(ta → da)</span></div>
+<div class="line">チ → ヂ <span class="small">(chi → ji)</span></div>
+<div class="line">ツ → ヅ <span class="small">(tsu → zu)</span></div>
+<div class="line">テ → デ <span class="small">(te → de)</span></div>
+<div class="line">ト → ド <span class="small">(to → do)</span></div>
 
-<div class="row">
-ハ → バ <span class="small">ha → ba</span>
-</div>
+<div class="line">ハ → バ <span class="small">(ha → ba)</span></div>
+<div class="line">ヒ → ビ <span class="small">(hi → bi)</span></div>
+<div class="line">フ → ブ <span class="small">(fu → bu)</span></div>
+<div class="line">ヘ → ベ <span class="small">(he → be)</span></div>
+<div class="line">ホ → ボ <span class="small">(ho → bo)</span></div>
 
 </div>
 
