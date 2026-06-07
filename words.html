@@ -90,11 +90,8 @@ BUTTONS
 
     cursor:pointer;
     transition:0.25s ease;
-
-    position:relative;
 }
 
-/* hover effect */
 .btn:hover{
     transform:scale(1.04);
     background:rgba(255,215,0,0.9);
@@ -102,7 +99,7 @@ BUTTONS
     box-shadow:0 0 18px rgba(255,215,0,0.4);
 }
 
-/* small stack text */
+/* small text */
 .stack{
     display:block;
     font-size:11px;
@@ -113,11 +110,30 @@ BUTTONS
     line-height:1.4;
 }
 
+/* =========================
+GRAMMAR BOX (NEW)
+========================= */
+.box{
+    margin-top:15px;
+    padding:15px;
+
+    border:1px solid rgba(255,215,0,0.6);
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.03);
+}
+
+.box-title{
+    color:#ffd700;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
 </style>
 </head>
 
-<body> 
-</div>
+<body>
 
 <div class="container">
 
@@ -157,6 +173,31 @@ BUTTONS
             Dakuten • Handakuten • Youon • Chouon
         </span>
     </button>
+
+    <!-- 🔥 GRAMMAR SYSTEM (NEW SECTION) -->
+    <div class="box">
+
+        <div class="box-title">
+            Grammar System (文法)
+        </div>
+
+        <button class="btn" onclick="go('jlpt-n5-grammar.html')">
+            JLPT - N5 Grammar
+        </button>
+
+        <button class="btn" onclick="go('jlpt-n4-grammar.html')">
+            JLPT - N4 Grammar
+        </button>
+
+        <button class="btn" onclick="go('jlpt-n3-grammar.html')">
+            JLPT - N3 Grammar
+        </button>
+
+        <button class="btn" onclick="go('jlpt-n2-n1-grammar.html')">
+            JLPT - N2 / N1 Grammar
+        </button>
+
+    </div>
 
 </div>
 
