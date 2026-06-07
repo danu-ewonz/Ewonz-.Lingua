@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Youon Chart</title>
+<title>Katakana Youon (බැදි අක්ෂර)</title>
 
 <style>
 body{
@@ -20,27 +20,39 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* BOX */
-.chart{
+/* MAIN WRAPPER */
+.box{
 border:2px solid gold;
 border-radius:12px;
 overflow:hidden;
 text-align:left;
 }
 
-/* ROW */
-.row{
-padding:12px 15px;
+/* EACH SET */
+.set{
 border-bottom:1px solid gold;
-font-size:18px;
-line-height:1.6;
+padding:12px 15px;
 }
 
-.row:last-child{
+.set:last-child{
 border-bottom:none;
 }
 
-/* ROMAJI STYLE */
+/* SET TITLE */
+.title{
+color:gold;
+font-weight:bold;
+margin-bottom:8px;
+font-size:15px;
+}
+
+/* ITEMS */
+.item{
+font-size:17px;
+line-height:1.7;
+}
+
+/* ROMAJI */
 .small{
 color:#ffd700;
 font-size:14px;
@@ -54,55 +66,127 @@ margin-left:5px;
 
 <h1>Katakana Youon</h1>
 
-<div class="chart">
+<div class="box">
 
-<div class="row">キャ - <span class="small">kya</span></div>
-<div class="row">キュ - <span class="small">kyu</span></div>
-<div class="row">キョ - <span class="small">kyo</span></div>
+<!-- 1 -->
+<div class="set">
+<div class="title">K-Row</div>
+<div class="item">
+キャ - <span class="small">kya</span><br>
+キュ - <span class="small">kyu</span><br>
+キョ - <span class="small">kyo</span>
+</div>
+</div>
 
-<div class="row">ギャ - <span class="small">gya</span></div>
-<div class="row">ギュ - <span class="small">gyu</span></div>
-<div class="row">ギョ - <span class="small">gyo</span></div>
+<!-- 2 -->
+<div class="set">
+<div class="title">G-Row</div>
+<div class="item">
+ギャ - <span class="small">gya</span><br>
+ギュ - <span class="small">gyu</span><br>
+ギョ - <span class="small">gyo</span>
+</div>
+</div>
 
-<div class="row">シャ - <span class="small">sha</span></div>
-<div class="row">シュ - <span class="small">shu</span></div>
-<div class="row">ショ - <span class="small">sho</span></div>
+<!-- 3 -->
+<div class="set">
+<div class="title">S-Row</div>
+<div class="item">
+シャ - <span class="small">sha</span><br>
+シュ - <span class="small">shu</span><br>
+ショ - <span class="small">sho</span>
+</div>
+</div>
 
-<div class="row">ジャ - <span class="small">ja</span></div>
-<div class="row">ジュ - <span class="small">ju</span></div>
-<div class="row">ジョ - <span class="small">jo</span></div>
+<!-- 4 -->
+<div class="set">
+<div class="title">J-Row</div>
+<div class="item">
+ジャ - <span class="small">ja</span><br>
+ジュ - <span class="small">ju</span><br>
+ジョ - <span class="small">jo</span>
+</div>
+</div>
 
-<div class="row">チャ - <span class="small">cha</span></div>
-<div class="row">チュ - <span class="small">chu</span></div>
-<div class="row">チョ - <span class="small">cho</span></div>
+<!-- 5 -->
+<div class="set">
+<div class="title">T-Row</div>
+<div class="item">
+チャ - <span class="small">cha</span><br>
+チュ - <span class="small">chu</span><br>
+チョ - <span class="small">cho</span>
+</div>
+</div>
 
-<div class="row">ヂャ - <span class="small">dya</span></div>
-<div class="row">ヂュ - <span class="small">dyu</span></div>
-<div class="row">ヂョ - <span class="small">dyo</span></div>
+<!-- 6 -->
+<div class="set">
+<div class="title">D-Row</div>
+<div class="item">
+ヂャ - <span class="small">dya</span><br>
+ヂュ - <span class="small">dyu</span><br>
+ヂョ - <span class="small">dyo</span>
+</div>
+</div>
 
-<div class="row">ニャ - <span class="small">nya</span></div>
-<div class="row">ニュ - <span class="small">nyu</span></div>
-<div class="row">ニョ - <span class="small">nyo</span></div>
+<!-- 7 -->
+<div class="set">
+<div class="title">N-Row</div>
+<div class="item">
+ニャ - <span class="small">nya</span><br>
+ニュ - <span class="small">nyu</span><br>
+ニョ - <span class="small">nyo</span>
+</div>
+</div>
 
-<div class="row">ヒャ - <span class="small">hya</span></div>
-<div class="row">ヒュ - <span class="small">hyu</span></div>
-<div class="row">ヒョ - <span class="small">hyo</span></div>
+<!-- 8 -->
+<div class="set">
+<div class="title">H-Row</div>
+<div class="item">
+ヒャ - <span class="small">hya</span><br>
+ヒュ - <span class="small">hyu</span><br>
+ヒョ - <span class="small">hyo</span>
+</div>
+</div>
 
-<div class="row">ビャ - <span class="small">bya</span></div>
-<div class="row">ビュ - <span class="small">byu</span></div>
-<div class="row">ビョ - <span class="small">byo</span></div>
+<!-- 9 -->
+<div class="set">
+<div class="title">B-Row</div>
+<div class="item">
+ビャ - <span class="small">bya</span><br>
+ビュ - <span class="small">byu</span><br>
+ビョ - <span class="small">byo</span>
+</div>
+</div>
 
-<div class="row">ピャ - <span class="small">pya</span></div>
-<div class="row">ピュ - <span class="small">pyu</span></div>
-<div class="row">ピョ - <span class="small">pyo</span></div>
+<!-- 10 -->
+<div class="set">
+<div class="title">P-Row</div>
+<div class="item">
+ピャ - <span class="small">pya</span><br>
+ピュ - <span class="small">pyu</span><br>
+ピョ - <span class="small">pyo</span>
+</div>
+</div>
 
-<div class="row">ミャ - <span class="small">mya</span></div>
-<div class="row">ミュ - <span class="small">myu</span></div>
-<div class="row">ミョ - <span class="small">myo</span></div>
+<!-- 11 -->
+<div class="set">
+<div class="title">M-Row</div>
+<div class="item">
+ミャ - <span class="small">mya</span><br>
+ミュ - <span class="small">myu</span><br>
+ミョ - <span class="small">myo</span>
+</div>
+</div>
 
-<div class="row">リャ - <span class="small">rya</span></div>
-<div class="row">リュ - <span class="small">ryu</span></div>
-<div class="row">リョ - <span class="small">ryo</span></div>
+<!-- 12 -->
+<div class="set">
+<div class="title">R-Row</div>
+<div class="item">
+リャ - <span class="small">rya</span><br>
+リュ - <span class="small">ryu</span><br>
+リョ - <span class="small">ryo</span>
+</div>
+</div>
 
 </div>
 
