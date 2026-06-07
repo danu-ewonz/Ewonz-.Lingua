@@ -11,19 +11,35 @@ body{
     font-family:Arial, sans-serif;
     background:#0b0b0b;
     color:white;
-    overflow-x:hidden;
 }
 
+/* HEADER */
 .header{
     text-align:center;
-    padding:20px;
-    font-size:26px;
+    padding:18px;
+    font-size:24px;
     font-weight:bold;
     color:#ffd700;
-    letter-spacing:3px;
     border-bottom:2px solid #ffd700;
 }
 
+/* SEARCH */
+.search-box{
+    padding:10px;
+    text-align:center;
+}
+
+.search-box input{
+    width:92%;
+    padding:12px;
+    border-radius:10px;
+    border:2px solid #ffd700;
+    background:#111;
+    color:white;
+    outline:none;
+}
+
+/* GRID */
 .grid{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
@@ -31,37 +47,55 @@ body{
     padding:15px;
 }
 
+/* CARD */
 .card{
     background:#111;
     border:2px solid #ffd700;
     border-radius:12px;
     padding:14px 10px;
     text-align:center;
-    box-shadow:0 0 10px rgba(255,215,0,0.12);
     transition:0.2s;
 }
 
-.card:active{ transform:scale(0.96); }
+.card:active{
+    transform:scale(0.97);
+}
 
+/* TEXT */
 .kanji{ font-size:42px; font-weight:bold; color:white; }
-.en{ margin-top:6px; font-size:12px; color:white; }
-.si{ margin-top:3px; font-size:13px; color:#ffd700; font-weight:bold; }
-.hira{ margin-top:4px; font-size:12px; color:#ccc; }
-.roma{ margin-top:2px; font-size:11px; color:#aaa; font-style:italic; }
+.en{ font-size:12px; color:white; margin-top:6px; }
+.si{ font-size:13px; color:#ffd700; font-weight:bold; margin-top:3px; }
+.hira{ font-size:12px; color:#ccc; margin-top:4px; }
+.roma{ font-size:11px; color:#aaa; font-style:italic; margin-top:2px; }
 
-.container{ padding-bottom:80px; }
+.back{
+    padding:10px 15px;
+    color:#ffd700;
+    cursor:pointer;
+    font-size:14px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="header">JLPT - N5 KANJI</div>
+<!-- BACK -->
+<div class="back" onclick="history.back()">⬅ Back</div>
 
-<div class="container">
-<div id="grid" class="grid"></div>
+<!-- HEADER -->
+<div class="header">JLPT N5 KANJI</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+<input type="text" id="search" placeholder="Search kanji / English / Sinhala / Hiragana / Romaji...">
 </div>
 
+<!-- GRID -->
+<div id="grid" class="grid"></div>
+
 <script>
+
+/* 🔥 FULL N5 KANJI LIST */
 const kanjiList = [
     {k:"一", en:"One", si:"එක", h:"いち", r:"ichi"},
     {k:"二", en:"Two", si:"දෙක", h:"に", r:"ni"},
@@ -74,29 +108,90 @@ const kanjiList = [
     {k:"九", en:"Nine", si:"නවය", h:"きゅう", r:"kyuu"},
     {k:"十", en:"Ten", si:"දහය", h:"じゅう", r:"juu"},
 
-    {k:"日", en:"Day", si:"දින", h:"にち", r:"nichi"},
-    {k:"月", en:"Moon/Month", si:"සඳ/මාසය", h:"げつ", r:"getsu"},
+    {k:"百", en:"Hundred", si:"සියය", h:"ひゃく", r:"hyaku"},
+    {k:"千", en:"Thousand", si:"දහස", h:"せん", r:"sen"},
+    {k:"万", en:"Ten thousand", si:"දස දහස", h:"まん", r:"man"},
+
+    {k:"日", en:"Day", si:"දින / හිරු", h:"にち", r:"nichi"},
+    {k:"月", en:"Month / Moon", si:"සඳ", h:"げつ", r:"getsu"},
     {k:"火", en:"Fire", si:"ගිනි", h:"か", r:"ka"},
     {k:"水", en:"Water", si:"ජලය", h:"すい", r:"sui"},
     {k:"木", en:"Tree", si:"ගස", h:"もく", r:"moku"},
+    {k:"金", en:"Gold / Money", si:"මුදල් / රන්", h:"きん", r:"kin"},
+    {k:"土", en:"Soil", si:"පස", h:"ど", r:"do"},
 
     {k:"人", en:"Person", si:"පුද්ගලයා", h:"ひと", r:"hito"},
-    {k:"目", en:"Eye", si:"ඇස", h:"め", r:"me"}
+    {k:"子", en:"Child", si:"ළමයා", h:"こ", r:"ko"},
+    {k:"女", en:"Woman", si:"කාන්තාව", h:"おんな", r:"onna"},
+    {k:"男", en:"Man", si:"පුරුෂයා", h:"おとこ", r:"otoko"},
+
+    {k:"目", en:"Eye", si:"ඇස", h:"め", r:"me"},
+    {k:"耳", en:"Ear", si:"කණ", h:"みみ", r:"mimi"},
+    {k:"口", en:"Mouth", si:"කට", h:"くち", r:"kuchi"},
+    {k:"手", en:"Hand", si:"අත", h:"て", r:"te"},
+    {k:"足", en:"Foot", si:"පාදය", h:"あし", r:"ashi"},
+
+    {k:"山", en:"Mountain", si:"කන්ද", h:"やま", r:"yama"},
+    {k:"川", en:"River", si:"ගඟ", h:"かわ", r:"kawa"},
+    {k:"田", en:"Rice field", si:"වෙල්", h:"た", r:"ta"},
+
+    {k:"車", en:"Car", si:"වාහන", h:"くるま", r:"kuruma"},
+    {k:"雨", en:"Rain", si:"වැස්ස", h:"あめ", r:"ame"},
+    {k:"電", en:"Electric", si:"විදුලිය", h:"でん", r:"den"},
+
+    {k:"学", en:"Study", si:"ඉගෙනීම", h:"がく", r:"gaku"},
+    {k:"校", en:"School", si:"පාසල", h:"こう", r:"kou"},
+    {k:"生", en:"Student / Life", si:"ශිෂ්‍යයා", h:"せい", r:"sei"},
+
+    {k:"見", en:"See", si:"බලන්න", h:"みる", r:"miru"},
+    {k:"行", en:"Go", si:"යන්න", h:"いく", r:"iku"},
+    {k:"来", en:"Come", si:"එන්න", h:"くる", r:"kuru"},
+    {k:"食", en:"Eat", si:"කන්න", h:"たべる", r:"taberu"},
+    {k:"飲", en:"Drink", si:"බොන්න", h:"のむ", r:"nomu"},
+
+    {k:"話", en:"Speak", si:"කතා", h:"はなす", r:"hanasu"},
+    {k:"書", en:"Write", si:"ලියන්න", h:"かく", r:"kaku"},
+    {k:"読", en:"Read", si:"කියවන්න", h:"よむ", r:"yomu"}
 ];
 
-const grid=document.getElementById("grid");
+const grid = document.getElementById("grid");
+const search = document.getElementById("search");
 
-kanjiList.forEach(i=>{
-    const c=document.createElement("div");
-    c.className="card";
-    c.innerHTML=`
-        <div class="kanji">${i.k}</div>
-        <div class="en">${i.en}</div>
-        <div class="si">${i.si}</div>
-        <div class="hira">${i.h}</div>
-        <div class="roma">${i.r}</div>
-    `;
-    grid.appendChild(c);
+/* RENDER */
+function render(list){
+    grid.innerHTML = "";
+
+    list.forEach(i=>{
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+            <div class="kanji">${i.k}</div>
+            <div class="en">${i.en}</div>
+            <div class="si">${i.si}</div>
+            <div class="hira">${i.h}</div>
+            <div class="roma">${i.r}</div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+render(kanjiList);
+
+/* SEARCH */
+search.addEventListener("input", function(){
+    let val = this.value.toLowerCase();
+
+    let filtered = kanjiList.filter(i =>
+        i.k.includes(val) ||
+        i.en.toLowerCase().includes(val) ||
+        i.si.includes(val) ||
+        i.h.includes(val) ||
+        i.r.toLowerCase().includes(val)
+    );
+
+    render(filtered);
 });
 </script>
 
