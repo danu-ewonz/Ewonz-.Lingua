@@ -59,7 +59,7 @@ body{
     cursor:pointer;
 }
 
-/* ACTIVE CLICK */
+/* ACTIVE */
 .btn:active{
     transform:scale(0.97);
 }
@@ -85,9 +85,10 @@ body{
     font-weight:bold;
 }
 
-/* LOCKED STYLE */
+/* 🔒 LOCK FIX */
 .locked{
     opacity:0.6;
+    pointer-events:none; /* 🚫 REAL BLOCK */
 }
 
 </style>
@@ -105,23 +106,22 @@ body{
 
     <!-- OPEN -->
     <button class="btn" onclick="location.href='n5.html'">N5</button>
-
     <button class="btn" onclick="location.href='n4.html'">N4</button>
 
     <!-- LOCKED -->
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         N3
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         N2
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         N1
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
 </div>
@@ -130,29 +130,29 @@ body{
 <div class="section">
     <h3>NAT-TEST (Practice System)</h3>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         Q5
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         Q4
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         Q3
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         Q2
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         Q1
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 
 </div>
@@ -161,17 +161,11 @@ body{
 <div class="section">
     <h3>JFT-Basic (SSW Visa)</h3>
 
-    <button class="btn locked" onclick="comingSoon()">
+    <button class="btn locked">
         N2 (Basic Level)
-        <div class="badge">Coming Soon - 2026.11.28</div>
+        <span class="badge">Coming Soon - 2026.11.28</span>
     </button>
 </div>
-
-<script>
-function comingSoon(){
-    alert("Coming Soon - 2026.11.28");
-}
-</script>
 
 </body>
 </html>
