@@ -136,12 +136,27 @@ COMING SOON BADGE
     opacity:0.55;
 }
 
-/* disable hover for locked */
 .locked:hover{
     transform:none;
     background:rgba(255,255,255,0.03);
     color:#fff;
     box-shadow:none;
+}
+
+/* 🔥 NEW: lock badge helper (for future use if needed) */
+.lock-badge{
+    position:absolute;
+    top:6px;
+    right:8px;
+
+    font-size:10px;
+    padding:3px 6px;
+
+    background:gold;
+    color:black;
+
+    border-radius:6px;
+    font-weight:bold;
 }
 
 </style>
@@ -188,7 +203,7 @@ COMING SOON BADGE
         </span>
     </button>
 
-    <!-- 6 COMING SOON -->
+    <!-- 6 LOCKED -->
     <button class="btn locked" onclick="comingSoon()">
         JLPT Quiz System
 
@@ -199,6 +214,53 @@ COMING SOON BADGE
         <span class="stack">
             Practice • Test • Score
         </span>
+    </button>
+
+    <!-- 🔥 NEW LOCKED LIST (from your system) -->
+
+    <button class="btn locked" onclick="comingSoon()">
+        JLPT N3
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        JLPT N2
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        JLPT N1
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        Q5
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        Q4
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        Q3
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        Q2
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        Q1
+        <div class="coming-soon">LOCKED</div>
+    </button>
+
+    <button class="btn locked" onclick="comingSoon()">
+        JFT BASIC
+        <div class="coming-soon">LOCKED</div>
     </button>
 
 </div>
