@@ -13,13 +13,17 @@
 /* FULL SCREEN */
 body{
     margin:0;
-    height:100vh;
-    overflow:hidden;
-    font-family:Arial, sans-serif;
+    min-height:100vh;
     background:#000;
+
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
+
+    font-family:Arial, sans-serif;
+
+    padding:20px;
 }
 
 /* MAIN CARD */
@@ -74,7 +78,7 @@ body{
     padding:5px 15px;
 
     margin-top:40px;
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 /* BUTTON AREA */
@@ -85,19 +89,17 @@ body{
     gap:12px;
 }
 
-/* BUTTON STYLE */
+/* BUTTON */
 .btn{
     padding:12px;
 
     border:2px solid gold;
-
     border-radius:12px;
 
     font-size:14px;
     font-weight:bold;
 
     background:rgba(255,255,255,0.20);
-
     color:black;
 
     backdrop-filter:blur(3px);
@@ -107,18 +109,19 @@ body{
     position:relative;
 }
 
-/* CLICK EFFECT */
+/* CLICK */
 .btn:active{
     transform:scale(0.97);
     opacity:0.8;
 }
 
-/* LOCK BUTTON */
+/* LOCK */
 .locked{
-    opacity:0.7;
+    opacity:0.6;
+    pointer-events:none;
 }
 
-/* LOCK BADGE */
+/* BADGE */
 .badge{
     position:absolute;
     top:4px;
@@ -134,16 +137,38 @@ body{
     border-radius:5px;
 }
 
-/* ANIMATION */
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+/* =========================
+CREDITS SECTION
+========================= */
+.info-box{
+    width:320px;
+    margin-top:15px;
+
+    border:1px solid rgba(255,215,0,0.4);
+    border-radius:15px;
+
+    padding:12px;
+
+    background:rgba(255,255,255,0.05);
+    color:white;
+
+    text-align:center;
+}
+
+.info-box h3{
+    color:gold;
+    margin-bottom:8px;
+}
+
+.info-box p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* LINK */
+.info-box a{
+    color:gold;
+    text-decoration:none;
 }
 
 </style>
@@ -151,11 +176,10 @@ body{
 
 <body>
 
+<!-- MAIN CARD -->
 <div class="card">
 
-    <div class="title">
-        EWONZ LINGUA
-    </div>
+    <div class="title">EWONZ LINGUA</div>
 
     <div class="about">
         Discover the world through language, connect globally, and grow beyond limits.
@@ -181,6 +205,25 @@ body{
         </button>
 
     </div>
+</div>
+
+<!-- INFO / CREDITS -->
+<div class="info-box">
+
+    <h3>Credits</h3>
+
+    <p>
+        👤 Created by: <b>Danu Ewonz</b><br>
+        📱 WhatsApp: 
+        <a href="https://wa.me/+94778730530">Contact Me</a>
+    </p>
+
+    <hr style="border:0;border-top:1px solid rgba(255,215,0,0.2);">
+
+    <p>
+        🌙 Special Thanks:<br>
+        <b>Japanese Language - Tsuki Sensei</b>
+    </p>
 
 </div>
 
