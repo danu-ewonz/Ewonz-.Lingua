@@ -98,7 +98,7 @@ html{
 }
 
 /* =========================
-📱 FLOAT NAV (OLD OPTIONAL)
+📱 FLOAT NAV
 ========================= */
 .bottom-nav{
     position:fixed;
@@ -147,7 +147,7 @@ html{
 }
 
 /* =========================
-📱 NEW BOTTOM BAR (FINAL)
+📱 BOTTOM BAR
 ========================= */
 .bottom-bar{
     position:fixed;
@@ -167,7 +167,6 @@ html{
     z-index:999;
 }
 
-/* BUTTON STYLE */
 .bar-btn{
     width:45px;
     height:45px;
@@ -194,6 +193,39 @@ html{
 
 .bar-btn:active{
     transform:scale(0.88);
+}
+
+/* =========================
+🔒 LOCK SYSTEM (ADDED)
+========================= */
+
+.locked{
+    opacity:0.6;
+    position:relative;
+    cursor:not-allowed;
+    pointer-events:none; /* 🚫 block click */
+}
+
+/* RED BADGE */
+.badge{
+    position:absolute;
+    top:6px;
+    right:8px;
+
+    background:red;
+    color:white;
+
+    font-size:9px;
+    padding:3px 6px;
+    border-radius:6px;
+
+    font-weight:bold;
+}
+
+/* disable hover */
+.locked:hover{
+    transform:none !important;
+    box-shadow:none !important;
 }
 
 /* =========================
@@ -344,39 +376,3 @@ html{
 .special-btn:last-child{
     margin-bottom:0;
 }
-
-.bottom-back{
-    position:fixed;
-    bottom:12px;
-    right:12px;
-
-    z-index:999;
-}
-
-.back-btn{
-    width:45px;
-    height:45px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#e74c3c;
-    color:white;
-
-    font-size:16px;
-    font-weight:bold;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    cursor:pointer;
-
-    box-shadow:0 0 10px rgba(0,0,0,0.3);
-
-    transition:0.2s ease;
-}
-
-.back-btn:active{
-    transform:scale(0.88);
-    }
