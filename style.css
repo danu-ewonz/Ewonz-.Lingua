@@ -84,8 +84,6 @@ html{
     box-shadow:0 0 8px rgba(255,215,0,0.4);
 
     transition:0.2s ease;
-
-    position:relative; /* 🔥 REQUIRED for badge */
 }
 
 .btn:active{
@@ -198,17 +196,16 @@ html{
 }
 
 /* =========================
-🔒 LOCK SYSTEM (FIXED)
+🔒 LOCK SYSTEM
 ========================= */
 
-/* locked button */
 .locked{
-    opacity:0.55;
-    pointer-events:none;
+    opacity:0.6;
     position:relative;
+    cursor:not-allowed;
+    pointer-events:none;
 }
 
-/* red badge */
 .badge{
     position:absolute;
     top:6px;
@@ -222,6 +219,11 @@ html{
     border-radius:6px;
 
     font-weight:bold;
+}
+
+.locked:hover{
+    transform:none !important;
+    box-shadow:none !important;
 }
 
 /* =========================
@@ -314,14 +316,8 @@ html{
 ✨ ANIMATION
 ========================= */
 @keyframes fadeInUp{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{ opacity:0; transform:translateY(25px); }
+    to{ opacity:1; transform:translateY(0); }
 }
 
 /* =========================
@@ -371,4 +367,17 @@ html{
 
 .special-btn:last-child{
     margin-bottom:0;
+}
+
+/* =========================
+📌 CREDIT (CLEAN - NEW)
+========================= */
+.credit{
+    margin-top:25px;
+    text-align:center;
+
+    font-size:11px;
+    color:#aaa;
+
+    opacity:0.8;
 }
