@@ -20,49 +20,42 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* GROUP */
-.group{
-margin-bottom:25px;
-}
-
-/* TITLE */
-.group-title{
-color:gold;
-font-size:16px;
-margin:10px 0;
+/* BOX */
+.box{
+border:2px solid gold;
+border-radius:12px;
+overflow:hidden;
 text-align:left;
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+/* GROUP */
+.group{
+padding:12px 15px;
+border-bottom:1px solid rgba(255,215,0,0.3);
 }
 
-/* CARD */
-.card{
-border:2px solid gold;
-border-radius:12px;
-padding:10px;
-background:rgba(255,255,255,0.03);
-text-align:center;
+.group:last-child{
+border-bottom:none;
+}
+
+/* TITLE */
+.title{
+color:gold;
+font-weight:bold;
+font-size:16px;
+margin-bottom:8px;
+}
+
+/* LINE */
+.line{
 font-size:18px;
+line-height:1.8;
 }
 
 /* ROMAJI */
 .small{
-display:block;
 color:#ffd700;
-font-size:13px;
-margin-top:5px;
-}
-
-/* RESPONSIVE */
-@media(max-width:500px){
-.grid{
-grid-template-columns:1fr 1fr;
-}
+font-size:14px;
 }
 
 </style>
@@ -72,18 +65,17 @@ grid-template-columns:1fr 1fr;
 
 <h1>Hiragana Handakuten</h1>
 
-<!-- P ROW -
+<div class="box">
+
 <div class="group">
-<div class="group-title">P-Row</div>
-<div class="grid">
-
-<div class="card">は → ぱ<span class="small">ha → pa</span></div>
-<div class="card">ひ → ぴ<span class="small">hi → pi</span></div>
-<div class="card">ふ → ぷ<span class="small">fu → pu</span></div>
-<div class="card">へ → ぺ<span class="small">he → pe</span></div>
-<div class="card">ほ → ぽ<span class="small">ho → po</span></div>
-
+<div class="title">は行</div>
+<div class="line">は → ぱ <span class="small">(ha → pa)</span></div>
+<div class="line">ひ → ぴ <span class="small">(hi → pi)</span></div>
+<div class="line">ふ → ぷ <span class="small">(fu → pu)</span></div>
+<div class="line">へ → ぺ <span class="small">(he → pe)</span></div>
+<div class="line">ほ → ぽ <span class="small">(ho → po)</span></div>
 </div>
+
 </div>
 
 </body>
