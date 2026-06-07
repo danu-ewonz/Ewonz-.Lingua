@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Katakana Youon</title>
+<title>Katakana Youon Chart</title>
 
 <style>
 body{
@@ -20,158 +20,120 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* GROUP BOX */
-.group{
+/* MAIN BOX */
+.chart{
 border:2px solid gold;
 border-radius:12px;
-margin-bottom:10px;
 overflow:hidden;
 }
 
-/* HEADER */
-.group-title{
-background:rgba(255,215,0,0.1);
+/* SECTION */
+.section{
+border-bottom:1px solid gold;
 padding:12px;
-cursor:pointer;
-font-weight:bold;
-color:gold;
+text-align:left;
 }
 
-/* CONTENT (hidden by default) */
-.group-content{
-display:none;
-padding:10px;
-border-top:1px solid gold;
-}
-
-/* ROW */
-.item{
-padding:8px;
-border-bottom:1px solid rgba(255,215,0,0.3);
-font-size:18px;
-}
-
-.item:last-child{
+.section:last-child{
 border-bottom:none;
 }
 
-/* ROMAJI */
+/* TITLE */
+.title{
+color:gold;
+font-weight:bold;
+margin-bottom:6px;
+}
+
+/* TEXT */
+.text{
+font-size:16px;
+line-height:1.6;
+}
+
 .small{
 font-size:12px;
 opacity:0.7;
 display:block;
 margin-top:3px;
 }
+
 </style>
 </head>
 
 <body>
 
-<h1>Katakana Youon (Grouped)</h1>
+<h1>Katakana Youon (拗音)</h1>
 
-<!-- K ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">K-Row (キャ行)</div>
-<div class="group-content">
-<div class="item">キャ <span class="small">kya</span></div>
-<div class="item">キュ <span class="small">kyu</span></div>
-<div class="item">キョ <span class="small">kyo</span></div>
-</div>
-</div>
+<div class="chart">
 
-<!-- S ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">S-Row (シャ行)</div>
-<div class="group-content">
-<div class="item">シャ <span class="small">sha</span></div>
-<div class="item">シュ <span class="small">shu</span></div>
-<div class="item">ショ <span class="small">sho</span></div>
+<!-- 1 -->
+<div class="section">
+<div class="title">K-Row</div>
+<div class="text">
+キャ (kya) ・ キュ (kyu) ・ キョ (kyo)
 </div>
 </div>
 
-<!-- T ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">T-Row (チャ行)</div>
-<div class="group-content">
-<div class="item">チャ <span class="small">cha</span></div>
-<div class="item">チュ <span class="small">chu</span></div>
-<div class="item">チョ <span class="small">cho</span></div>
+<!-- 2 -->
+<div class="section">
+<div class="title">S-Row</div>
+<div class="text">
+シャ (sha) ・ シュ (shu) ・ ショ (sho)
 </div>
 </div>
 
-<!-- N ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">N-Row (ニャ行)</div>
-<div class="group-content">
-<div class="item">ニャ <span class="small">nya</span></div>
-<div class="item">ニュ <span class="small">nyu</span></div>
-<div class="item">ニョ <span class="small">nyo</span></div>
+<!-- 3 -->
+<div class="section">
+<div class="title">T-Row</div>
+<div class="text">
+チャ (cha) ・ チュ (chu) ・ チョ (cho)
 </div>
 </div>
 
-<!-- H ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">H-Row (ヒャ行)</div>
-<div class="group-content">
-<div class="item">ヒャ <span class="small">hya</span></div>
-<div class="item">ヒュ <span class="small">hyu</span></div>
-<div class="item">ヒョ <span class="small">hyo</span></div>
+<!-- 4 -->
+<div class="section">
+<div class="title">N-Row</div>
+<div class="text">
+ニャ (nya) ・ ニュ (nyu) ・ ニョ (nyo)
 </div>
 </div>
 
-<!-- M ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">M-Row (ミャ行)</div>
-<div class="group-content">
-<div class="item">ミャ <span class="small">mya</span></div>
-<div class="item">ミュ <span class="small">myu</span></div>
-<div class="item">ミョ <span class="small">myo</span></div>
+<!-- 5 -->
+<div class="section">
+<div class="title">H-Row</div>
+<div class="text">
+ヒャ (hya) ・ ヒュ (hyu) ・ ヒョ (hyo)
 </div>
 </div>
 
-<!-- R ROW -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">R-Row (リャ行)</div>
-<div class="group-content">
-<div class="item">リャ <span class="small">rya</span></div>
-<div class="item">リュ <span class="small">ryu</span></div>
-<div class="item">リョ <span class="small">ryo</span></div>
+<!-- 6 -->
+<div class="section">
+<div class="title">M-Row</div>
+<div class="text">
+ミャ (mya) ・ ミュ (myu) ・ ミョ (myo)
 </div>
 </div>
 
-<!-- G / J / B / P -->
-<div class="group">
-<div class="group-title" onclick="toggle(this)">G / J / B / P</div>
-<div class="group-content">
-<div class="item">ギャ <span class="small">gya</span></div>
-<div class="item">ギュ <span class="small">gyu</span></div>
-<div class="item">ギョ <span class="small">gyo</span></div>
-
-<div class="item">ジャ <span class="small">ja</span></div>
-<div class="item">ジュ <span class="small">ju</span></div>
-<div class="item">ジョ <span class="small">jo</span></div>
-
-<div class="item">ビャ <span class="small">bya</span></div>
-<div class="item">ビュ <span class="small">byu</span></div>
-<div class="item">ビョ <span class="small">byo</span></div>
-
-<div class="item">ピャ <span class="small">pya</span></div>
-<div class="item">ピュ <span class="small">pyu</span></div>
-<div class="item">ピョ <span class="small">pyo</span></div>
+<!-- 7 -->
+<div class="section">
+<div class="title">R-Row</div>
+<div class="text">
+リャ (rya) ・ リュ (ryu) ・ リョ (ryo)
 </div>
 </div>
 
-<script>
-function toggle(el){
-let content = el.nextElementSibling;
+<!-- 8 -->
+<div class="section">
+<div class="title">G / J / B / P</div>
+<div class="text">
+ギャ (gya) ・ ジャ (ja) ・ ビャ (bya) ・ ピャ (pya)<br>
+ギュ (gyu) ・ ジュ (ju) ・ ビュ (byu) ・ ピュ (pyu)<br>
+ギョ (gyo) ・ ジョ (jo) ・ ビョ (byo) ・ ピョ (pyo)
+</div>
+</div>
 
-if(content.style.display === "block"){
-content.style.display = "none";
-}else{
-content.style.display = "block";
-}
-}
-</script>
+</div>
 
 </body>
 </html>
