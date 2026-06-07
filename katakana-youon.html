@@ -20,42 +20,31 @@ color:gold;
 margin-bottom:20px;
 }
 
-/* MAIN BOX */
+/* BOX */
 .chart{
 border:2px solid gold;
 border-radius:12px;
 overflow:hidden;
-}
-
-/* SECTION */
-.section{
-border-bottom:1px solid gold;
-padding:12px;
 text-align:left;
 }
 
-.section:last-child{
-border-bottom:none;
-}
-
-/* TITLE */
-.title{
-color:gold;
-font-weight:bold;
-margin-bottom:6px;
-}
-
-/* TEXT */
-.text{
-font-size:16px;
+/* ROW */
+.row{
+padding:12px 15px;
+border-bottom:1px solid gold;
+font-size:18px;
 line-height:1.6;
 }
 
+.row:last-child{
+border-bottom:none;
+}
+
+/* ROMAJI STYLE */
 .small{
-font-size:12px;
-opacity:0.7;
-display:block;
-margin-top:3px;
+color:#ffd700;
+font-size:14px;
+margin-left:5px;
 }
 
 </style>
@@ -63,75 +52,57 @@ margin-top:3px;
 
 <body>
 
-<h1>Katakana Youon (拗音)</h1>
+<h1>Katakana Youon</h1>
 
 <div class="chart">
 
-<!-- 1 -->
-<div class="section">
-<div class="title">K-Row</div>
-<div class="text">
-キャ (kya) ・ キュ (kyu) ・ キョ (kyo)
-</div>
-</div>
+<div class="row">キャ - <span class="small">kya</span></div>
+<div class="row">キュ - <span class="small">kyu</span></div>
+<div class="row">キョ - <span class="small">kyo</span></div>
 
-<!-- 2 -->
-<div class="section">
-<div class="title">S-Row</div>
-<div class="text">
-シャ (sha) ・ シュ (shu) ・ ショ (sho)
-</div>
-</div>
+<div class="row">ギャ - <span class="small">gya</span></div>
+<div class="row">ギュ - <span class="small">gyu</span></div>
+<div class="row">ギョ - <span class="small">gyo</span></div>
 
-<!-- 3 -->
-<div class="section">
-<div class="title">T-Row</div>
-<div class="text">
-チャ (cha) ・ チュ (chu) ・ チョ (cho)
-</div>
-</div>
+<div class="row">シャ - <span class="small">sha</span></div>
+<div class="row">シュ - <span class="small">shu</span></div>
+<div class="row">ショ - <span class="small">sho</span></div>
 
-<!-- 4 -->
-<div class="section">
-<div class="title">N-Row</div>
-<div class="text">
-ニャ (nya) ・ ニュ (nyu) ・ ニョ (nyo)
-</div>
-</div>
+<div class="row">ジャ - <span class="small">ja</span></div>
+<div class="row">ジュ - <span class="small">ju</span></div>
+<div class="row">ジョ - <span class="small">jo</span></div>
 
-<!-- 5 -->
-<div class="section">
-<div class="title">H-Row</div>
-<div class="text">
-ヒャ (hya) ・ ヒュ (hyu) ・ ヒョ (hyo)
-</div>
-</div>
+<div class="row">チャ - <span class="small">cha</span></div>
+<div class="row">チュ - <span class="small">chu</span></div>
+<div class="row">チョ - <span class="small">cho</span></div>
 
-<!-- 6 -->
-<div class="section">
-<div class="title">M-Row</div>
-<div class="text">
-ミャ (mya) ・ ミュ (myu) ・ ミョ (myo)
-</div>
-</div>
+<div class="row">ヂャ - <span class="small">dya</span></div>
+<div class="row">ヂュ - <span class="small">dyu</span></div>
+<div class="row">ヂョ - <span class="small">dyo</span></div>
 
-<!-- 7 -->
-<div class="section">
-<div class="title">R-Row</div>
-<div class="text">
-リャ (rya) ・ リュ (ryu) ・ リョ (ryo)
-</div>
-</div>
+<div class="row">ニャ - <span class="small">nya</span></div>
+<div class="row">ニュ - <span class="small">nyu</span></div>
+<div class="row">ニョ - <span class="small">nyo</span></div>
 
-<!-- 8 -->
-<div class="section">
-<div class="title">G / J / B / P</div>
-<div class="text">
-ギャ (gya) ・ ジャ (ja) ・ ビャ (bya) ・ ピャ (pya)<br>
-ギュ (gyu) ・ ジュ (ju) ・ ビュ (byu) ・ ピュ (pyu)<br>
-ギョ (gyo) ・ ジョ (jo) ・ ビョ (byo) ・ ピョ (pyo)
-</div>
-</div>
+<div class="row">ヒャ - <span class="small">hya</span></div>
+<div class="row">ヒュ - <span class="small">hyu</span></div>
+<div class="row">ヒョ - <span class="small">hyo</span></div>
+
+<div class="row">ビャ - <span class="small">bya</span></div>
+<div class="row">ビュ - <span class="small">byu</span></div>
+<div class="row">ビョ - <span class="small">byo</span></div>
+
+<div class="row">ピャ - <span class="small">pya</span></div>
+<div class="row">ピュ - <span class="small">pyu</span></div>
+<div class="row">ピョ - <span class="small">pyo</span></div>
+
+<div class="row">ミャ - <span class="small">mya</span></div>
+<div class="row">ミュ - <span class="small">myu</span></div>
+<div class="row">ミョ - <span class="small">myo</span></div>
+
+<div class="row">リャ - <span class="small">rya</span></div>
+<div class="row">リュ - <span class="small">ryu</span></div>
+<div class="row">リョ - <span class="small">ryo</span></div>
 
 </div>
 
