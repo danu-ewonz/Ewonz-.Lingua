@@ -23,6 +23,7 @@ body{
 
 .search-box{
     padding:10px;
+    text-align:center;
 }
 
 .search-box input{
@@ -32,6 +33,7 @@ body{
     background:#111;
     color:white;
     border-radius:10px;
+    outline:none;
 }
 
 .grid{
@@ -47,69 +49,69 @@ body{
     border-radius:12px;
     text-align:center;
     padding:12px;
+    transition:0.2s;
+}
+
+.card:active{
+    transform:scale(0.97);
 }
 
 .kanji{font-size:40px;}
 .en{font-size:12px;}
-.si{color:#ffd700;font-size:13px;}
-.hira{color:#ccc;font-size:12px;}
-.roma{color:#aaa;font-size:11px;}
+.si{color:#ffd700;font-size:13px;margin-top:2px;}
+.hira{color:#ccc;font-size:12px;margin-top:2px;}
+.roma{color:#aaa;font-size:11px;margin-top:2px;}
 </style>
 </head>
 
 <body>
 
-<div class="header">JLPT N5 KANJI</div>
+<div class="header">JLPT N5 KANJI (FULL SYSTEM)</div>
 
 <div class="search-box">
-<input id="search" placeholder="Search...">
+<input id="search" placeholder="Search kanji / English / Sinhala / reading...">
 </div>
 
 <div id="grid" class="grid"></div>
 
-<script>
+<!-- 🔥 LOAD DATA FILE -->
+<script src="n5-data.js"></script>
 
-const kanjiList = [
-{ k:"一", en:"One", si:"එක", h:"いち", r:"ichi" },
-{ k:"二", en:"Two", si:"දෙක", h:"に", r:"ni" },
-{ k:"三", en:"Three", si:"තුන", h:"さん", r:"san" },
-{ k:"四", en:"Four", si:"හතර", h:"よん", r:"yon" },
-{ k:"五", en:"Five", si:"පහ", h:"ご", r:"go" },
-{ k:"六", en:"Six", si:"හය", h:"ろく", r:"roku" },
-{ k:"七", en:"Seven", si:"හත", h:"なな", r:"nana" },
-{ k:"八", en:"Eight", si:"අට", h:"はち", r:"hachi" },
-{ k:"九", en:"Nine", si:"නවය", h:"きゅう", r:"kyuu" },
-{ k:"十", en:"Ten", si:"දහය", h:"じゅう", r:"juu" }
-];
+<script>
 
 const grid = document.getElementById("grid");
 const search = document.getElementById("search");
 
+/* RENDER FUNCTION */
 function render(list){
-grid.innerHTML="";
-list.forEach(i=>{
-grid.innerHTML += `
-<div class="card">
-<div class="kanji">${i.k}</div>
-<div class="en">${i.en}</div>
-<div class="si">${i.si}</div>
-<div class="hira">${i.h}</div>
-<div class="roma">${i.r}</div>
-</div>`;
-});
+    grid.innerHTML = "";
+
+    list.forEach(i=>{
+        grid.innerHTML += `
+        <div class="card">
+            <div class="kanji">${i.k}</div>
+            <div class="en">${i.en}</div>
+            <div class="si">${i.si}</div>
+            <div class="hira">${i.h}</div>
+            <div class="roma">${i.r}</div>
+        </div>`;
+    });
 }
 
+/* INITIAL LOAD */
 render(kanjiList);
 
+/* SEARCH SYSTEM */
 search.addEventListener("input",()=>{
-let v = search.value.toLowerCase();
-render(kanjiList.filter(i=>
-i.k.includes(v)||
-i.en.toLowerCase().includes(v)||
-i.si.includes(v)||
-i.h.includes(v)||
-i.r.includes(v)
-));
+    let v = search.value.toLowerCase();
+
+    render(kanjiList.filter(i =>
+        i.k.includes(v) ||
+        i.en.toLowerCase().includes(v) ||
+        i.si.includes(v) ||
+        i.h.includes(v) ||
+        i.r.toLowerCase().includes(v)
+    ));
 });
 
 </script>
