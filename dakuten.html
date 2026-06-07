@@ -1,112 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>Dakuten (Ten-Ten) Full Chart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiragana Dakuten</title>
 
 <style>
-
 body{
-    margin:0;
-    min-height:100vh;
+margin:0;
+background:#000;
+font-family:Arial;
+color:#fff;
+padding:20px;
+text-align:center;
+}
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:#0b0b0b;
-    font-family:Arial;
-    padding:20px;
+h1{
+color:gold;
+margin-bottom:20px;
 }
 
 /* CARD */
-.container{
-    width:95%;
-    max-width:450px;
-
-    border:2px solid gold;
-    border-radius:20px;
-
-    padding:20px;
-    text-align:center;
-
-    background:rgba(255,255,255,0.03);
+.card{
+border:2px solid gold;
+border-radius:12px;
+padding:15px;
+text-align:left;
+background:rgba(255,255,255,0.03);
 }
 
-/* TITLE */
-.title{
-    color:gold;
-    font-size:22px;
-    font-weight:bold;
-    margin-bottom:8px;
+/* LINE */
+.line{
+font-size:18px;
+line-height:1.8;
+padding:4px 0;
+border-bottom:1px solid rgba(255,215,0,0.2);
 }
 
-.subtitle{
-    color:#aaa;
-    font-size:13px;
-    margin-bottom:20px;
+.line:last-child{
+border-bottom:none;
 }
 
-/* ROW */
-.row{
-    display:flex;
-    gap:8px;
-    margin-bottom:10px;
-}
-
-/* BOX */
-.box{
-    flex:1;
-
-    border:2px solid gold;
-    border-radius:12px;
-
-    padding:10px;
-
-    background:rgba(255,255,255,0.05);
-}
-
-/* BIG CHAR */
-.big{
-    font-size:26px;
-    color:white;
-    font-weight:bold;
-}
-
-/* SMALL TEXT */
+/* ROMAJI */
 .small{
-    font-size:11px;
-    color:#aaa;
-    margin-top:4px;
-}
-
-/* BACK BUTTON */
-.back-btn{
-    margin-top:20px;
-    width:100%;
-    padding:12px;
-
-    border:2px solid gold;
-    border-radius:12px;
-
-    background:transparent;
-    color:white;
-
-    font-weight:bold;
-}
-
-.back-btn:active{
-    transform:scale(0.97);
-}
-
-/* SECTION TITLE */
-.section{
-    color:gold;
-    font-size:14px;
-    margin:12px 0 6px;
-    font-weight:bold;
+color:#ffd700;
+font-size:14px;
 }
 
 </style>
@@ -114,50 +52,33 @@ body{
 
 <body>
 
-<div class="container">
+<h1>Hiragana Dakuten</h1>
 
-    <div class="title">Dakuten (゛) Full Chart</div>
-    <div class="subtitle">Hiragana voiced sound transformation</div>
+<div class="card">
 
-    <div class="section">G-group</div>
-    <div class="row">
-        <div class="box"><div class="big">か → が</div><div class="small">ka → ga</div></div>
-        <div class="box"><div class="big">き → ぎ</div><div class="small">ki → gi</div></div>
-        <div class="box"><div class="big">く → ぐ</div><div class="small">ku → gu</div></div>
-        <div class="box"><div class="big">け → げ</div><div class="small">ke → ge</div></div>
-        <div class="box"><div class="big">こ → ご</div><div class="small">ko → go</div></div>
-    </div>
+<div class="line">か → が <span class="small">(ka → ga)</span></div>
+<div class="line">き → ぎ <span class="small">(ki → gi)</span></div>
+<div class="line">く → ぐ <span class="small">(ku → gu)</span></div>
+<div class="line">け → げ <span class="small">(ke → ge)</span></div>
+<div class="line">こ → ご <span class="small">(ko → go)</span></div>
 
-    <div class="section">S-group</div>
-    <div class="row">
-        <div class="box"><div class="big">さ → ざ</div><div class="small">sa → za</div></div>
-        <div class="box"><div class="big">し → じ</div><div class="small">shi → ji</div></div>
-        <div class="box"><div class="big">す → ず</div><div class="small">su → zu</div></div>
-        <div class="box"><div class="big">せ → ぜ</div><div class="small">se → ze</div></div>
-        <div class="box"><div class="big">そ → ぞ</div><div class="small">so → zo</div></div>
-    </div>
+<div class="line">さ → ざ <span class="small">(sa → za)</span></div>
+<div class="line">し → じ <span class="small">(shi → ji)</span></div>
+<div class="line">す → ず <span class="small">(su → zu)</span></div>
+<div class="line">せ → ぜ <span class="small">(se → ze)</span></div>
+<div class="line">そ → ぞ <span class="small">(so → zo)</span></div>
 
-    <div class="section">T-group</div>
-    <div class="row">
-        <div class="box"><div class="big">た → だ</div><div class="small">ta → da</div></div>
-        <div class="box"><div class="big">ち → ぢ</div><div class="small">chi → ji</div></div>
-        <div class="box"><div class="big">つ → づ</div><div class="small">tsu → zu</div></div>
-        <div class="box"><div class="big">て → で</div><div class="small">te → de</div></div>
-        <div class="box"><div class="big">と → ど</div><div class="small">to → do</div></div>
-    </div>
+<div class="line">た → だ <span class="small">(ta → da)</span></div>
+<div class="line">ち → ぢ <span class="small">(chi → ji)</span></div>
+<div class="line">つ → づ <span class="small">(tsu → zu)</span></div>
+<div class="line">て → で <span class="small">(te → de)</span></div>
+<div class="line">と → ど <span class="small">(to → do)</span></div>
 
-    <div class="section">H-group (Main Dakuten)</div>
-    <div class="row">
-        <div class="box"><div class="big">は → ば</div><div class="small">ha → ba</div></div>
-        <div class="box"><div class="big">ひ → び</div><div class="small">hi → bi</div></div>
-        <div class="box"><div class="big">ふ → ぶ</div><div class="small">fu → bu</div></div>
-        <div class="box"><div class="big">へ → べ</div><div class="small">he → be</div></div>
-        <div class="box"><div class="big">ほ → ぼ</div><div class="small">ho → bo</div></div>
-    </div>
-
-    <button class="back-btn" onclick="window.location.href='words.html'">
-        ← Back
-    </button>
+<div class="line">は → ば <span class="small">(ha → ba)</span></div>
+<div class="line">ひ → び <span class="small">(hi → bi)</span></div>
+<div class="line">ふ → ぶ <span class="small">(fu → bu)</span></div>
+<div class="line">へ → べ <span class="small">(he → be)</span></div>
+<div class="line">ほ → ぼ <span class="small">(ho → bo)</span></div>
 
 </div>
 
