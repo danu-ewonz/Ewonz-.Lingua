@@ -10,6 +10,7 @@
 
 <style>
 
+/* FULL SCREEN */
 body{
     margin:0;
     height:100vh;
@@ -58,7 +59,7 @@ body{
     margin-bottom:20px;
 }
 
-/* BUTTONS */
+/* BUTTON AREA */
 .buttons{
     width:100%;
     display:flex;
@@ -66,6 +67,7 @@ body{
     gap:12px;
 }
 
+/* BUTTON STYLE */
 .btn{
     padding:12px;
     border:2px solid gold;
@@ -107,7 +109,7 @@ body{
 
     <div class="buttons">
 
-        <!-- LANGUAGES -->
+        <!-- LANGUAGE BUTTONS (UNCHANGED) -->
         <button class="btn" onclick="window.location.href='words.html'">
             Japanese Language 🇯🇵
         </button>
@@ -120,7 +122,7 @@ body{
             Korean Language 🇰🇷
         </button>
 
-        <!-- JLPT SECTION (ONLY ONE NOW) -->
+        <!-- FIXED JLPT SECTION (ONLY ONE BLOCK) -->
         <div class="exam-title">Kanji Exams</div>
 
         <button class="btn" onclick="openExam('n5')">JLPT N5</button>
@@ -136,10 +138,17 @@ body{
 
 <script>
 
+/* ONLY THIS BLOCK CONTROLS EXAMS */
 function openExam(level){
-    window.location.href = level + ".html";
+    if(level === "n5"){
+        window.location.href = "n5.html";
+    }
+    else if(level === "n4"){
+        window.location.href = "n4.html";
+    }
 }
 
+/* LOCKED EXAMS */
 function openSoon(){
     alert("🚧 Coming Soon - 2026.11.28 🚧");
 }
