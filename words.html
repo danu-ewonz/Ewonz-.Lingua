@@ -44,29 +44,43 @@ body{
     margin-bottom:20px;
 }
 
-/* BUTTONS */
+/* =========================
+MAIN LANGUAGE BUTTONS
+========================= */
 .btn{
     width:100%;
     padding:15px;
     margin:8px 0;
 
-    border:none;
+    border:2px solid gold;
     border-radius:12px;
 
     font-size:16px;
     font-weight:bold;
 
+    background:transparent;
+
     color:white;
+
     cursor:pointer;
+    transition:0.2s ease;
 }
 
-/* COLORS */
-.hira{background:#c0392b;}
-.kata{background:#2980b9;}
-.kanji{background:linear-gradient(135deg,#d4af37,#8c6b00); color:black;}
+.btn:active{
+    transform:scale(0.97);
+    opacity:0.8;
+}
+
+/* extra safety (no colors anywhere) */
+.hira,
+.kata,
+.kanji{
+    background:transparent;
+    color:white;
+}
 
 /* =========================
-🔴 SPECIAL CHARACTERS BOX (ADDED)
+SPECIAL BOX
 ========================= */
 .special-box{
     margin-top:25px;
@@ -95,14 +109,19 @@ body{
     border-radius:10px;
 
     background:rgba(255,255,255,0.1);
-    color:black;
+
+    color:white;
 
     font-size:13px;
     font-weight:bold;
+
+    cursor:pointer;
+    transition:0.2s ease;
 }
 
 .special-btn:active{
     transform:scale(0.97);
+    opacity:0.85;
 }
 
 </style>
@@ -131,7 +150,7 @@ body{
         Kanji (Required 漢字)
     </button>
 
-    <!-- 🔥 SPECIAL CHARACTERS BOX -->
+    <!-- SPECIAL CHARACTERS -->
     <div class="special-box">
 
         <div class="special-title">
@@ -147,11 +166,11 @@ body{
         </button>
 
         <button class="special-btn" onclick="go('youon.html')">
-            Youon (ゃゅょ)
+            Youon (බැදි අක්ෂර)
         </button>
 
         <button class="special-btn" onclick="go('chouon.html')">
-            Chouon (ー)
+            Chouon (දිර්ඝ අක්ෂර)
         </button>
 
     </div>
