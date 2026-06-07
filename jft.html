@@ -1,16 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>JFT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kanji - Japanese Exam Required</title>
+
 <style>
-body{background:#0b0b0b;color:white;padding:20px;}
-h1{color:gold;text-align:center;}
+
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:Arial,sans-serif;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    border:2px solid gold;
+    border-radius:25px;
+    padding:20px;
+    max-width:450px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    color:gold;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.section-title{
+    color:gold;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.btn{
+    width:100%;
+    padding:18px;
+    margin:10px 0;
+
+    background:transparent;
+    color:white;
+
+    border:2px solid gold;
+    border-radius:18px;
+
+    font-size:18px;
+    font-weight:bold;
+}
+
+.btn:active{
+    transform:scale(0.98);
+}
+
 </style>
 </head>
 <body>
 
-<h1>JFT-Basic (SSW Visa)</h1>
-<p>Basic Japanese (N5–N4)</p>
+<div class="container">
+
+    <div class="title">
+        Kanji - Japanese Exam Required
+    </div>
+
+    <div class="section-title">
+        JLPT Exam
+    </div>
+
+    <button class="btn" onclick="location.href='n5.html'">
+        JLPT - N5
+    </button>
+
+    <button class="btn" onclick="location.href='n4.html'">
+        JLPT - N4
+    </button>
+
+    <button class="btn" onclick="location.href='n3.html'">
+        JLPT - N3
+    </button>
+
+    <button class="btn" onclick="location.href='n2.html'">
+        JLPT - N2
+    </button>
+
+    <button class="btn" onclick="location.href='n1.html'">
+        JLPT - N1
+    </button>
+
+</div>
 
 </body>
 </html>
