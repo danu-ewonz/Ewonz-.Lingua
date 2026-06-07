@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Japanese Writing System</title>
+
+<style>
+
+/* =========================
+🌐 GLOBAL
+========================= */
 body{
     margin:0;
     min-height:100vh;
@@ -13,66 +26,53 @@ body{
     padding:20px 0;
 }
 
-/* MAIN CARD */
+/* =========================
+MAIN CARD
+========================= */
 .container{
     width:90%;
     max-width:400px;
 
-    border:1.5px solid rgba(255,215,0,0.6);
+    border:1px solid rgba(255,215,0,0.6);
     border-radius:20px;
 
     padding:20px;
     text-align:center;
 
     background:rgba(255,255,255,0.04);
-    backdrop-filter: blur(12px);
-
-    box-shadow:0 0 25px rgba(255,215,0,0.08);
+    box-shadow:0 0 20px rgba(255,215,0,0.08);
 
     position:relative;
 }
 
-/* Neon glow border effect */
-.container::before{
+/* glow border (SAFE VERSION) */
+.container::after{
     content:"";
     position:absolute;
-    inset:0;
-    border-radius:20px;
-    padding:1.5px;
+    inset:-2px;
+    border-radius:22px;
 
-    background:linear-gradient(
-        45deg,
-        #ffd700,
-        #ffcc00,
-        #fff3b0,
-        #ffae00
-    );
+    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0,#ffae00);
 
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events:none;
-
-    filter:drop-shadow(0 0 8px rgba(255,215,0,0.6));
-    animation: glowMove 3s infinite linear;
+    z-index:-1;
+    filter:blur(6px);
+    opacity:0.6;
 }
 
-/* TITLE */
+/* =========================
+TITLE
+========================= */
 .title{
     color:#ffd700;
     font-size:22px;
     font-weight:bold;
     margin-bottom:20px;
 
-    text-shadow:0 0 10px rgba(255,215,0,0.3);
+    text-shadow:0 0 8px rgba(255,215,0,0.3);
 }
 
 /* =========================
-BUTTONS (FIXED + NEON)
+MAIN BUTTONS
 ========================= */
 .btn{
     width:100%;
@@ -80,7 +80,7 @@ BUTTONS (FIXED + NEON)
     margin:8px 0;
 
     border-radius:12px;
-    border:1px solid rgba(255,215,0,0.5);
+    border:1px solid rgba(255,215,0,0.6);
 
     font-size:16px;
     font-weight:bold;
@@ -89,46 +89,20 @@ BUTTONS (FIXED + NEON)
     color:#fff;
 
     cursor:pointer;
-    transition:0.3s ease;
-
-    backdrop-filter: blur(8px);
+    transition:0.25s ease;
 
     position:relative;
 }
 
-/* button glow border */
-.btn::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:12px;
-    padding:1px;
-
-    background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0);
-
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events:none;
-
-    filter:drop-shadow(0 0 6px rgba(255,215,0,0.5));
-}
-
 .btn:hover{
-    transform:scale(1.04);
-    background:#ffd700;
+    transform:scale(1.03);
+    background:rgba(255,215,0,0.9);
     color:#000;
-    box-shadow:0 0 20px rgba(255,215,0,0.4);
+    box-shadow:0 0 18px rgba(255,215,0,0.4);
 }
 
-/* ensure text visibility fix */
-.hira,
-.kata,
-.kanji{
+/* fix text */
+.hira,.kata,.kanji{
     color:#fff;
 }
 
@@ -144,33 +118,26 @@ SPECIAL BOX
     background:rgba(255,255,255,0.03);
     border:1px solid rgba(255,215,0,0.4);
 
-    backdrop-filter: blur(10px);
     position:relative;
 }
 
-/* glow border */
-.special-box::before{
+/* glow */
+.special-box::after{
     content:"";
     position:absolute;
-    inset:0;
-    border-radius:15px;
-    padding:1px;
+    inset:-2px;
+    border-radius:17px;
 
     background:linear-gradient(45deg,#ffd700,#ffcc00,#fff3b0);
 
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-
-    pointer-events:none;
-
-    filter:drop-shadow(0 0 6px rgba(255,215,0,0.4));
+    filter:blur(6px);
+    opacity:0.4;
+    z-index:-1;
 }
 
-/* SPECIAL BUTTONS */
+/* =========================
+SPECIAL BUTTONS
+========================= */
 .special-btn{
     width:100%;
     padding:10px;
@@ -187,18 +154,67 @@ SPECIAL BOX
     font-weight:bold;
 
     cursor:pointer;
-    transition:0.3s ease;
+    transition:0.25s ease;
 }
 
 .special-btn:hover{
-    transform:scale(1.03);
-    background:rgba(255,215,0,0.2);
-    box-shadow:0 0 15px rgba(255,215,0,0.3);
+    transform:scale(1.02);
+    background:rgba(255,215,0,0.25);
+    box-shadow:0 0 12px rgba(255,215,0,0.3);
 }
 
-/* ANIMATION */
-@keyframes glowMove{
-    0%{ filter:drop-shadow(0 0 6px rgba(255,215,0,0.4)); }
-    50%{ filter:drop-shadow(0 0 12px rgba(255,215,0,0.8)); }
-    100%{ filter:drop-shadow(0 0 6px rgba(255,215,0,0.4)); }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">
+        Japanese Writing System 🇯🇵
+    </div>
+
+    <!-- MAIN BUTTONS -->
+    <button class="btn hira" onclick="go('hiragana.html')">
+        Hiragana あ
+    </button>
+
+    <button class="btn kata" onclick="go('katakana.html')">
+        Katakana ア
+    </button>
+
+    <button class="btn kanji" onclick="go('kanji.html')">
+        Kanji (漢字)
+    </button>
+
+    <!-- SPECIAL BOX -->
+    <div class="special-box">
+
+        <button class="special-btn" onclick="go('dakuten.html')">
+            Dakuten (゛)
+        </button>
+
+        <button class="special-btn" onclick="go('handakuten.html')">
+            Handakuten (゜)
+        </button>
+
+        <button class="special-btn" onclick="go('youon.html')">
+            Youon (බැදි අක්ෂර)
+        </button>
+
+        <button class="special-btn" onclick="go('chouon.html')">
+            Chouon (දිර්ඝ අක්ෂර)
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+function go(page){
+    window.location.href = page;
 }
+</script>
+
+</body>
+</html>
