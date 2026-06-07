@@ -94,6 +94,7 @@ BUTTONS
     position:relative;
 }
 
+/* hover glow */
 .btn:hover{
     transform:scale(1.04);
     background:rgba(255,215,0,0.9);
@@ -110,6 +111,37 @@ BUTTONS
     font-weight:normal;
     letter-spacing:0.3px;
     line-height:1.4;
+}
+
+/* =========================
+COMING SOON BADGE
+========================= */
+.coming-soon{
+    position:absolute;
+    top:6px;
+    right:8px;
+
+    font-size:10px;
+    padding:3px 6px;
+
+    background:gold;
+    color:black;
+
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* LOCKED BUTTON */
+.locked{
+    opacity:0.55;
+}
+
+/* disable hover for locked */
+.locked:hover{
+    transform:none;
+    background:rgba(255,255,255,0.03);
+    color:#fff;
+    box-shadow:none;
 }
 
 </style>
@@ -147,7 +179,7 @@ BUTTONS
         </span>
     </button>
 
-    <!-- 5 NEW -->
+    <!-- 5 -->
     <button class="btn" onclick="go('katakana-special.html')">
         Katakana Special
 
@@ -156,12 +188,31 @@ BUTTONS
         </span>
     </button>
 
+    <!-- 6 COMING SOON -->
+    <button class="btn locked" onclick="comingSoon()">
+        JLPT Quiz System
+
+        <div class="coming-soon">
+            Coming Soon - 2026.11.28
+        </div>
+
+        <span class="stack">
+            Practice • Test • Score
+        </span>
+    </button>
+
 </div>
 
 <script>
+
 function go(page){
     window.location.href = page;
 }
+
+function comingSoon(){
+    alert("🚀 Coming Soon - 2026.11.28");
+}
+
 </script>
 
 </body>
