@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Handakuten (゜) - Hiragana</title>
+
+<style>
+
+body{
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0b0b0b;
+    font-family:Arial;
+    padding:20px;
+}
+
+/* CARD */
+.container{
+    width:95%;
+    max-width:450px;
+
+    border:2px solid gold;
+    border-radius:20px;
+
+    padding:20px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.03);
+}
+
+/* TITLE */
+.title{
+    color:gold;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+/* ROW */
+.row{
+    display:flex;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+/* BOX */
+.box{
+    flex:1;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    padding:12px;
+
+    background:rgba(255,255,255,0.05);
+}
+
+/* BIG CHAR */
+.big{
+    font-size:28px;
+    color:white;
+    font-weight:bold;
+}
+
+/* SMALL TEXT */
+.small{
+    font-size:12px;
+    color:#aaa;
+    margin-top:5px;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    background:transparent;
+    color:white;
+
+    font-weight:bold;
+}
+
+.back-btn:active{
+    transform:scale(0.97);
+}
+
+/* SECTION */
+.section{
+    color:gold;
+    font-size:14px;
+    margin:12px 0 8px;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">Handakuten (゜)</div>
+    <div class="subtitle">Hiragana semi-voiced sound (P-sounds)</div>
+
+    <div class="section">H-group → P-group</div>
+
+    <div class="row">
+        <div class="box">
+            <div class="big">は → ぱ</div>
+            <div class="small">ha → pa</div>
+        </div>
+
+        <div class="box">
+            <div class="big">ひ → ぴ</div>
+            <div class="small">hi → pi</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="big">ふ → ぷ</div>
+            <div class="small">fu → pu</div>
+        </div>
+
+        <div class="box">
+            <div class="big">へ → ぺ</div>
+            <div class="small">he → pe</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="box">
+            <div class="big">ほ → ぽ</div>
+            <div class="small">ho → po</div>
+        </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='words.html'">
+        ← Back to Writing System
+    </button>
+
+</div>
+
+</body>
+</html>
