@@ -141,7 +141,7 @@ html{
 }
 
 /* =========================
-🇯🇵 LANGUAGE TYPE BUTTONS
+🇯🇵 LANGUAGE BUTTONS
 ========================= */
 .lang-btn{
     width:80%;
@@ -241,7 +241,7 @@ html{
 }
 
 /* =========================
-🔴 HIRAGANA SPECIAL BOX (ADDED - SAFE)
+🔴 SPECIAL BOX (HIRAGANA SYSTEM)
 ========================= */
 .special-box{
     width:90%;
@@ -252,8 +252,6 @@ html{
     border-radius:12px;
 
     background:rgba(255,255,255,0.05);
-
-    animation:fadeInUp 0.5s ease;
 }
 
 .special-title{
