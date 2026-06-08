@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Basic Vocabulary</title>
+<title>Pronounce & People</title>
 
 <style>
 
@@ -13,83 +13,89 @@
 ========================= */
 body{
     margin:0;
-    background:#0b0b0b;
     font-family:Arial, sans-serif;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-
+    background:#0b0b0b;
     color:white;
-}
-
-/* =========================
-CONTAINER
-========================= */
-.container{
-    width:90%;
-    max-width:420px;
-
-    border:2px solid gold;
-    border-radius:20px;
 
     padding:20px;
-    background:rgba(255,255,255,0.03);
-
-    text-align:center;
 }
 
 /* TITLE */
 .title{
+    text-align:center;
     font-size:24px;
     font-weight:bold;
     color:gold;
     margin-bottom:20px;
 }
 
-/* BUTTONS */
-.btn{
-    width:100%;
-    padding:14px;
-    margin:8px 0;
+/* SECTION */
+.section-title{
+    font-size:16px;
+    color:gold;
+    margin:15px 0 10px;
+}
 
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
     border:2px solid gold;
     border-radius:12px;
 
-    background:rgba(255,255,255,0.05);
-    color:white;
-
-    font-size:15px;
-    font-weight:bold;
+    padding:10px;
+    text-align:center;
 
     transition:0.2s ease;
-    cursor:pointer;
 }
 
-.btn:active{
+.card:active{
     transform:scale(0.97);
 }
 
-/* hover */
-.btn:hover{
-    background:gold;
-    color:black;
+/* TEXT */
+.jp{
+    font-size:22px;
+    font-weight:bold;
+    color:gold;
 }
 
-/* STACK TEXT */
-.small{
-    display:block;
-    font-size:11px;
-    opacity:0.7;
-    margin-top:5px;
+.ro{
+    font-size:12px;
+    color:#00ffcc;
+    margin-top:4px;
+}
+
+.si{
+    font-size:12px;
+    color:white;
+    margin-top:4px;
+    opacity:0.9;
 }
 
 /* BACK BUTTON */
 .back{
-    margin-top:15px;
-    background:#e74c3c;
-    border-color:#e74c3c;
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+
+    border:2px solid red;
+    border-radius:10px;
+
+    background:transparent;
+    color:red;
+
+    font-weight:bold;
+}
+
+.back:active{
+    transform:scale(0.97);
 }
 
 </style>
@@ -97,56 +103,99 @@ CONTAINER
 
 <body>
 
-<div class="container">
+<div class="title">Pronounce & People 👤</div>
 
-    <div class="title">Basic Vocabulary</div>
+<!-- ================= PEOPLE ================= -->
+<div class="section-title">👤 People</div>
 
-    <!-- 8 BUTTONS -->
+<div class="grid">
 
-    <button class="btn" onclick="go('pronounce-people.html')">
-        Pronounce & People
-    </button>
+    <div class="card">
+        <div class="jp">私</div>
+        <div class="ro">watashi</div>
+        <div class="si">මම</div>
+    </div>
 
-    <button class="btn" onclick="go('core-verbs.html')">
-        Core Verbs
-    </button>
+    <div class="card">
+        <div class="jp">あなた</div>
+        <div class="ro">anata</div>
+        <div class="si">ඔබ</div>
+    </div>
 
-    <button class="btn" onclick="go('essential-nouns.html')">
-        Essential Nouns
-    </button>
+    <div class="card">
+        <div class="jp">彼</div>
+        <div class="ro">kare</div>
+        <div class="si">ඔහු</div>
+    </div>
 
-    <button class="btn" onclick="go('common-adjectives.html')">
-        Common Adjectives
-    </button>
+    <div class="card">
+        <div class="jp">彼女</div>
+        <div class="ro">kanojo</div>
+        <div class="si">ඇය</div>
+    </div>
 
-    <button class="btn" onclick="go('question-words.html')">
-        Question Words
-    </button>
+    <div class="card">
+        <div class="jp">友達</div>
+        <div class="ro">tomodachi</div>
+        <div class="si">මිතුරා</div>
+    </div>
 
-    <button class="btn" onclick="go('time-frequency.html')">
-        Time & Frequency
-    </button>
-
-    <button class="btn" onclick="go('aisatsu-phrases.html')">
-        Aisatsu & Phrases
-    </button>
-
-    <button class="btn" onclick="go('connectors.html')">
-        Connectors
-    </button>
-
-    <!-- BACK -->
-    <button class="btn back" onclick="go('index.html')">
-        ⬅ Back
-    </button>
+    <div class="card">
+        <div class="jp">家族</div>
+        <div class="ro">kazoku</div>
+        <div class="si">පවුල</div>
+    </div>
 
 </div>
 
-<script>
-function go(page){
-    window.location.href = page;
-}
-</script>
+<!-- ================= BASIC SOUNDS ================= -->
+<div class="section-title">🔊 Basic Pronunciation</div>
+
+<div class="grid">
+
+    <div class="card"><div class="jp">あ</div><div class="ro">a</div><div class="si">අ</div></div>
+    <div class="card"><div class="jp">い</div><div class="ro">i</div><div class="si">ඉ</div></div>
+    <div class="card"><div class="jp">う</div><div class="ro">u</div><div class="si">උ</div></div>
+    <div class="card"><div class="jp">え</div><div class="ro">e</div><div class="si">එ</div></div>
+    <div class="card"><div class="jp">お</div><div class="ro">o</div><div class="si">ඔ</div></div>
+
+</div>
+
+<!-- ================= DAILY BASIC ================= -->
+<div class="section-title">🧠 Daily Basics</div>
+
+<div class="grid">
+
+    <div class="card">
+        <div class="jp">名前</div>
+        <div class="ro">namae</div>
+        <div class="si">නම</div>
+    </div>
+
+    <div class="card">
+        <div class="jp">学校</div>
+        <div class="ro">gakkou</div>
+        <div class="si">පාසල</div>
+    </div>
+
+    <div class="card">
+        <div class="jp">水</div>
+        <div class="ro">mizu</div>
+        <div class="si">ජලය</div>
+    </div>
+
+    <div class="card">
+        <div class="jp">本</div>
+        <div class="ro">hon</div>
+        <div class="si">පොත</div>
+    </div>
+
+</div>
+
+<!-- BACK -->
+<button class="back" onclick="history.back()">
+⬅ Back
+</button>
 
 </body>
 </html>
