@@ -6,72 +6,131 @@
 
 <title>Pronounce & People</title>
 
-<link rel="stylesheet" href="style.css">
-
 <style>
-/* extra small tweak (optional) */
-.btn{
-    text-align:left;
-    line-height:1.6;
-}
-.small{
-    font-size:12px;
-    opacity:0.8;
-}
-</style>
 
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:Arial;
+    padding:20px;
+    color:white;
+}
+
+.title{
+    text-align:center;
+    font-size:24px;
+    color:gold;
+    margin-bottom:20px;
+}
+
+/* ROW */
+.row{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+/* CARD */
+.lang-card{
+    flex:1;
+    border:2px solid gold;
+    border-radius:12px;
+    padding:10px;
+    background:rgba(255,255,255,0.05);
+    text-align:center;
+}
+
+/* TEXT FIX */
+.lang-card *{
+    color:#fff;
+}
+
+/* JAPANESE */
+.kanji{
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* ROMAJI */
+.romaji{
+    color:#00ffcc;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* SINHALA */
+.meaning{
+    font-size:12px;
+    margin-top:5px;
+    color:#ffffff;
+    opacity:0.9;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="title">Pronounce & People</div>
 
-    <div class="title">Pronounce & People 👤</div>
-
-    <div class="buttons">
-
-        <div class="btn">
-            私 (わたし - watashi) <br>
-            <span class="small">මම / I</span>
-        </div>
-
-        <div class="btn">
-            あなた (anata) <br>
-            <span class="small">ඔබ / You</span>
-        </div>
-
-        <div class="btn">
-            彼 (かれ - kare) <br>
-            <span class="small">ඔහු / He</span>
-        </div>
-
-        <div class="btn">
-            彼女 (かのじょ - kanojo) <br>
-            <span class="small">ඇය / She</span>
-        </div>
-
-        <div class="btn">
-            私たち (わたしたち - watashitachi) <br>
-            <span class="small">අපි / We</span>
-        </div>
-
-        <div class="btn">
-            先生 (せんせい - sensei) <br>
-            <span class="small">ගුරුතුමා / Teacher</span>
-        </div>
-
-        <div class="btn">
-            学生 (がくせい - gakusei) <br>
-            <span class="small">ශිෂ්‍යයා / Student</span>
-        </div>
-
-        <div class="btn">
-            友達 (ともだち - tomodachi) <br>
-            <span class="small">මිතුරා / Friend</span>
-        </div>
-
+<!-- 1 -->
+<div class="row">
+    <div class="lang-card">
+        <div class="kanji">私</div>
+        <div class="romaji">watashi</div>
+        <div class="meaning">මම / මට</div>
     </div>
 
+    <div class="lang-card">
+        <div class="kanji">あなた</div>
+        <div class="romaji">anata</div>
+        <div class="meaning">ඔබ</div>
+    </div>
+</div>
+
+<!-- 2 -->
+<div class="row">
+    <div class="lang-card">
+        <div class="kanji">彼</div>
+        <div class="romaji">kare</div>
+        <div class="meaning">ඔහු</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">彼女</div>
+        <div class="romaji">kanojo</div>
+        <div class="meaning">ඇය</div>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="row">
+    <div class="lang-card">
+        <div class="kanji">友達</div>
+        <div class="romaji">tomodachi</div>
+        <div class="meaning">මිතුරා</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">人</div>
+        <div class="romaji">hito</div>
+        <div class="meaning">පුද්ගලයා</div>
+    </div>
+</div>
+
+<!-- 4 -->
+<div class="row">
+    <div class="lang-card">
+        <div class="kanji">先生</div>
+        <div class="romaji">sensei</div>
+        <div class="meaning">ගුරුවරයා</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">学生</div>
+        <div class="romaji">gakusei</div>
+        <div class="meaning">ශිෂ්‍යයා</div>
+    </div>
 </div>
 
 </body>
