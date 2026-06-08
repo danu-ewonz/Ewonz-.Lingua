@@ -1,10 +1,152 @@
 <!DOCTYPE html>
-<html>
-<body style="background:black;color:white">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h1>TEST PAGE</h1>
+<title>Basic Vocabulary</title>
 
-<button onclick="alert('OK')">TEST BUTTON</button>
+<style>
+
+/* =========================
+🌐 GLOBAL
+========================= */
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:Arial, sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+
+    color:white;
+}
+
+/* =========================
+CONTAINER
+========================= */
+.container{
+    width:90%;
+    max-width:420px;
+
+    border:2px solid gold;
+    border-radius:20px;
+
+    padding:20px;
+    background:rgba(255,255,255,0.03);
+
+    text-align:center;
+}
+
+/* TITLE */
+.title{
+    font-size:24px;
+    font-weight:bold;
+    color:gold;
+    margin-bottom:20px;
+}
+
+/* BUTTONS */
+.btn{
+    width:100%;
+    padding:14px;
+    margin:8px 0;
+
+    border:2px solid gold;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.05);
+    color:white;
+
+    font-size:15px;
+    font-weight:bold;
+
+    transition:0.2s ease;
+    cursor:pointer;
+}
+
+.btn:active{
+    transform:scale(0.97);
+}
+
+/* hover */
+.btn:hover{
+    background:gold;
+    color:black;
+}
+
+/* STACK TEXT */
+.small{
+    display:block;
+    font-size:11px;
+    opacity:0.7;
+    margin-top:5px;
+}
+
+/* BACK BUTTON */
+.back{
+    margin-top:15px;
+    background:#e74c3c;
+    border-color:#e74c3c;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title">Basic Vocabulary</div>
+
+    <!-- 8 BUTTONS -->
+
+    <button class="btn" onclick="go('pronounce-people.html')">
+        Pronounce & People
+    </button>
+
+    <button class="btn" onclick="go('core-verbs.html')">
+        Core Verbs
+    </button>
+
+    <button class="btn" onclick="go('essential-nouns.html')">
+        Essential Nouns
+    </button>
+
+    <button class="btn" onclick="go('common-adjectives.html')">
+        Common Adjectives
+    </button>
+
+    <button class="btn" onclick="go('question-words.html')">
+        Question Words
+    </button>
+
+    <button class="btn" onclick="go('time-frequency.html')">
+        Time & Frequency
+    </button>
+
+    <button class="btn" onclick="go('aisatsu-phrases.html')">
+        Aisatsu & Phrases
+    </button>
+
+    <button class="btn" onclick="go('connectors.html')">
+        Connectors
+    </button>
+
+    <!-- BACK -->
+    <button class="btn back" onclick="go('index.html')">
+        ⬅ Back
+    </button>
+
+</div>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+</script>
 
 </body>
 </html>
