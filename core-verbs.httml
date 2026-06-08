@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Core Verbs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">Core Verbs 🔥</div>
+
+<div class="buttons">
+
+<div class="btn">食べる (taberu) - කනවා</div>
+<div class="btn">飲む (nomu) - බොනවා</div>
+<div class="btn">行く (iku) - යනවා</div>
+<div class="btn">来る (kuru) - එනවා</div>
+<div class="btn">見る (miru) - බලනවා</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
