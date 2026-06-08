@@ -1,83 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Basic Vocabulary</title>
+<html>
+<body style="background:black;color:white">
 
-<style>
-body{
-    margin:0;
-    background:#0b0b0b;
-    font-family:Arial, sans-serif;
-    display:flex;
-    justify-content:center;
-    padding:20px;
-}
+<h1>TEST PAGE</h1>
 
-.container{
-    width:100%;
-    max-width:420px;
-    text-align:center;
-}
-
-.title{
-    color:gold;
-    font-size:26px;
-    font-weight:bold;
-    margin-bottom:25px;
-}
-
-.buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.btn{
-    padding:15px;
-    border:2px solid gold;
-    border-radius:15px;
-    background:rgba(255,255,255,0.1);
-    color:black;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.btn:active{
-    transform:scale(0.96);
-    opacity:0.8;
-}
-</style>
-
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="title">Basic Vocabulary 📚</div>
-
-    <div class="buttons">
-
-        <button class="btn" onclick="go('pronounce-people.html')">Pronounce & People</button>
-        <button class="btn" onclick="go('core-verbs.html')">Core Verbs</button>
-        <button class="btn" onclick="go('essential-nouns.html')">Essential Nouns</button>
-        <button class="btn" onclick="go('common-adjectives.html')">Common Adjectives</button>
-        <button class="btn" onclick="go('question-words.html')">Question Words</button>
-        <button class="btn" onclick="go('time-frequency.html')">Time & Frequency</button>
-        <button class="btn" onclick="go('aisatsu-phrases.html')">Aisatsu & Phrases</button>
-        <button class="btn" onclick="go('connectors.html')">Connectors</button>
-
-    </div>
-
-</div>
-
-<script>
-function go(page){
-    window.location.href = page;
-}
-</script>
+<button onclick="alert('OK')">TEST BUTTON</button>
 
 </body>
 </html>
