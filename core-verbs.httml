@@ -1,26 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Core Verbs</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    background:#0b0b0b;
+    font-family:Arial;
+    padding:20px;
+    color:white;
+}
+
+.title{
+    text-align:center;
+    font-size:24px;
+    color:gold;
+    margin-bottom:20px;
+}
+
+/* ROW */
+.row{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+/* CARD */
+.lang-card{
+    flex:1;
+    border:2px solid gold;
+    border-radius:12px;
+    padding:10px;
+    background:rgba(255,255,255,0.05);
+    text-align:center;
+}
+
+/* TEXT FIX */
+.lang-card *{
+    color:#fff;
+}
+
+/* JAPANESE */
+.kanji{
+    font-size:26px;
+    font-weight:bold;
+}
+
+/* ROMAJI */
+.romaji{
+    color:#00ffcc;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* SINHALA */
+.meaning{
+    font-size:12px;
+    margin-top:5px;
+    color:#ffffff;
+    opacity:0.9;
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="title">Core Verbs</div>
 
-<div class="title">Core Verbs 🔥</div>
+<!-- 1 -->
+<div class="row">
 
-<div class="buttons">
+    <div class="lang-card">
+        <div class="kanji">食べる</div>
+        <div class="romaji">taberu</div>
+        <div class="meaning">කන්න</div>
+    </div>
 
-<div class="btn">食べる (taberu) - කනවා</div>
-<div class="btn">飲む (nomu) - බොනවා</div>
-<div class="btn">行く (iku) - යනවා</div>
-<div class="btn">来る (kuru) - එනවා</div>
-<div class="btn">見る (miru) - බලනවා</div>
+    <div class="lang-card">
+        <div class="kanji">飲む</div>
+        <div class="romaji">nomu</div>
+        <div class="meaning">බොන්න</div>
+    </div>
 
 </div>
+
+<!-- 2 -->
+<div class="row">
+
+    <div class="lang-card">
+        <div class="kanji">行く</div>
+        <div class="romaji">iku</div>
+        <div class="meaning">යන්න</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">来る</div>
+        <div class="romaji">kuru</div>
+        <div class="meaning">එන්න</div>
+    </div>
+
+</div>
+
+<!-- 3 -->
+<div class="row">
+
+    <div class="lang-card">
+        <div class="kanji">見る</div>
+        <div class="romaji">miru</div>
+        <div class="meaning">බලන්න</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">聞く</div>
+        <div class="romaji">kiku</div>
+        <div class="meaning">අහන්න</div>
+    </div>
+
+</div>
+
+<!-- 4 -->
+<div class="row">
+
+    <div class="lang-card">
+        <div class="kanji">話す</div>
+        <div class="romaji">hanasu</div>
+        <div class="meaning">කතා කරනවා</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">書く</div>
+        <div class="romaji">kaku</div>
+        <div class="meaning">ලියන්න</div>
+    </div>
+
+</div>
+
+<!-- 5 -->
+<div class="row">
+
+    <div class="lang-card">
+        <div class="kanji">読む</div>
+        <div class="romaji">yomu</div>
+        <div class="meaning">කියවන්න</div>
+    </div>
+
+    <div class="lang-card">
+        <div class="kanji">勉強する</div>
+        <div class="romaji">benkyou suru</div>
+        <div class="meaning">ඉගෙන ගන්න</div>
+    </div>
 
 </div>
 
